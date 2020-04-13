@@ -1,10 +1,18 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 
-import { HeaderComponent } from './components/header/header.component';
+import { AuthenticationService } from "./services/authentication.service";
+
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 @NgModule({
-  providers: [HeaderComponent, FooterComponent]
+  providers: [AuthenticationService],
+  exports: [
+    HeaderComponent,
+    FooterComponent
+  ],
+  declarations: [FooterComponent, HeaderComponent]
 })
 
 export class CoreModule {
