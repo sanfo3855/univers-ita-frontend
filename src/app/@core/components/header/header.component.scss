@@ -1,0 +1,259 @@
+.header {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.hiddenKeys {
+  height: 0;
+  width: 0;
+  top: -10000000px;
+}
+.hiddenKeys, .hiddenStructure {
+  display: block;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+a:visited {
+  color: #613399;
+}
+.back-to-top, .main-menu ul li a, .tag-box .title, a, a:visited {
+  text-decoration: none;
+}
+a {
+  color: #1565c0;
+}
+
+.header-container .textual-header {
+  margin: 0 auto;
+  max-width: 1210px;
+  overflow: hidden;
+  padding-bottom: .9375em;
+}
+
+.header-container .textual-header .alma {
+  float: left;
+  width: 161px;
+  height: 103px;
+  margin-top: 15px;
+  text-indent: -99999px;
+  background-image: url("src/assets/unibo-sigillo2x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  border-right: 1px solid #00436A;
+}
+
+.header-container .textual-header .text-wrap {
+  padding-left: .46875em;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 115px;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 38px;
+  color: #00436A;
+  margin-top: .46875em;
+}
+.header-container .textual-header .text-wrap, .header-container .textual-header h1 {
+  font-family: Cinzel,Verdana,Geneva,Tahoma,sans-serif;
+  margin-bottom: 0;
+}
+
+.menu-container {
+  background-color: #0066A4;
+}
+
+.main-menu {
+  max-width: 1210px;
+  margin: auto;
+}
+.main-menu {
+  position: relative;
+}
+
+.large-device, .medium-device, .menu-button, .small-device {
+  display: none;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dataTables_wrapper .dataTables_paginate a, .fa, .fa-stack {
+  display: inline-block;
+}
+
+.main-menu ul {
+  font-family: ProximaNova,Opensans,Verdana,Geneva,Tahoma,sans-serif;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  z-index: 999;
+  padding: 0;
+}
+
+.main-menu ul li ul, .main-menu ul li.selected, .main-menu ul li.selected li, .main-menu>ul>li:hover {
+  background-color: #00436A;
+}
+
+.main-menu ul li {
+  text-transform: uppercase;
+  position: relative;
+  margin-right: 1px;
+}
+.main-menu>ul>li {
+  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-menu ul li.selected a {
+  color: #fff;
+}
+.main-menu ul li.selected>a {
+  color: #fff;
+}
+.main-menu ul a:not(.menu-button) {
+  display: block;
+  float: left;
+}
+.main-menu ul li a {
+  font-size: 1.1em;
+  padding: 15px 20px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.back-to-top, .main-menu ul li a, .tag-box .title, a, a:visited {
+  text-decoration: none;
+}
+
+.main-menu ul a:not(.menu-button) {
+  display: block;
+  float: left;
+}
+
+.main-menu ul .menu-button {
+  float: left;
+  display: inline-block;
+  width: 8px;
+  height: 54px;
+  overflow: hidden;
+  padding: 0;
+  line-height: 54px;
+  position: relative;
+  right: 8px;
+  margin-right: .46875em;
+  z-index: 0;
+}
+
+.main-menu ul li ul li {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .3s ease-in;
+  transition: max-height .3s ease-in;
+  position: static;
+  display: block;
+  width: 220px;
+  margin-right: 0;
+  text-transform: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-container {
+    position: relative;
+  }
+
+  .header-container .textual-header .alma {
+    width: 161px;
+    background-size: contain;
+    height: 103px;
+    margin-left: .46875em;
+    margin-bottom: .9375em;
+    background-image: url("src/assets/unibo-sigillo2x.png");
+  }
+
+  .header-container .textual-header .text-wrap {
+    padding-right: .9375em;
+    min-height: 115px;
+    font-size: 1.5625em;
+    line-height: 28px;
+  }
+
+  .main-menu {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    display: block;
+  }
+
+  .main-menu>.menu-button {
+    border: 1px solid #333;
+    padding: .46875em .9375em;
+    color: #333;
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 5px 0 5px 5px;
+  }
+
+  .main-menu .menu-button {
+    font-size: 1.2em;
+    display: inline-block;
+    float: none;
+    text-align: center;
+  }
+
+  .main-menu .menu-button span, .main-menu>.menu-button {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-container .textual-header .alma {
+    width: 100px;
+    background-size: contain;
+    height: 64px;
+    margin-bottom: .46875em;
+  }
+
+  .header-container .textual-header .text-wrap {
+    margin-top: .9375em;
+    padding-left: .9375em;
+    margin-bottom: 20px;
+    min-height: 70px;
+    font-size: 1.25em;
+    line-height: normal;
+    height: auto;
+  }
+}

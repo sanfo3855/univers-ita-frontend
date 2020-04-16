@@ -1,0 +1,30 @@
+.toolbar {
+  background-color: #0066A4;
+}
+
+.toolbar .row {
+  background-color: #fff;
+  padding: .46875em .9375em;
+}
+
+.toolbar .breadcrumbs {
+  display: inline-block;
+  margin-top: .625em;
+  margin-bottom: .625em;
+  margin-left: .9375em;
+  font-size: 1em;
+  line-height: 22px;
+}
+
+.toolbar .breadcrumbs .breadcrumbSeparator {
+  color: #00436A;
+  font-weight: 700;
+}
+
+.toolbar .breadcrumbs a {
+  color: #333;
+  border-bottom: 1px solid #aaa;
+}
+a:visited {
+  color: #613399;
+}

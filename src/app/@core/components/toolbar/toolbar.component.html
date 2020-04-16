@@ -1,0 +1,8 @@
+<div class="toolbar" id="u-toolbar">
+  <div class="row">
+    <div *ngFor="let pathElement of appPath">
+      <span id='breadcrumbs-{{pathElement}}' class="breadcrumbs"><a [routerLink]="'/'+pathElement | lowercase">{{pathElement}}</a></span>
+      <span *ngIf="appPath.indexOf(pathElement)!==appPath.length-1" class="breadcrumbs breadcrumbSeparator">/</span>
+    </div>
+  </div>
+</div>
