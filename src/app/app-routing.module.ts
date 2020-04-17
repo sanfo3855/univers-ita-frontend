@@ -6,9 +6,9 @@ import {AdminComponent} from "./pages/admin/admin.component";
 import {SurveyComponent} from "./pages/survey/survey.component";
 import {WritingComponent} from "./pages/writing/writing.component";
 import {PageNotFoundComponent} from "./pages/page-not-found/page-not-found.component";
+
 import {CoreModule} from "./@core/core.module";
 import {RedirectGuard} from "./@core/services/redirect-guard.service";
-
 
 const routes: Routes = [
   {path: 'home', canActivate: [RedirectGuard], component: RedirectGuard, data :{externalUrl:'https://site.unibo.it/univers-ita'}},
