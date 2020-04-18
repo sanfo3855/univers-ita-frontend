@@ -9,9 +9,12 @@ import {PageNotFoundComponent} from "./pages/page-not-found/page-not-found.compo
 
 import {CoreModule} from "./@core/core.module";
 import {RedirectGuard} from "./@core/services/redirect-guard.service";
+import {AppHomeComponent} from "./pages/app-home/app-home.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
   {path: 'home', canActivate: [RedirectGuard], component: RedirectGuard, data :{externalUrl:'https://site.unibo.it/univers-ita'}},
+  {path: 'app-home', component: AppHomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'survey', component: SurveyComponent},
@@ -21,7 +24,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [LoginComponent, AdminComponent,SurveyComponent,WritingComponent,PageNotFoundComponent],
-  imports: [RouterModule.forRoot(routes), CoreModule],
+  imports: [RouterModule.forRoot(routes), CoreModule, ReactiveFormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

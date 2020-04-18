@@ -3,6 +3,7 @@
 }
 
 .toolbar .row {
+  position: relative;
   background-color: #fff;
   padding: .46875em .9375em;
 }
@@ -29,19 +30,26 @@ a:visited {
   color: #613399;
 }
 
-.toolbar .tool-log {
+.toolbar .row .tool-log {
+  right: 0;
   float: right;
-  position: relative;
+  padding: .46875em .9375em;
+  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.toolbar .tool-log .active-button {
-
+.toolbar .row .tool-log .btn {
+  margin-left: 3px;
+  margin-right: 3px;
+  line-height: 1.1;
+  border-radius: 5px;
 }
 
-.toolbar .tool-log .active-button {
-
+.btn-custom-blue {
+  color: #fff;
+  background-color: #0066A4;
+  border-color: #0066A4;
 }

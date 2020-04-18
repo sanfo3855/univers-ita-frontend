@@ -1,0 +1,40 @@
+h1 {
+  font-size: 2em;
+  line-height: 40px;
+  margin-top: .46875em;
+  margin-bottom: .46875em;
+  color: #00436A;
+  font-family: ProximaNova,Opensans,Verdana,Geneva,Tahoma,sans-serif;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-wrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 0.625em;
+  margin-bottom: 0.625em;
+  margin-left: 0.9375em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-9 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-height: 22px;
+  margin-bottom: .625em;
+}
+

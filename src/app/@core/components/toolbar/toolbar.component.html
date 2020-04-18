@@ -5,8 +5,8 @@
       <span *ngIf="appPath.indexOf(pathElement)!==appPath.length-1" class="breadcrumbs breadcrumbSeparator">/</span>
     </div>
     <div id="login" class="tool-log">
-      <button id="login-button" class="active-button">Login</button>
-      <button id="logout-button" class="disabled-button">Logout</button>
+      <button type="button" id="login-button" class="btn btn-custom-blue" routerLink="/login">Accesso</button>
+      <button type="button" id="logout-button" class="btn btn-custom-blue">Logout</button>
     </div>
   </div>
 </div>
