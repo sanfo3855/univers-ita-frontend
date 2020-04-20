@@ -6,20 +6,14 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
+import {QuestionComponent} from "./components/question/question.component";
 
 
 @NgModule({
-    providers: [],
-    exports: [
-        HeaderComponent,
-        FooterComponent,
-        ToolbarComponent
-    ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-    declarations: [FooterComponent, HeaderComponent, ToolbarComponent]
+  providers: [],
+  exports: [HeaderComponent,FooterComponent,ToolbarComponent, QuestionComponent],
+  imports: [CommonModule,RouterModule],
+  declarations: [FooterComponent, HeaderComponent, ToolbarComponent,QuestionComponent]
 })
 
 export class CoreModule {
