@@ -7,13 +7,15 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
 import {QuestionComponent} from "./components/question/question.component";
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
   providers: [],
-  exports: [HeaderComponent,FooterComponent,ToolbarComponent, QuestionComponent],
-  imports: [CommonModule,RouterModule],
-  declarations: [FooterComponent, HeaderComponent, ToolbarComponent,QuestionComponent]
+    exports: [HeaderComponent, FooterComponent, ToolbarComponent, QuestionComponent, LoginFormComponent],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  declarations: [FooterComponent, HeaderComponent, ToolbarComponent,QuestionComponent, LoginFormComponent]
 })
 
 export class CoreModule {

@@ -4,12 +4,11 @@ import {CanActivate, ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '
 @Injectable()
 export class RedirectGuard implements CanActivate {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-
-    window.location.href = route.data['externalUrl'];
+    window.location.href = route.data.externalUrl;
     return true;
-
   }
 }

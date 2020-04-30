@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {JWTTokenService} from '../../@core/services/JWT-token/jwt-token.service';
 
 @Component({
   selector: 'app-app-home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public jwtTokenService: JWTTokenService) { }
 
   ngOnInit(): void {
   }

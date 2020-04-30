@@ -5,8 +5,9 @@
       <span *ngIf="appPath.indexOf(pathElement)!==appPath.length-1" class="breadcrumbs breadcrumbSeparator">/</span>
     </div>
     <div id="login" class="tool-log">
-      <button type="button" id="login-button" class="btn btn-custom-blue" routerLink="/login">Accesso</button>
-      <button type="button" id="logout-button" class="btn btn-custom-blue">Logout</button>
+      <label *ngIf="jwtTokenService.getToken()" id="logged-user">{{this.jwtTokenService.getUser()}}</label>
+      <button *ngIf="!jwtTokenService.getToken()" type="button" id="login-button" class="btn btn-custom-blue" routerLink="/login">Accedi</button>
+      <button *ngIf="jwtTokenService.getToken()" type="button" id="logout-button" class="btn btn-custom-blue" (click)="logOut()">Esci</button>
     </div>
   </div>
 </div>

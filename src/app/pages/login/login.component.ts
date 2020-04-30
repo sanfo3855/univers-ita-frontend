@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {JWTTokenService} from '../../@core/services/JWT-token/jwt-token.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  loginForm = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl('')
+  });
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.loginForm.value);
+  }
 }

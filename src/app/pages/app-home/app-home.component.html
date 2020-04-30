@@ -2,10 +2,9 @@
 <app-toolbar [appPath]="['Home','App-Home']" ></app-toolbar>
 <div id="u-content-wrapper" class="content-wrapper">
   <div class="row">
-    <h1>Raccolta dati UniverS-ITA</h1>
-  </div>
-  <div class="row">
-    <p class="col-md-9"> Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in particolare,
+    <div class="col-md-9">
+      <h1>Raccolta dati UniverS-ITA</h1>
+      <p>Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in particolare,
       negli studenti universitari, è stato al centro di un dibattito molto acceso. L’attenzione si è concentrata sugli
       universitari perché, tra i giovani, essi rappresentano lo strato teoricamente più ‘colto’, più esposto a usi formali
       della lingua, sia nello scritto che nel parlato, e, dunque, più competente della varietà standard. È quindi evidente
@@ -18,6 +17,11 @@
       universitari di diverse sedi. L’analisi verrà condotta in prospettiva sia sociolinguistica, sia tipologica, allo
       scopo di individuare i tratti peculiari dell’italiano degli universitari e di poter progettare interventi didattici
       mirati a rafforzare le aree oggettivamente più deboli della loro competenza.</p>
+    </div>
+    <div *ngIf="!jwtTokenService.getToken()" class="col-md-3">
+      <h1>Accesso</h1>
+      <app-login-form></app-login-form>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>
