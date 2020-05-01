@@ -13,24 +13,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-.content-wrapper {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin-top: 0.625em;
-  margin-bottom: 0.625em;
-  margin-left: 0.9375em;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .col-md-9 {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -38,3 +20,6 @@ h1 {
   margin-bottom: .625em;
 }
 
+p {
+  text-align: justify;
+}

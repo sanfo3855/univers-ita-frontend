@@ -5,9 +5,12 @@
   border-radius: 5px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
+.col-md-12 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-height: 22px;
+  margin-bottom: .625em;
+  margin-left: 0.9375em;
 }
 
 h1 {
@@ -29,17 +32,8 @@ h1 {
   flex-wrap: wrap;
 }
 
-.content-wrapper {
-  flex: 1 0 auto;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin-top: 0.625em;
-  margin-bottom: 0.625em;
-  margin-left: 0.9375em;
-}
-
 form {
   padding-right: 15px;
   padding-left: 15px;
 }
+

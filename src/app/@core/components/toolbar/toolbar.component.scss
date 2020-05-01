@@ -30,7 +30,11 @@ a:visited {
   color: #613399;
 }
 
-.toolbar .row .tool-log {
+.toolbar .row .tool-login .toolbar-username {
+  padding: 5px 10px 5px 5px;
+}
+
+.toolbar .row .tool-login {
   right: 0;
   float: right;
   padding: .46875em .9375em;
@@ -41,7 +45,7 @@ a:visited {
   display: flex;
 }
 
-.toolbar .row .tool-log .btn {
+.toolbar .row .tool-login .btn {
   margin-left: 3px;
   margin-right: 3px;
   line-height: 1.1;
@@ -52,4 +56,38 @@ a:visited {
   color: #fff;
   background-color: #0066A4;
   border-color: #0066A4;
+}
+
+.toolbar .row .tool-logged {
+  width: 100%;
+  padding-left: 0.9375em;
+  padding-bottom: 0.9375em;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.toolbar .row .tool-logged .btn {
+  margin-left: 3px;
+  margin-right: 3px;
+  line-height: 1.1;
+  border-radius: 5px;
+}
+
+.toolbar .row .tool-logged .toolbar-username {
+  padding: 5px 10px 5px 5px;
+  align-content: center;
+}
+
+.back-button {
+  left:0;
+  float:left
+}
+
+.next-button {
+  right:0;
+  float:right;
 }

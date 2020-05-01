@@ -12,7 +12,6 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  position: fixed;
 }
 
 .footer .footer-wrap, .footer-plain .footer-wrap {
@@ -161,4 +160,24 @@ a:-webkit-any-link {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (max-width: 519px){
+  .footer .copyright, .footer-plain .copyright {
+    display: block;
+    text-align: center;
+  }
+
+  .footer .copyright .logo-unibo, .footer-plain .copyright .logo-unibo {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: auto auto .9375em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+.footer .copyright, .footer-plain .copyright {
+  padding: 1.875em;
+}
 }

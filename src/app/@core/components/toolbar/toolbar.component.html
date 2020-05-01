@@ -4,10 +4,21 @@
       <span id='breadcrumbs-{{pathElement}}' class="breadcrumbs"><a [routerLink]="'/'+pathElement | lowercase">{{pathElement}}</a></span>
       <span *ngIf="appPath.indexOf(pathElement)!==appPath.length-1" class="breadcrumbs breadcrumbSeparator">/</span>
     </div>
-    <div id="login" class="tool-log">
-      <label *ngIf="jwtTokenService.getToken()" id="logged-user">{{this.jwtTokenService.getUser()}}</label>
+    <div id="login" class="tool-login">
       <button *ngIf="!jwtTokenService.getToken()" type="button" id="login-button" class="btn btn-custom-blue" routerLink="/login">Accedi</button>
       <button *ngIf="jwtTokenService.getToken()" type="button" id="logout-button" class="btn btn-custom-blue" (click)="logOut()">Esci</button>
+    </div>
+  </div>
+  <div *ngIf="jwtTokenService.getToken()" class="row">
+    <div id="logged-info" class="tool-logged">
+      <button *ngIf="backButton" type="button" id="back-button" class="btn btn-success" [routerLink]=backButton[0]><i class="fa fa-arrow-left"></i> {{this.backButton[1]}}</button>
+
+<!--        <label id="logged-user" class="toolbar-username">-->
+<!--        Accesso come:-->
+<!--        <span *ngIf="jwtTokenService.getUser()!=='admin'"><b>student</b></span>-->
+<!--        <span *ngIf="jwtTokenService.getUser()==='admin'"><b>admin</b></span>-->
+<!--        </label>-->
+      <button *ngIf="nextButton" type="button" id="next-button" class="btn btn-success" [routerLink]=nextButton[0]>{{this.nextButton[1]}} <i class="fa fa-arrow-right"></i></button>
     </div>
   </div>
 </div>

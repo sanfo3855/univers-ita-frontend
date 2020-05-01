@@ -11,19 +11,21 @@ import {CoreModule} from './@core/core.module';
 import {RedirectGuard} from './@core/services/redirect-guard/redirect-guard.service';
 import {AppHomeComponent} from './pages/app-home/app-home.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {AuthorizeGuard} from './@core/services/authorize-guard/authorize.guard';
+import {AuthorizeAdminGuard} from './@core/services/authorize-guard/authorize-admin.guard';
+import {AuthorizeStudentGuard} from './@core/services/authorize-guard/authorize-student.guard';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {CustomInterceptor} from './@core/services/backend-api/backend-api.service';
 import { HttpClientModule } from '@angular/common/http';
+import {LoggedGuard} from './@core/services/logged-guard/logged.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'app-home', pathMatch: 'full'},
   {path: 'home', canActivate: [RedirectGuard], component: RedirectGuard, data : {externalUrl: 'https://site.unibo.it/univers-ita'}},
   {path: 'app-home', component: AppHomeComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'admin', component: AdminComponent, canActivate:[AuthorizeGuard]},
-  {path: 'survey', component: SurveyComponent, canActivate: [AuthorizeGuard]},
-  {path: 'writing', component: WritingComponent, canActivate: [AuthorizeGuard]},
+  {path: 'login', component: LoginComponent, canActivate: [LoggedGuard]},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthorizeAdminGuard]},
+  {path: 'survey', component: SurveyComponent, canActivate: [AuthorizeStudentGuard]},
+  {path: 'writing', component: WritingComponent, canActivate: [AuthorizeStudentGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 

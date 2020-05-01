@@ -7,7 +7,7 @@ import {JWTTokenService} from '../JWT-token/jwt-token.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthorizeGuard implements CanActivate {
+export class AuthorizeAdminGuard implements CanActivate {
   constructor(private authStorage: LocalStorageService,
               private jwtService: JWTTokenService,
               private router: Router) {
@@ -16,7 +16,7 @@ export class AuthorizeGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (this.jwtService.getUser()) {
+    if (this.jwtService.getToken() && this.jwtService.getUser() === 'admin') {
       if (this.jwtService.isTokenExpired()) {
         this.router.navigate(['login']);
         return false;
@@ -24,7 +24,7 @@ export class AuthorizeGuard implements CanActivate {
         return true;
       }
     } else {
-      this.router.navigate(['login']);
+      this.router.navigate(['app-home']);
       return false;
     }
   }

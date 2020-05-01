@@ -1,8 +1,16 @@
 <app-header></app-header>
-<app-toolbar [appPath]="['Home','App-Home','Writing']" ></app-toolbar>
-<div class="container" >
+<app-toolbar [appPath]="['Home','App-Home','Writing']" [backButton]="['/app-home','Indietro']" [nextButton]="['/survey','Vai al questionario']" ></app-toolbar>
+<div class="content-wrapper" >
   <div class="row">
-
+    <div class="col-md-12">
+      <h1>Fase 1: Scrittura</h1>
+      <p>Descrizione di cosa fare in questa fase</p>
+      <form [formGroup]="textForm">
+        <div class="text-area-wrapper">
+          <textarea id="textarea" (ngModelChange)="onSubmit()" class="form-control" formControlName="textarea" rows="10"></textarea>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>
