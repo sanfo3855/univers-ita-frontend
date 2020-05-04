@@ -1,1 +1,40 @@
-<p>question works!</p>
+<div class="row">
+  <div class="row">
+    <h3>{{question.question}}</h3>
+  </div>
+  <div class="row">
+    <form [formGroup]="form">
+      <div *ngIf="type === 'checkbox'" class="checkbox">
+        <div *ngFor="let answer of answers">
+          <input type="checkbox" (ngModelChange)="onSubmit(answer.answer)" formControlName="value"
+                 id="check-question-{{question.num}}-answer-{{answer.num}}">
+          <label for="check-question-{{question.num}}-answer-{{answer.num}}">
+            {{answer.answer}}
+          </label>
+        </div>
+      </div>
+      <div *ngIf="type === 'radiobutton'" class="radio">
+        <div *ngFor="let answer of answers">
+          <input type="radio" (ngModelChange)="onSubmit(answer.answer)" name="value" formControlName="value"
+                 id="radio-question-{{question.num}}-answer-{{answer.num}}" value="{{answer.answer}}">
+          <label for="radio-question-{{question.num}}-answer-{{answer.num}}">
+            {{answer.answer}}
+          </label>
+        </div>
+      </div>
+      <div *ngIf="type === 'textbox'">
+        <input type="text" class="form-control" (ngModelChange)="onSubmit('')"
+               formControlName="value" id="textbox-question-{{question.num}}">
+        <label for="textbox-question-{{question.num}}"></label>
+      </div>
+      <div *ngIf="type === 'select'">
+        <label>
+          <select class="form-control" formControlName="value" (ngModelChange)="onSubmit('')">
+            <option *ngFor="let answer of answers" [ngValue]="answer.answer">{{answer.answer}}</option>
+          </select>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
+

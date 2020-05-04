@@ -1,6 +1,7 @@
 import {Component, Input, OnInit } from '@angular/core';
 import {JWTTokenService} from '../../services/JWT-token/jwt-token.service';
 import {Router} from '@angular/router';
+import {LocalStorageService} from '../../services/local-storage/local-storage.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -15,6 +16,7 @@ export class ToolbarComponent implements OnInit {
 
 
   constructor(public jwtTokenService: JWTTokenService,
+              private localStorage: LocalStorageService,
               private router: Router) {
   }
 
@@ -24,6 +26,8 @@ export class ToolbarComponent implements OnInit {
 
   logOut(): void {
     this.jwtTokenService.resetToken();
+    this.localStorage.remove('writing-text');
+    this.localStorage.remove('questions');
     this.router.navigate(['/app-home']);
   }
 

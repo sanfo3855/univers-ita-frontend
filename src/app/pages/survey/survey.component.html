@@ -1,7 +1,28 @@
 <app-header></app-header>
-<app-toolbar [appPath]="['Home','App-Home','Writing','Survey']" [backButton]="['/writing','Scrittura']" [nextButton]="['/end','Termina']"></app-toolbar>
+<app-toolbar [appPath]="['Home','App-Home','Writing','Survey']" [backButton]="['/writing','Scrittura']"
+             [nextButton]="['/end','Termina']"></app-toolbar>
 <div class="container">
   <div class="row">
+    <div class="row row-question">
+      <app-question [question]="{'question':'Domandina 1','num':1}" [type]="'checkbox'"
+                    [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
+    </div>
+    <div class="row row-question">
+      <app-question [question]="{'question':'Domandina 2','num':2}" [type]="'radiobutton'"
+                    [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
+    </div>
+    <div class="row row-question">
+      <app-question [question]="{'question':'Domandina 3','num':3}" [type]="'radiobutton'"
+                    [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
+    </div>
+    <div class="row row-question">
+      <app-question [question]="{'question':'Domandina 4','num':4}" [type]="'textbox'"
+                    [answers]=""></app-question>
+    </div>
+    <div class="row row-question">
+      <app-question [question]="{'question':'Domandina 5','num':5}" [type]="'select'"
+                    [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>
