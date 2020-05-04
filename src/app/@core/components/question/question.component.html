@@ -6,7 +6,7 @@
     <form [formGroup]="form">
       <div *ngIf="type === 'checkbox'" class="checkbox">
         <div *ngFor="let answer of answers">
-          <input type="checkbox" (ngModelChange)="onSubmit(answer.answer)" formControlName="value"
+          <input type="checkbox" (ngModelChange)="onSubmit(answer.answer, answer.num)" formControlName="{{answer.num}}"
                  id="check-question-{{question.num}}-answer-{{answer.num}}">
           <label for="check-question-{{question.num}}-answer-{{answer.num}}">
             {{answer.answer}}
@@ -23,13 +23,13 @@
         </div>
       </div>
       <div *ngIf="type === 'textbox'">
-        <input type="text" class="form-control" (ngModelChange)="onSubmit('')"
+        <input type="text" class="form-control" (ngModelChange)="onSubmit()"
                formControlName="value" id="textbox-question-{{question.num}}">
         <label for="textbox-question-{{question.num}}"></label>
       </div>
       <div *ngIf="type === 'select'">
         <label>
-          <select class="form-control" formControlName="value" (ngModelChange)="onSubmit('')">
+          <select class="form-control" formControlName="value" (ngModelChange)="onSubmit()">
             <option *ngFor="let answer of answers" [ngValue]="answer.answer">{{answer.answer}}</option>
           </select>
         </label>

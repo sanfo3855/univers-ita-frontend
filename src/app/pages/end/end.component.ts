@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LocalStorageService} from '../../@core/services/local-storage/local-storage.service';
 
 @Component({
   selector: 'app-end',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EndComponent implements OnInit {
 
-  constructor() { }
+  constructor(public localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
   }
