@@ -1,21 +1,7 @@
-h1 {
-  font-size: 2em;
-  line-height: 40px;
-  margin-top: .46875em;
-  margin-bottom: .46875em;
-  color: #00436A;
-  font-family: ProximaNova,Opensans,Verdana,Geneva,Tahoma,sans-serif;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 textarea {
   width: 100%;
   padding: 15px;
   margin: 15px 0px;
   resize: none;
+  white-space: pre-line;
 }
