@@ -26,7 +26,7 @@ export class QuestionComponent implements OnInit {
     const savedResponse = this.getLocalStorageQuestion().answer ? this.getLocalStorageQuestion().answer : '';
     let answerControlOption = {};
     if (this.type === 'checkbox') {
-      console.log(savedResponse);
+      // console.log(savedResponse);
       for (const answer of this.answers) {
         answerControlOption[answer.num] = new FormControl(false);
         for (const item of savedResponse) {
@@ -35,17 +35,18 @@ export class QuestionComponent implements OnInit {
           }
         }
       }
-    } else if (this.type === 'radiobutton' || this.type === 'textbox') {
-      console.log(savedResponse[0]);
-      answerControlOption = {
-        value: new FormControl(savedResponse[0])
-      };
-    } else if (this.type === 'select') {
-      console.log(savedResponse[0]);
+    } else if (this.type === 'radiobutton' || this.type === 'textbox' || this.type === 'select') {
+      // console.log(savedResponse[0]);
       answerControlOption = {
         value: new FormControl(savedResponse[0])
       };
     }
+    // else if (this.type === 'select') {
+    //   // console.log(savedResponse[0]);
+    //   answerControlOption = {
+    //     value: new FormControl(savedResponse[0])
+    //   };
+    // }
     this.form = new FormGroup(answerControlOption);
   }
 
@@ -69,17 +70,13 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('localStorage ' + this.type);
     this.initializeLocalStorage();
-    console.log('form');
     this.initializeForm();
-    console.log('localStorageAnswer');
     this.resumeLocalStorageAnswer();
   }
 
   onSubmit(response?: string, n?: number) {
     if (this.type === 'checkbox') {
-      console.log(this.form.value);
       if (this.form.value[n]) {
         if (!this.values) {
           this.values = [];
@@ -88,13 +85,11 @@ export class QuestionComponent implements OnInit {
       } else {
         this.values = this.values.filter((val, i, arr) => {
           if (val !== response) {
-            console.log('Keeping ' + val);
             return val;
           }
         });
       }
     } else if (this.type === 'radiobutton' || this.type === 'textbox' || this.type === 'select') {
-      console.log(this.form.value.value);
       this.values = [this.form.value.value];
     }
     console.log('Updated ' + this.question.question + ': ' + this.values);

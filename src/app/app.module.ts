@@ -9,11 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { RedirectGuard } from './@core/services/redirect-guard/redirect-guard.service';
 import { AppHomeComponent } from './pages/app-home/app-home.component';
 import { EndComponent } from './pages/end/end.component';
+import {TimerService} from './@core/services/timer/timer.service';
 
 @NgModule({
   declarations: [AppComponent, AppHomeComponent, EndComponent],
   imports: [CoreModule, BrowserModule, FormsModule, AppRoutingModule],
-  providers: [RedirectGuard],
+  providers: [RedirectGuard, TimerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,41 +1,71 @@
-<app-header></app-header>
-<app-toolbar [appPath]="['Home','App-Home']" [nextButton]="['/writing','Vai alla Scrittura']"></app-toolbar>
-<div id="u-content-wrapper" class="content-wrapper">
-  <div class="row">
-    <div class="col-md-9">
-      <h1>Raccolta dati UniverS-ITA</h1>
-      <p>Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in particolare,
-      negli studenti universitari, è stato al centro di un dibattito molto acceso. L’attenzione si è concentrata sugli
-      universitari perché, tra i giovani, essi rappresentano lo strato teoricamente più ‘colto’, più esposto a usi formali
-      della lingua, sia nello scritto che nel parlato, e, dunque, più competente della varietà standard. È quindi evidente
-      come sistematiche deviazioni rispetto allo standard da parte degli universitari acquistino un significato particolare.
-      La sensazione di un declino nelle competenze linguistiche degli studenti universitari è spesso basata su intuizioni
-      ed esperienze di carattere personale e su testi non riconducibili a un campione davvero rappresentativo della
-      popolazione universitaria, quindi su dati certo significativi, ma non generalizzabili.<br>
-      Il progetto ha lo scopo di tracciare un profilo esaustivo dell’italiano scritto degli studenti universitari,
-      analizzando la produzione scritta formale e informale di un campione rappresentativo di almeno 3000 studenti
-      universitari di diverse sedi. L’analisi verrà condotta in prospettiva sia sociolinguistica, sia tipologica, allo
-      scopo di individuare i tratti peculiari dell’italiano degli universitari e di poter progettare interventi didattici
-      mirati a rafforzare le aree oggettivamente più deboli della loro competenza.<br>
-      Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in particolare,
-      negli studenti universitari, è stato al centro di un dibattito molto acceso. L’attenzione si è concentrata sugli
-      universitari perché, tra i giovani, essi rappresentano lo strato teoricamente più ‘colto’, più esposto a usi formali
-      della lingua, sia nello scritto che nel parlato, e, dunque, più competente della varietà standard. È quindi evidente
-      come sistematiche deviazioni rispetto allo standard da parte degli universitari acquistino un significato particolare.
-      La sensazione di un declino nelle competenze linguistiche degli studenti universitari è spesso basata su intuizioni
-      ed esperienze di carattere personale e su testi non riconducibili a un campione davvero rappresentativo della
-      popolazione universitaria, quindi su dati certo significativi, ma non generalizzabili.<br>
-      Il progetto ha lo scopo di tracciare un profilo esaustivo dell’italiano scritto degli studenti universitari,
-      analizzando la produzione scritta formale e informale di un campione rappresentativo di almeno 3000 studenti
-      universitari di diverse sedi. L’analisi verrà condotta in prospettiva sia sociolinguistica, sia tipologica, allo
-      scopo di individuare i tratti peculiari dell’italiano degli universitari e di poter progettare interventi didattici
-      mirati a rafforzare le aree oggettivamente più deboli della loro competenza.</p>
-    </div>
-    <div *ngIf="!jwtTokenService.getToken()" class="col-md-3">
-      <h1>Accesso</h1>
-      <app-login-form></app-login-form>
+<div class="body-overflow">
+  <app-header></app-header>
+  <app-toolbar [appPath]="['Home','App-Home']" [nextButton]="['/writing','Vai alla Scrittura']"></app-toolbar>
+  <div id="u-content-wrapper" class="content-wrapper">
+    <div class="row">
+      <div *ngIf="!this.jwtTokenService.getToken()" class="col-md-9">
+        <h1>Raccolta dati UniverS-ITA</h1>
+        <p>Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in
+          particolare, negli studenti universitari, è stato al centro di un dibattito molto acceso. L’attenzione si è
+          concentrata sugli universitari perché, tra i giovani, essi rappresentano lo strato teoricamente più ‘colto’,
+          più esposto a usi formali della lingua, sia nello scritto che nel parlato, e, dunque, più competente della
+          varietà standard. È quindi evidente come sistematiche deviazioni rispetto allo standard da parte degli
+          universitari acquistino un significato particolare.
+          <br>La sensazione di un declino nelle competenze linguistiche degli studenti universitari è spesso basata su
+          intuizioni ed esperienze di carattere personale e su testi non riconducibili a un campione davvero
+          rappresentativo della popolazione universitaria, quindi su dati certo significativi, ma non generalizzabili.
+          Il progetto ha lo scopo di tracciare un profilo esaustivo dell’italiano scritto degli studenti universitari,
+          analizzando la produzione scritta formale e informale di un campione rappresentativo di almeno 3000 studenti
+          universitari di diverse sedi. L’analisi verrà condotta in prospettiva sia sociolinguistica, sia tipologica,
+          allo scopo di individuare i tratti peculiari dell’italiano degli universitari e di poter progettare interventi
+          didattici mirati a rafforzare le aree oggettivamente più deboli della loro competenza.
+          <br>Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in
+          particolare, negli studenti universitari, è stato al centro di un dibattito molto acceso. L’attenzione si è
+          concentrata sugli universitari perché, tra i giovani, essi rappresentano lo strato teoricamente più ‘colto’,
+          più esposto a usi formali della lingua, sia nello scritto che nel parlato, e, dunque, più competente della
+          varietà standard.
+          <br>È quindi evidente come sistematiche deviazioni rispetto allo standard da parte degli universitari acquistino
+          un significato particolare. La sensazione di un declino nelle competenze linguistiche degli studenti
+          universitari è spesso basata su intuizioni ed esperienze di carattere personale e su testi non riconducibili a
+          un campione davvero rappresentativo della popolazione universitaria, quindi su dati certo significativi, ma
+          non generalizzabili.</p>
+      </div>
+      <div *ngIf="!jwtTokenService.getToken()" class="col-md-3">
+        <h1>Accesso</h1>
+        <app-login-form></app-login-form>
+      </div>
+      <div *ngIf="this.jwtTokenService.getToken()" class="col-md-12">
+        <h1>Raccolta dati UniverS-ITA</h1>
+        <p>Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in
+          particolare, negli studenti universitari, è stato al centro di un dibattito molto acceso. L’attenzione si è
+          concentrata sugli universitari perché, tra i giovani, essi rappresentano lo strato teoricamente più ‘colto’,
+          più esposto a usi formali della lingua, sia nello scritto che nel parlato, e, dunque, più competente della
+          varietà standard. È quindi evidente come sistematiche deviazioni rispetto allo standard da parte degli
+          universitari acquistino un significato particolare.
+          <br>
+          La sensazione di un declino nelle competenze linguistiche degli studenti universitari è spesso basata su
+          intuizioni ed esperienze di carattere personale e su testi non riconducibili a un campione davvero
+          rappresentativo della popolazione universitaria, quindi su dati certo significativi, ma non generalizzabili.
+          Il progetto ha lo scopo di tracciare un profilo esaustivo dell’italiano scritto degli studenti universitari,
+          analizzando la produzione scritta formale e informale di un campione rappresentativo di almeno 3000 studenti
+          universitari di diverse sedi. L’analisi verrà condotta in prospettiva sia sociolinguistica, sia tipologica,
+          allo scopo di individuare i tratti peculiari dell’italiano degli universitari e di poter progettare interventi
+          didattici mirati a rafforzare le aree oggettivamente più deboli della loro competenza.
+          <br>
+          Negli ultimi tempi lo stato di salute dell’italiano, soprattutto nelle generazioni più giovani e, in
+          particolare, negli studenti universitari, è stato al centro di un dibattito molto acceso. L’attenzione si è
+          concentrata sugli universitari perché, tra i giovani, essi rappresentano lo strato teoricamente più ‘colto’,
+          più esposto a usi formali della lingua, sia nello scritto che nel parlato, e, dunque, più competente della
+          varietà standard.
+          <br>
+          È quindi evidente come sistematiche deviazioni rispetto allo standard da parte degli universitari acquistino
+          un significato particolare. La sensazione di un declino nelle competenze linguistiche degli studenti
+          universitari è spesso basata su intuizioni ed esperienze di carattere personale e su testi non riconducibili a
+          un campione davvero rappresentativo della popolazione universitaria, quindi su dati certo significativi, ma
+          non generalizzabili.</p>
+      </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
 <router-outlet></router-outlet>

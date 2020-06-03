@@ -5,3 +5,15 @@ textarea {
   resize: none;
   white-space: pre-line;
 }
+
+.timer, .word-counter {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.timer-group {
+  padding-top: 25px;
+}
+.word-counter-group {
+  padding-top: 5px;
+}

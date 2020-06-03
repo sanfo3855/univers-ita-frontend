@@ -16,6 +16,8 @@ export class LoginFormComponent implements OnInit {
     password: new FormControl('')
   });
 
+  loginError = '';
+
   constructor(private backendApiService: BackendApiService,
               private jwtTokenService: JWTTokenService,
               private router: Router) {
@@ -26,14 +28,23 @@ export class LoginFormComponent implements OnInit {
 
   onSubmit() {
     const formValues = this.loginForm.value;
-    this.backendApiService.checkLogin(formValues.username, formValues.password).subscribe(data => {
-      if (data.success) {
-        this.jwtTokenService.setToken(data.token);
-        this.router.navigate(['/app-home']);
-      } else {
-
-      }
-    });
+    if (formValues.username !== '' && formValues.password !== '') {
+      this.backendApiService.checkLogin(formValues.username, formValues.password).subscribe(data => {
+        if (data.success) {
+          this.jwtTokenService.setToken(data.token);
+          if (this.jwtTokenService.getDecodedToken().type === 'student') {
+            this.router.navigate(['/app-home']);
+          } else if (this.jwtTokenService.getDecodedToken().type === 'admin') {
+            this.router.navigate(['/admin']);
+          }
+        } else {
+          console.log(data.err);
+          this.loginError = data.err;
+        }
+      });
+    } else {
+      this.loginError = 'Inserisci entrambe le credenziali';
+    }
   }
 
 }

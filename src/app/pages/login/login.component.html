@@ -1,16 +1,18 @@
-<app-header></app-header>
-<app-toolbar [appPath]="['Home','App-Home','Login']"></app-toolbar>
-<div class="content-wrapper">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        <h1>Accedi ad UniverS-ita</h1>
-      </div>
-      <div class="row">
-        <app-login-form></app-login-form>
+<div class="body-overflow">
+  <app-header></app-header>
+  <app-toolbar [appPath]="['Home','App-Home','Login']"></app-toolbar>
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <h1>Accedi ad UniverS-ita</h1>
+        </div>
+        <div class="row">
+          <app-login-form></app-login-form>
+        </div>
       </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
 <router-outlet></router-outlet>

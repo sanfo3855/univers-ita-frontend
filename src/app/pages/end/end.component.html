@@ -1,23 +1,25 @@
-<app-header></app-header>
-<app-toolbar [appPath]="['Home','App-Home','Writing','Survey','End']" [backButton]="['/survey','Questionario']"
-             [nextButton]=""></app-toolbar>
-<div class="content-wrapper">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Fase 3: Riepilogo</h1>
-      <h2>Testo scritto</h2>
-      <div class="row">
-        <div class="text-container">
-          <p>{{this.writingText.text}}</p>
-        </div>
-      </div>
-      <br>
-      <h2>Risposte al Questionario</h2>
-      <div *ngFor="let question of this.questions | keyvalue">
+<div class="body-overflow">
+  <app-header></app-header>
+  <app-toolbar [appPath]="['Home','App-Home','Writing','Survey','End']" [backButton]="['/survey','Questionario']"
+               [nextButton]=""  [submitButton]="['','Conferma']"></app-toolbar>
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Fase 3: Riepilogo</h1>
+        <h2>Testo scritto</h2>
         <div class="row">
-          <h5>{{question.key}}) {{question.value.question}}</h5>
-          <div class="row text-container">
-            <p>{{question.value.answer}}</p>
+          <div class="text-container">
+            <p>{{this.writingText.text}}</p>
+          </div>
+        </div>
+        <br>
+        <h2>Risposte al Questionario</h2>
+        <div *ngFor="let question of this.questions | keyvalue">
+          <div class="row">
+            <h5>{{question.key}}) {{question.value.question}}</h5>
+            <div class="row text-container">
+              <p>{{question.value.answer}}</p>
+            </div>
           </div>
         </div>
       </div>
