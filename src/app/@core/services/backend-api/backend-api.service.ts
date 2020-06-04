@@ -1,5 +1,12 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpEvent,
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest
+} from '@angular/common/http';
 import {environment} from '../../../../environments/environment';
 import {Observable, throwError} from 'rxjs';
 import {JWTTokenService} from '../JWT-token/jwt-token.service';
@@ -42,6 +49,26 @@ export class BackendApiService {
     return this.http.post<any>(this.userEndpoint + '/check', credentials)
       .pipe(catchError(BackendApiService.handleError));
   }
+
+  public getUsers(): Observable<any> {
+    return this.http.get<any>(this.userEndpoint + '/all')
+      .pipe(catchError(BackendApiService.handleError));
+  }
+
+  public createUser(user: string, pass: string, typ: string) {
+    return this.http.post(this.userEndpoint + '/create', {username: user, password: pass, type: typ})
+      .pipe(catchError(BackendApiService.handleError));
+  }
+
+  public deleteUser(user: string) {
+    return this.http.post(this.userEndpoint + '/delete', {username: user})
+      .pipe(catchError(BackendApiService.handleError));
+  }
+
+  public changeValidity(user: string, value: boolean) {
+    return this.http.post(this.userEndpoint + '/change-validity', {username: user, validity: value})
+      .pipe(catchError(BackendApiService.handleError));
+  }
 }
 
 @Injectable()
@@ -57,7 +84,7 @@ export class CustomInterceptor implements HttpInterceptor {
     }
 
     req = req.clone({headers: req.headers.set('Accept', 'application/json')});
-    if (this.jwtTokenService.jwtToken){
+    if (this.jwtTokenService.jwtToken) {
       req = req.clone({headers: req.headers.set('Authorization', 'Bearer ' + this.jwtTokenService.getToken())});
     } else {
 

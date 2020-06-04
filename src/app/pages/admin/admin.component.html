@@ -3,7 +3,34 @@
   <app-toolbar [appPath]="['Home','Admin']"></app-toolbar>
   <div class="container">
     <div class="row">
-
+      <app-create-user-form></app-create-user-form>
+    </div>
+    <div class="row">
+        <h3 class="title">Utenti presenti</h3>
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Attivo</th>
+            <th scope="col"></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of this.users; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{user.username}}</td>
+            <td>{{user.type}}</td>
+            <td>{{user.validity}}</td>
+            <td>
+              <button *ngIf="user.validity==='Si'" class="btn btn-secondary" (click)="changeValidity(user.username,false)">Disattiva <i class="fa fa-edit"></i></button>
+              <button *ngIf="user.validity==='No'" class="btn btn-success" (click)="changeValidity(user.username,true)">Riattiva <i class="fa fa-play"></i></button>
+              <button class="btn btn-danger" (click)="delete(user.username)">Elimina <i class="fa fa-trash"></i></button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
     </div>
   </div>
   <app-footer></app-footer>

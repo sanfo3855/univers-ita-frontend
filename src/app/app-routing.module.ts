@@ -18,6 +18,8 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {CustomInterceptor} from './@core/services/backend-api/backend-api.service';
 import {HttpClientModule} from '@angular/common/http';
 import {LoggedGuard} from './@core/services/logged-guard/logged.guard';
+import {StatsComponent} from './pages/stats/stats.component';
+import {CommonModule} from "@angular/common";
 
 const routes: Routes = [
   {path: '', redirectTo: 'app-home', pathMatch: 'full'},
@@ -28,12 +30,13 @@ const routes: Routes = [
   {path: 'survey', component: SurveyComponent, canActivate: [AuthorizeStudentGuard]},
   {path: 'writing', component: WritingComponent, canActivate: [AuthorizeStudentGuard]},
   {path: 'end', component: EndComponent, canActivate: [AuthorizeStudentGuard]},
+  {path: 'stats', component: StatsComponent, canActivate: [AuthorizeAdminGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
   declarations: [LoginComponent, AdminComponent, SurveyComponent, WritingComponent, PageNotFoundComponent],
-  imports: [RouterModule.forRoot(routes), CoreModule, ReactiveFormsModule, HttpClientModule],
+  imports: [RouterModule.forRoot(routes), CoreModule, ReactiveFormsModule, HttpClientModule, CommonModule],
   exports: [RouterModule],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true}]
 })

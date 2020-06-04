@@ -9,13 +9,14 @@ import {RouterModule} from '@angular/router';
 import {QuestionComponent} from './components/question/question.component';
 import {LoginFormComponent} from './components/login-form/login-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
 
 
 @NgModule({
   providers: [],
-  exports: [HeaderComponent, FooterComponent, ToolbarComponent, QuestionComponent, LoginFormComponent],
+    exports: [HeaderComponent, FooterComponent, ToolbarComponent, QuestionComponent, LoginFormComponent, CreateUserFormComponent],
   imports: [CommonModule, RouterModule, ReactiveFormsModule],
-  declarations: [FooterComponent, HeaderComponent, ToolbarComponent, QuestionComponent, LoginFormComponent]
+  declarations: [FooterComponent, HeaderComponent, ToolbarComponent, QuestionComponent, LoginFormComponent, CreateUserFormComponent]
 })
 
 export class CoreModule {
