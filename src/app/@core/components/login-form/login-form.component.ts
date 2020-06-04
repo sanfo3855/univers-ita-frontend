@@ -29,7 +29,7 @@ export class LoginFormComponent implements OnInit {
   onSubmit() {
     const formValues = this.loginForm.value;
     if (formValues.username !== '' && formValues.password !== '') {
-      this.backendApiService.checkLogin(formValues.username, formValues.password).subscribe(data => {
+      this.backendApiService.checkLogin(formValues.username, formValues.password).subscribe((data) => {
         if (data.success) {
           this.jwtTokenService.setToken(data.token);
           if (this.jwtTokenService.getDecodedToken().type === 'student') {

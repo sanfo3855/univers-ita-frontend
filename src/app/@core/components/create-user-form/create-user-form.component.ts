@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {BackendApiService} from '../../services/backend-api/backend-api.service';
 import {JWTTokenService} from '../../services/JWT-token/jwt-token.service';
 import {Router} from '@angular/router';
+import {Location} from '@angular/common';
 // import {AdminComponent} from "../../../pages/admin/admin.component";
 
 @Component({
@@ -18,6 +19,8 @@ export class CreateUserFormComponent implements OnInit {
     type: new FormControl('')
   });
 
+  createUserError = '';
+
   constructor(private backendApiService: BackendApiService,
               private jwtTokenService: JWTTokenService,
               private router: Router) {
@@ -28,13 +31,25 @@ export class CreateUserFormComponent implements OnInit {
 
   onSubmit(): void {
     const formValues = this.createUserForm.value;
-    this.backendApiService.createUser(
-      formValues.username,
-      formValues.password,
-      formValues.type === 'Amministratore' ? 'admin' : 'student'
-    ).subscribe( response => {
-      console.log(response);
-    });
+    if (formValues.username === '' || formValues.password === '' || formValues.type === '') {
+      this.createUserError = 'Riempire tutti i campi';
+    } else {
+      this.backendApiService.createUser(
+        formValues.username,
+        formValues.password,
+        formValues.type === 'Amministratore' ? 'admin' : 'student'
+      ).subscribe((response) => {
+        if (response.success) {
+          console.log('success');
+          this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+            this.router.navigate(['/admin']);
+          });
+        } else {
+          console.log(response.err);
+          this.createUserError = response.err;
+        }
+      });
+    }
   }
 
 }

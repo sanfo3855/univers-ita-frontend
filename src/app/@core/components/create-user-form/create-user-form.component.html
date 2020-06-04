@@ -1,13 +1,15 @@
-<h3 class="title">Crea utente</h3>
+<h3 class="title">Aggiungi utente</h3>
 <div class="row">
   <form [formGroup]="createUserForm" class="form-inline" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="username-input">Username </label>
-      <input id="username-input" type="text" placeholder="Inserisci l'username" class="form-control" formControlName="username">
+      <input id="username-input" type="text" placeholder="Inserisci l'username" class="form-control"
+             formControlName="username">
     </div>
     <div class="form-group">
       <label for="password-input">Password </label>
-      <input id="password-input" type="password" placeholder="Inserisci la password" class="form-control" formControlName="password">
+      <input id="password-input" type="password" placeholder="Inserisci la password" class="form-control"
+             formControlName="password">
     </div>
     <div class="form-group">
       <label for="type-select">Tipo</label>
@@ -18,6 +20,9 @@
       </select>
     </div>
 
-    <button type="submit" [disabled]="!createUserForm.valid" class="btn btn-success">Crea Utente</button>
+    <button type="submit" [disabled]="!createUserForm.valid" class="btn btn-primary">Crea Utente</button>
   </form>
+</div>
+<div *ngIf="createUserError !== ''" class="row">
+  <label class="create-error">{{createUserError}}</label>
 </div>
