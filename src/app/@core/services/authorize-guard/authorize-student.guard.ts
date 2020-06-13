@@ -16,7 +16,7 @@ export class AuthorizeStudentGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (this.jwtService.getToken() && this.jwtService.getUser() !== 'admin') {
+    if (this.jwtService.getToken() && this.jwtService.getType() === 'student') {
       if (this.jwtService.isTokenExpired()) {
         this.router.navigate(['login']);
         return false;

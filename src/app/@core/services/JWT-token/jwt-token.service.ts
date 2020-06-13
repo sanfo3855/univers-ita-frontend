@@ -56,6 +56,11 @@ export class JWTTokenService {
     return this.decodedToken ? this.decodedToken.username : null;
   }
 
+  getType() {
+    this.decodeToken();
+    return this.decodedToken ? this.decodedToken.type : null;
+  }
+
   getExpiryTime() {
     this.decodeToken();
     return this.decodedToken ? this.decodedToken.exp : null;
@@ -64,7 +69,7 @@ export class JWTTokenService {
   isTokenExpired(): boolean {
     const expiryTime: number = Number(this.getExpiryTime());
     if (expiryTime) {
-      return ((1000 * expiryTime) - (new Date()).getTime()) < 5000;
+      return ((1000 * expiryTime) - (new Date()).getTime()) < 0;
     } else {
       return false;
     }
