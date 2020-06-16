@@ -14,8 +14,7 @@ export class LoggedGuard implements CanActivate {
   constructor(private jwtTokenService: JWTTokenService,
               private router: Router,
               private localStorage: LocalStorageService,
-              private timer: TimerService,
-              private window: Window){
+              private timer: TimerService){
 
   }
 
@@ -24,7 +23,6 @@ export class LoggedGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     this.jwtTokenService.getToken();
     this.jwtTokenService.decodeToken();
-    console.log(this.jwtTokenService.getExpiryTime());
     if (this.jwtTokenService.isTokenExpired()) {
       this.jwtTokenService.resetToken();
       this.localStorage.remove('writing-text');

@@ -37,10 +37,9 @@ export class CreateUserFormComponent implements OnInit {
       this.backendApiService.createUser(
         formValues.username,
         formValues.password,
-        formValues.type === 'Amministratore' ? 'admin' : 'student'
+        formValues.type
       ).subscribe((response) => {
         if (response.success) {
-          console.log('success');
           this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
             this.router.navigate(['/admin']);
           });

@@ -55,17 +55,17 @@ export class BackendApiService {
       .pipe(catchError(BackendApiService.handleError));
   }
 
-  public createUser(user: string, pass: string, typ: string):  Observable<any>  {
+  public createUser(user: string, pass: string, typ: string): Observable<any> {
     return this.http.post(this.userEndpoint + '/create', {username: user, password: pass, type: typ})
       .pipe(catchError(BackendApiService.handleError));
   }
 
-  public deleteUser(user: string): Observable<any>  {
+  public deleteUser(user: string): Observable<any> {
     return this.http.post(this.userEndpoint + '/delete', {username: user})
       .pipe(catchError(BackendApiService.handleError));
   }
 
-  public changeValidity(user: string, value: boolean): Observable<any>  {
+  public changeValidity(user: string, value: boolean): Observable<any> {
     return this.http.post(this.userEndpoint + '/change-validity', {username: user, validity: value})
       .pipe(catchError(BackendApiService.handleError));
   }
