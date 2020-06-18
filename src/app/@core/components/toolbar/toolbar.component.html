@@ -12,14 +12,16 @@
   <div *ngIf="jwtTokenService.getToken() && jwtTokenService.getDecodedToken().type === 'student'" class="row">
     <div id="logged-info" class="tool-logged">
       <button *ngIf="backButton" type="button" id="back-button" class="btn btn-success" [routerLink]=backButton[0]><i class="fa fa-arrow-left"></i> {{this.backButton[1]}}</button>
-      <button *ngIf="nextButton" type="button" id="next-button" class="btn btn-success" [routerLink]=nextButton[0]>{{this.nextButton[1]}} <i class="fa fa-arrow-right"></i></button>
-      <button *ngIf="submitButton" type="button" id="submit-button" class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>
+      <button *ngIf="nextButton && !isDisabled()" type="button" id="next-button-enabled" class="btn btn-success" [routerLink]=nextButton[0]>{{this.nextButton[1]}} <i class="fa fa-arrow-right"></i></button>
+      <button *ngIf="nextButton && isDisabled()" type="button" id="next-button-disabled" disabled class="btn btn-success" [routerLink]=nextButton[0]>{{this.nextButton[1]}} <i class="fa fa-arrow-right"></i></button>
+      <button *ngIf="submitButton && !isDisabled()" type="button" id="submit-button-enabled" class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>
+      <button *ngIf="submitButton && isDisabled()" type="button" id="submit-button-disabled" disabled class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>
     </div>
   </div>
   <div *ngIf="jwtTokenService.getToken() && jwtTokenService.getDecodedToken().type === 'admin'" class="row">
     <div id="admin-data" class="tool-logged">
       <button type="button" id="admin-page-button" class="btn btn-success" routerLink="/admin">Pagina Amministratore</button>
-      <button type="button" id="stats-page-button" class="btn btn-success" routerLink="/stats">Statistiche</button>
+      <button type="button" id="stats-page-button" disabled class="btn btn-success" routerLink="/stats">Statistiche</button>
 <!--      <button *ngIf="submitButton" type="button" id="submit-button" class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>-->
     </div>
   </div>

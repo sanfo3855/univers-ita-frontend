@@ -52,7 +52,7 @@ export class AdminComponent implements OnInit {
       }
     });
     this.backendApiService.changeValidity(username, value).subscribe(response => {
-      console.log(response);
+      // console.log(response);
     });
   }
 
@@ -63,7 +63,7 @@ export class AdminComponent implements OnInit {
       }
     }
     this.backendApiService.deleteUser(username).subscribe(response => {
-      console.log(response);
+      // console.log(response);
     });
   }
 }

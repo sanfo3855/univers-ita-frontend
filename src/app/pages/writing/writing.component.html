@@ -12,10 +12,15 @@
         </div>
         <div class="word-counter-group">
           Parole rimanenti: <span class="word-counter">{{this.remainingWord}}</span>
+          <div *ngIf="copyPasteError!==''" class="copyPasteError">
+            {{copyPasteError}}
+          </div>
         </div>
         <form [formGroup]="textForm">
           <div class="text-area-wrapper">
-          <textarea id="textarea" (ngModelChange)="onSubmit()" (click)="onSubmit()" class="form-control" formControlName="textarea"
+          <textarea id="textarea" (ngModelChange)="onSubmit()"
+                    (paste)="lockAction()" (copy)="lockAction()" (cut)="lockAction()"
+                    (click)="onSubmit()" class="form-control" formControlName="textarea"
                     rows="10"></textarea>
           </div>
         </form>

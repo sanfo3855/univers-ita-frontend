@@ -3,6 +3,7 @@ import {JWTTokenService} from '../../services/JWT-token/jwt-token.service';
 import {Router} from '@angular/router';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
 import {TimerService} from '../../services/timer/timer.service';
+import {isEmpty} from "rxjs/operators";
 
 @Component({
   selector: 'app-toolbar',
@@ -27,22 +28,45 @@ export class ToolbarComponent implements OnInit {
   }
 
   isDisabled() {
-    if (this.nextButton[0] === '/survey') {
-      return this.isTimeFinished();
-    } else if (this.nextButton[0] === '/end') {
-      return this.areQuestionsAnswered();
+    if (this.nextButton) {
+      if (this.nextButton[0] === '/survey') {
+        return !this.isTimeFinished();
+      } else if (this.nextButton[0] === '/end') {
+        return !this.areQuestionsAnswered();
+      } else if (this.nextButton[0] === '/writing') {
+        return false;
+      }
+    } else if (this.submitButton) {
+      return !this.areQuestionsAnswered() && !this.areTextFilled();
     }
   }
 
   isTimeFinished() {
-    return this.localStorage.get('time') ? (this.localStorage.get('time') === '0') : true;
+    if (this.localStorage.get('time')) {
+      return this.localStorage.get('time') === '0';
+    }
   }
 
   areQuestionsAnswered() {
-
-    return this.localStorage.getJSON('questions').map((key, value) => {
-
+    const jsonObj = this.localStorage.getJSON('questions');
+    // console.log(jsonObj);
+    let counterNotAnswered = 0;
+    Object.keys(jsonObj).map((key) => {
+      if (Object.keys(jsonObj[key]).length !== 0) {
+        if (jsonObj[key].answer.length === 0 || jsonObj[key].answer[0] === '') {
+          console.log('answer lunghezza 0');
+          counterNotAnswered++;
+        }
+      } else {
+        console.log('obj lunghezza 0');
+        counterNotAnswered++;
+      }
     });
+    return counterNotAnswered === 0;
+  }
+
+  areTextFilled() {
+    return this.localStorage.getJSON('text').length !== 0 && this.localStorage.getJSON('text') !== '';
   }
 
   logOut(): void {

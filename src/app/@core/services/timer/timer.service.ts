@@ -7,7 +7,7 @@ import {LocalStorageService} from '../local-storage/local-storage.service';
 })
 export class TimerService {
 
-  timeDefault = 3600;
+  timeDefault = 5;
   time: number;
   stringValue = this.getStringValue();
   interval;
