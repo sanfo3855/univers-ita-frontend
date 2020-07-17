@@ -3,7 +3,7 @@ import {JWTTokenService} from '../../services/JWT-token/jwt-token.service';
 import {Router} from '@angular/router';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
 import {TimerService} from '../../services/timer/timer.service';
-import {isEmpty} from "rxjs/operators";
+import {BackendApiService} from '../../services/backend-api/backend-api.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -20,7 +20,8 @@ export class ToolbarComponent implements OnInit {
   constructor(public jwtTokenService: JWTTokenService,
               public localStorage: LocalStorageService,
               private router: Router,
-              private timer: TimerService) {
+              private timer: TimerService,
+              private backendService: BackendApiService) {
   }
 
   ngOnInit(): void {
@@ -37,7 +38,7 @@ export class ToolbarComponent implements OnInit {
         return false;
       }
     } else if (this.submitButton) {
-      return !this.areQuestionsAnswered() && !this.areTextFilled();
+      return !this.areQuestionsAnswered();
     }
   }
 
@@ -49,7 +50,6 @@ export class ToolbarComponent implements OnInit {
 
   areQuestionsAnswered() {
     const jsonObj = this.localStorage.getJSON('questions');
-    // console.log(jsonObj);
     let counterNotAnswered = 0;
     Object.keys(jsonObj).map((key) => {
       if (Object.keys(jsonObj[key]).length !== 0) {
@@ -76,6 +76,14 @@ export class ToolbarComponent implements OnInit {
     this.localStorage.remove('time');
     this.timer.stopTimer();
     this.router.navigate(['/app-home']);
+  }
+
+  uploadTextNQuestions(): void {
+    const text = this.localStorage.getJSON('writing-text').text;
+    const questions = this.localStorage.getJSON('questions');
+    this.backendService.uploadTextNQuestion(text, questions).subscribe((data) => {
+        console.log('sent');
+    });
   }
 
 }

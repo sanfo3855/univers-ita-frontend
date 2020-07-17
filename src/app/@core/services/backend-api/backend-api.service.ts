@@ -69,6 +69,17 @@ export class BackendApiService {
     return this.http.post(this.userEndpoint + '/change-validity', {username: user, validity: value})
       .pipe(catchError(BackendApiService.handleError));
   }
+
+  public uploadTextNQuestion(writtenText: string, localAnsweredQuestions: any): Observable<any> {
+    console.log(writtenText);
+    const answeredQuestions = [];
+    Object.keys(localAnsweredQuestions).map((key) => {
+      answeredQuestions[Number(key) - 1] = localAnsweredQuestions[key];
+    });
+    console.log(answeredQuestions);
+    return this.http.post(this.textSurveyEndpoint + '/save', {text: writtenText, questions: answeredQuestions})
+      .pipe(catchError(BackendApiService.handleError));
+  }
 }
 
 @Injectable()

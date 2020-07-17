@@ -36,7 +36,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [LoginComponent, AdminComponent, SurveyComponent, WritingComponent, PageNotFoundComponent],
-  imports: [RouterModule.forRoot(routes), CoreModule, ReactiveFormsModule, HttpClientModule, CommonModule],
+  imports: [RouterModule.forRoot(routes, {useHash: true}), CoreModule, ReactiveFormsModule, HttpClientModule, CommonModule],
   exports: [RouterModule],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true}]
 })

@@ -17,8 +17,6 @@ export class EndComponent implements OnInit {
     const q = this.localStorage.get('questions');
     this.writingText = wt ? JSON.parse(wt) : {};
     this.questions = q ? JSON.parse(q) : {};
-    console.log(this.writingText);
-    console.log(this.questions);
   }
 
 }
