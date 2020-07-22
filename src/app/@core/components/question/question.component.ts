@@ -99,7 +99,7 @@ export class QuestionComponent implements OnInit {
     }
     savedQuestion[this.question.num].question = this.question.question;
     savedQuestion[this.question.num].answer = this.values;
-    console.log(savedQuestion);
+    // console.log(savedQuestion);
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
   }
 }

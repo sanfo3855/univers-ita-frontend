@@ -6,25 +6,10 @@
     <div class="row">
       <div class="col-md-12">
         <h1>Fase 2: Questionario</h1>
-        <div class="row row-question">
-          <app-question [question]="{'question':'Domandina 1','num':1}" [type]="'checkbox'"
-                        [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
-        </div>
-        <div class="row row-question">
-          <app-question [question]="{'question':'Domandina 2','num':2}" [type]="'radiobutton'"
-                        [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
-        </div>
-        <div class="row row-question">
-          <app-question [question]="{'question':'Domandina 3','num':3}" [type]="'radiobutton'"
-                        [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
-        </div>
-        <div class="row row-question">
-          <app-question [question]="{'question':'Domandina 4','num':4}" [type]="'textbox'"
-                        [answers]=""></app-question>
-        </div>
-        <div class="row row-question">
-          <app-question [question]="{'question':'Domandina 5','num':5}" [type]="'select'"
-                        [answers]="[{'answer':'Risposta 1','num':1},{'answer':'Risposta 2','num':2},{'answer':'Risposta 3','num':3}]"></app-question>
+        <div *ngFor="let item of questionObj">
+          <div class="row row-question">
+            <app-question [question]=item.question [type]=item.type [answers]=item.answers></app-question>
+          </div>
         </div>
       </div>
     </div>

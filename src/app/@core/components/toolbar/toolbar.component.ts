@@ -54,11 +54,11 @@ export class ToolbarComponent implements OnInit {
     Object.keys(jsonObj).map((key) => {
       if (Object.keys(jsonObj[key]).length !== 0) {
         if (jsonObj[key].answer.length === 0 || jsonObj[key].answer[0] === '') {
-          console.log('answer lunghezza 0');
+          // console.log('answer lunghezza 0');
           counterNotAnswered++;
         }
       } else {
-        console.log('obj lunghezza 0');
+        // console.log('obj lunghezza 0');
         counterNotAnswered++;
       }
     });

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as questionJson from '../../../assets/question-config.json';
 
 @Component({
   selector: 'app-survey',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurveyComponent implements OnInit {
 
-  constructor() { }
+  questionObj = questionJson.default;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
+
+  ngOnInit(): void {}
 
 }
