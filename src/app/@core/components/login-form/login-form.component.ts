@@ -5,7 +5,7 @@ import {JWTTokenService} from '../../services/JWT-token/jwt-token.service';
 import {ToolbarComponent} from '../toolbar/toolbar.component';
 import {Router} from '@angular/router';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
-import {TimerService} from "../../services/timer/timer.service";
+import {TimerService} from '../../services/timer/timer.service';
 
 @Component({
   selector: 'app-login-form',
