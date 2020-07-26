@@ -85,7 +85,6 @@ export class ToolbarComponent implements OnInit {
   uploadTextNQuestions(): void {
     const text = this.localStorage.getJSON('writing-text').text;
     const questions = this.localStorage.getJSON('questions');
-    this.modalService
     this.backendService.uploadTextNQuestion(text, questions).subscribe((data) => {
         console.log('sent');
     });
