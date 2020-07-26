@@ -4,7 +4,6 @@ import {Router} from '@angular/router';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
 import {TimerService} from '../../services/timer/timer.service';
 import {BackendApiService} from '../../services/backend-api/backend-api.service';
-import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-toolbar',
@@ -18,14 +17,11 @@ export class ToolbarComponent implements OnInit {
   @Input() nextButton: string[];
   @Input() submitButton: string[];
 
-  modalRef: BsModalRef;
-
   constructor(public jwtTokenService: JWTTokenService,
               public localStorage: LocalStorageService,
               private router: Router,
               private timer: TimerService,
-              private backendService: BackendApiService,
-              private modalService: BsModalService) {
+              private backendService: BackendApiService) {
   }
 
   ngOnInit(): void {
