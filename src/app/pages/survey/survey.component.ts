@@ -8,7 +8,7 @@ import * as questionJson from '../../../assets/question-config.json';
 })
 export class SurveyComponent implements OnInit {
 
-  questionObj = questionJson.default;
+  questionObj = questionJson.default.survey;
 
   constructor() {}
 

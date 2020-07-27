@@ -40,7 +40,7 @@ a {
   height: 103px;
   margin-top: 15px;
   text-indent: -99999px;
-  background-image: url("src/assets/unibo-sigillo2x.png");
+  background-image: url("/assets/unibo-sigillo2x.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -197,7 +197,7 @@ a {
     height: 103px;
     margin-left: .46875em;
     margin-bottom: .9375em;
-    background-image: url("src/assets/unibo-sigillo2x.png");
+    background-image: url('/assets/unibo-sigillo2x.png');
   }
 
   .header-container .textual-header .text-wrap {

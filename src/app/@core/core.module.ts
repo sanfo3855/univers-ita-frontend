@@ -10,13 +10,19 @@ import {QuestionComponent} from './components/question/question.component';
 import {LoginFormComponent} from './components/login-form/login-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
+import { NgbdModalConfirm, NgbdModalConfirmAutofocus, NgbdModalFocus } from './components/modal-focus/modal-focus.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   providers: [],
-    exports: [HeaderComponent, FooterComponent, ToolbarComponent, QuestionComponent, LoginFormComponent, CreateUserFormComponent],
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
-  declarations: [FooterComponent, HeaderComponent, ToolbarComponent, QuestionComponent, LoginFormComponent, CreateUserFormComponent]
+  exports: [HeaderComponent, FooterComponent, ToolbarComponent, QuestionComponent, LoginFormComponent, CreateUserFormComponent,
+    NgbdModalFocus],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, NgbModule],
+  declarations: [FooterComponent, HeaderComponent, ToolbarComponent, QuestionComponent, LoginFormComponent,
+    CreateUserFormComponent, NgbdModalFocus, NgbdModalConfirm, NgbdModalConfirmAutofocus],
+  bootstrap: [NgbdModalFocus],
+  entryComponents: [NgbdModalConfirm, NgbdModalConfirmAutofocus]
 })
 
 export class CoreModule {

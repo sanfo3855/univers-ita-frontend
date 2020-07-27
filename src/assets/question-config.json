@@ -1,27 +1,97 @@
-[
-  {
-    "question": {"question":"Domandina 1","num": 1},
-    "type": "checkbox",
-    "answers": [{"answer":"Risposta 1","num": 1},{"answer":"Risposta 2","num": 2},{"answer": "Risposta 3","num": 3}]
-  },
-  {
-    "question": {"question":"Domandina 2","num": 2},
-    "type": "radiobutton",
-    "answers": [{"answer":"Risposta 1","num": 1},{"answer":"Risposta 2","num": 2},{"answer": "Risposta 3","num": 3}]
-  },
-  {
-    "question": {"question":"Domandina 3","num": 3},
-    "type": "radiobutton",
-    "answers": [{"answer":"Risposta 1","num": 1},{"answer":"Risposta 2","num": 2},{"answer": "Risposta 3","num": 3}]
-  },
-  {
-    "question": {"question":"Domandina 4","num": 4},
-    "type": "textbox",
-    "answers": ""
-  },
-  {
-    "question": {"question":"Domandina 5","num": 5},
-    "type": "select",
-    "answers": [{"answer":"Risposta 1","num": 1},{"answer":"Risposta 2","num": 2},{"answer": "Risposta 3","num": 3}]
-  }
-]
+{
+  "time": 3600,
+  "survey": [
+    {
+      "question": {
+        "question": "Domandina 1",
+        "num": 1
+      },
+      "type": "checkbox",
+      "answers": [
+        {
+          "answer": "Risposta 1",
+          "num": 1
+        },
+        {
+          "answer": "Risposta 2",
+          "num": 2
+        },
+        {
+          "answer": "Risposta 3",
+          "num": 3
+        }
+      ]
+    },
+    {
+      "question": {
+        "question": "Domandina 2",
+        "num": 2
+      },
+      "type": "radiobutton",
+      "answers": [
+        {
+          "answer": "Risposta 1",
+          "num": 1
+        },
+        {
+          "answer": "Risposta 2",
+          "num": 2
+        },
+        {
+          "answer": "Risposta 3",
+          "num": 3
+        }
+      ]
+    },
+    {
+      "question": {
+        "question": "Domandina 3",
+        "num": 3
+      },
+      "type": "radiobutton",
+      "answers": [
+        {
+          "answer": "Risposta 1",
+          "num": 1
+        },
+        {
+          "answer": "Risposta 2",
+          "num": 2
+        },
+        {
+          "answer": "Risposta 3",
+          "num": 3
+        }
+      ]
+    },
+    {
+      "question": {
+        "question": "Domandina 4",
+        "num": 4
+      },
+      "type": "textbox",
+      "answers": ""
+    },
+    {
+      "question": {
+        "question": "Domandina 5",
+        "num": 5
+      },
+      "type": "select",
+      "answers": [
+        {
+          "answer": "Risposta 1",
+          "num": 1
+        },
+        {
+          "answer": "Risposta 2",
+          "num": 2
+        },
+        {
+          "answer": "Risposta 3",
+          "num": 3
+        }
+      ]
+    }
+  ]
+}
