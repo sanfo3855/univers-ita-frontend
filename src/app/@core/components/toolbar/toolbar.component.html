@@ -14,8 +14,11 @@
       <button *ngIf="backButton" type="button" id="back-button" class="btn btn-success" [routerLink]=backButton[0]><i class="fa fa-arrow-left"></i> {{this.backButton[1]}}</button>
       <button *ngIf="nextButton && !isDisabled()" type="button" id="next-button-enabled" class="btn btn-success" [routerLink]=nextButton[0]>{{this.nextButton[1]}} <i class="fa fa-arrow-right"></i></button>
       <button *ngIf="nextButton && isDisabled()" type="button" id="next-button-disabled" disabled class="btn btn-success" [routerLink]=nextButton[0]>{{this.nextButton[1]}} <i class="fa fa-arrow-right"></i></button>
-      <button *ngIf="submitButton && !isDisabled()" type="button" id="submit-button-enabled" (click)="uploadTextNQuestions()" class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>
-      <button *ngIf="submitButton && isDisabled()" type="button" id="submit-button-disabled" disabled class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>
+<!--      <button *ngIf="submitButton && !isDisabled()" type="button" id="submit-button-enabled" (click)="uploadTextNQuestions()" class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>-->
+<!--      <button *ngIf="submitButton && isDisabled()" type="button" id="submit-button-disabled" disabled class="btn btn-success-upload">{{this.submitButton[1]}} <i class="fa fa-arrow-right"></i></button>-->
+      <ngbd-modal-focus *ngIf="submitButton && !isDisabled()" [enabled]="true"></ngbd-modal-focus>
+      <ngbd-modal-focus *ngIf="submitButton && isDisabled()" [enabled]="false"></ngbd-modal-focus>
+
     </div>
   </div>
   <div *ngIf="jwtTokenService.getToken() && jwtTokenService.getDecodedToken().type === 'admin'" class="row">
