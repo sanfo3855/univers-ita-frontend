@@ -4,11 +4,11 @@
                [nextButton]="['/end','Riepilogo']"></app-toolbar>
   <div class="content-wrapper">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 indent">
         <h1>Fase 2: Questionario</h1>
         <div *ngFor="let item of questionObj">
           <div class="row row-question">
-            <app-question [question]=item.question [type]=item.type [answers]=item.answers></app-question>
+            <app-question [question]=item.question [type]=item.type [answers]=item.answers [if_answered]=item.if_answered [enabled]="true"></app-question>
           </div>
         </div>
       </div>

@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
 import {OnInit} from '@angular/core';
 import {LocalStorageService} from '../local-storage/local-storage.service';
+import * as questionJson from '../../../../assets/question-config.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TimerService {
 
-  timeDefault = 5;
+  timeDefault = questionJson['time'];
   time: number;
   stringValue = this.getStringValue();
   interval;
@@ -31,7 +32,7 @@ export class TimerService {
       this.localStorage.set('time', this.time.toString());
       this.stringValue = this.getStringValue();
     }
-    if (this.time < 3600) {
+    if (this.time < this.timeDefault) {
       this.startTimer();
     }
   }

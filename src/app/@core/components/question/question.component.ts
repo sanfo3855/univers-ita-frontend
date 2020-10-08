@@ -1,19 +1,33 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnChanges,
+  EventEmitter,
+  Output,
+  SimpleChanges,
+  ChangeDetectorRef
+} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
-  styleUrls: ['./question.component.scss']
+  styleUrls: ['./question.component.scss'],
 })
-export class QuestionComponent implements OnInit {
+export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
   @Input() question: any;
   @Input() type: any;
   @Input() answers: any;
+  @Input() enabled: any;
+  @Input() if_answered: any
 
   form: FormGroup;
+
+  sub_question_enabled = false;
 
   answered = [];
 
@@ -36,18 +50,28 @@ export class QuestionComponent implements OnInit {
         }
       }
     } else if (this.type === 'radiobutton' || this.type === 'textbox' || this.type === 'select') {
-      // console.log(savedResponse[0]);
       answerControlOption = {
         value: new FormControl(savedResponse[0])
       };
     }
-    // else if (this.type === 'select') {
-    //   // console.log(savedResponse[0]);
-    //   answerControlOption = {
-    //     value: new FormControl(savedResponse[0])
-    //   };
-    // }
     this.form = new FormGroup(answerControlOption);
+
+    if (this.enabled) {
+        setTimeout(()=>this.form.enable(),1);
+    } else {
+      setTimeout(()=>{
+        this.form.disable();
+      },1);
+      this.localStorage.removeQuestionAnswered(this.question.num);
+    }
+
+    if(this.if_answered != null) {
+      if(this.localStorage.isQuestionAnswered(this.question.num)) {
+        this.sub_question_enabled = true;
+      } else {
+        this.sub_question_enabled = false;
+      }
+    }
   }
 
   initializeLocalStorage() {
@@ -69,7 +93,7 @@ export class QuestionComponent implements OnInit {
     this.values = JSON.parse(this.localStorage.get('questions'))[this.question.num].answer;
   }
 
-  ngOnInit(): void {
+  ngOnChanges(changes: SimpleChanges): void {
     this.initializeLocalStorage();
     this.initializeForm();
     this.resumeLocalStorageAnswer();
@@ -101,5 +125,14 @@ export class QuestionComponent implements OnInit {
     savedQuestion[this.question.num].answer = this.values;
     // console.log(savedQuestion);
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
+
+
+    if(this.if_answered != null) {
+      if(this.localStorage.isQuestionAnswered(this.question.num)) {
+        this.sub_question_enabled = true;
+      } else {
+        this.sub_question_enabled = false;
+      }
+    }
   }
 }

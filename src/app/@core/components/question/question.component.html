@@ -1,4 +1,4 @@
-<div class="row">
+<div id="question-{{question.num}}" class="row" [className]="!enabled?'question-disabled':'question-enabled'">
   <div class="row">
     <h5>{{question.num}}) {{question.question}}</h5>
   </div>
@@ -35,6 +35,14 @@
         </label>
       </div>
     </form>
+  </div>
+</div>
+<div *ngIf="if_answered">
+  <div *ngFor="let item of if_answered">
+    <div class="row">
+      <app-question class="indent" [question]=item.question [type]=item.type [answers]=item.answers
+                    [if_answered]=item.if_answered [enabled]="this.sub_question_enabled"></app-question>
+    </div>
   </div>
 </div>
 
