@@ -1,18 +1,24 @@
 .row form {
-  padding: 10px 10px 15px;
+  padding: 5px 10px 15px;
 }
 
 .indent {
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 .question-disabled {
+  padding-top: 25px;
   color: #aaaaaa;
 }
 .question-enabled {
+  padding-top: 30px;
   color: black;
 }
 
 label {
   padding-left: 3px;
+}
+
+.question {
+  margin: 25px;
 }

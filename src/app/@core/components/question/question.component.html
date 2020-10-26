@@ -1,47 +1,71 @@
-<div id="question-{{question.num}}" class="row" [className]="!enabled?'question-disabled':'question-enabled'">
+<div id="question-{{question_item.question.num}}" [className]="!this.isEnabled()?'question-disabled':'question-enabled'">
   <div class="row">
-    <h5>{{question.num}}) {{question.question}}</h5>
+    <h5>{{question_item.question.num}}) {{question_item.question.question}}</h5>
   </div>
   <div class="row">
     <form [formGroup]="form">
-      <div *ngIf="type === 'checkbox'" class="checkbox">
-        <div *ngFor="let answer of answers">
+      <div *ngIf="question_item.type === 'checkbox'" class="checkbox">
+        <div *ngFor="let answer of question_item.answers" class="form-inline">
           <input type="checkbox" (ngModelChange)="onSubmit(answer.answer, answer.num)" formControlName="{{answer.num}}"
-                 id="check-question-{{question.num}}-answer-{{answer.num}}">
-          <label for="check-question-{{question.num}}-answer-{{answer.num}}">
+                 id="check-question-{{question_item.question.num}}-answer-{{answer.num}}">
+          <label for="check-question-{{question_item.question.num}}-answer-{{answer.num}}">
             {{answer.answer}}
           </label>
+          <div *ngIf="inline_sub_questions" class="form-inline">
+            <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
+              <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
+                                    [super_responses]="responses" [enabling_response]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
+            </div>
+          </div>
         </div>
       </div>
-      <div *ngIf="type === 'radiobutton'" class="radio">
-        <div *ngFor="let answer of answers">
+      <div *ngIf="question_item.type === 'radiobutton'" class="radio">
+        <div *ngFor="let answer of question_item.answers" class="form-inline">
           <input type="radio" (ngModelChange)="onSubmit(answer.answer)" name="value" formControlName="value"
-                 id="radio-question-{{question.num}}-answer-{{answer.num}}" value="{{answer.answer}}">
-          <label for="radio-question-{{question.num}}-answer-{{answer.num}}">
+                 id="radio-question-{{question_item.question.num}}-answer-{{answer.num}}" value="{{answer.answer}}">
+          <label for="radio-question-{{question_item.question.num}}-answer-{{answer.num}}">
             {{answer.answer}}
           </label>
+          <div *ngIf="inline_sub_questions" class="form-inline">
+            <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
+              <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
+                                    [super_responses]="responses" [enabling_response]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
+            </div>
+          </div>
         </div>
       </div>
-      <div *ngIf="type === 'textbox'">
+      <div *ngIf="question_item.type === 'textbox'">
         <input type="text" class="form-control" (ngModelChange)="onSubmit()"
-               formControlName="value" id="textbox-question-{{question.num}}">
-        <label for="textbox-question-{{question.num}}"></label>
+               formControlName="value" id="textbox-question-{{question_item.question.num}}">
+        <label for="textbox-question-{{question_item.question.num}}"></label>
+        <div *ngIf="inline_sub_questions" class="form-inline">
+          <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
+            <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
+                                 [super_responses]="responses" [changeValueTrigger]="changeValue"></app-inline-questions>
+          </div>
+        </div>
       </div>
-      <div *ngIf="type === 'select'">
+      <div *ngIf="question_item.type === 'select'">
         <label>
           <select class="form-control" formControlName="value" (ngModelChange)="onSubmit()">
-            <option *ngFor="let answer of answers" [ngValue]="answer.answer">{{answer.answer}}</option>
+            <option *ngFor="let answer of question_item.answers" [ngValue]="answer.answer">{{answer.answer}}</option>
           </select>
         </label>
+        <div *ngIf="inline_sub_questions" class="form-inline">
+          <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
+            <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
+                                  [super_responses]="responses" [changeValueTrigger]="changeValue"></app-inline-questions>
+          </div>
+        </div>
       </div>
     </form>
   </div>
 </div>
-<div *ngIf="if_answered">
-  <div *ngFor="let item of if_answered">
+<div *ngIf="dependant_sub_questions">
+  <div *ngFor="let item of dependant_sub_questions">
     <div class="row">
-      <app-question class="indent" [question]=item.question [type]=item.type [answers]=item.answers
-                    [if_answered]=item.if_answered [enabled]="this.sub_question_enabled"></app-question>
+      <app-question class="indent" [question_item]=item [dependant_sub_questions]="item.dependant_sub_questions"
+                    [inline_sub_questions]=item.inline_sub_questions [super_responses]="responses" [changeValueTrigger]="changeValue"></app-question>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@
         <h1>Fase 2: Questionario</h1>
         <div *ngFor="let item of questionObj">
           <div class="row row-question">
-            <app-question [question]=item.question [type]=item.type [answers]=item.answers [if_answered]=item.if_answered [enabled]="true"></app-question>
+            <app-question [question_item]=item [dependant_sub_questions]=item.dependant_sub_questions [inline_sub_questions]=item.inline_sub_questions ></app-question>
           </div>
         </div>
       </div>

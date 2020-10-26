@@ -25,21 +25,6 @@ export class LocalStorageService {
     localStorage.removeItem(key);
   }
 
-  isQuestionAnswered(dependentOn: any) {
-    let answered = false;
-    if(this.getJSON('questions')[dependentOn].answer) {
-      if (this.getJSON('questions')[dependentOn].answer.length !== 0) {
-        const answers = this.getJSON('questions')[dependentOn].answer;
-        for (let answer of answers) {
-          if (answer !== '' || answer != null) {
-            answered = true;
-          }
-        }
-      }
-    }
-    return answered;
-  }
-
   removeQuestionAnswered(num: any) {
     let updatedQuestions = this.getJSON('questions')
     updatedQuestions[num].answer = []
