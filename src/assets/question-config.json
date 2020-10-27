@@ -26,7 +26,29 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "1.1"
+            "num": "1"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 4",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 5",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 6",
+              "num": 3
+            }
+          ],
+          "super_answers": ["Risposta 1"]
+        },
+        {
+          "question": {
+            "question": "sub domandina 1",
+            "num": "1"
           },
           "type": "select",
           "answers": [
@@ -43,12 +65,34 @@
               "num": 3
             }
           ],
-          "super_answers": ["Risposta 2","Risposta 3"]
+          "super_answers": ["Risposta 2"]
+        },
+        {
+          "question": {
+            "question": "sub domandina 1",
+            "num": "1"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 7",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 8",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 9",
+              "num": 3
+            }
+          ],
+          "super_answers": ["Risposta 3"]
         },
         {
           "question": {
             "question": "sub domandina 2",
-            "num": "1.2"
+            "num": "2"
           },
           "type": "checkbox",
           "answers": [
@@ -65,7 +109,7 @@
               "num": 3
             }
           ],
-          "super_answers": ["Risposta 2","Risposta 3"]
+          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
         }
       ],
       "dependant_sub_questions": [
@@ -94,7 +138,7 @@
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "2.1"
+                "num": "1"
               },
               "type": "textbox",
               "answers": "",
@@ -103,7 +147,7 @@
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "2.1"
+                "num": "2"
               },
               "type": "radiobutton",
               "answers": [
@@ -395,7 +439,8 @@
                   "answer": "Risposta 3",
                   "num": 3
                 }
-              ]
+              ],
+              "super_answers": ["Risposta 1","Risposta 2"]
             }
           ],
           "dependant_sub_questions": [
