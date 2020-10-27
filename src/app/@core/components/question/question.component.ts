@@ -59,7 +59,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
   }
 
   initializeForm() {
-    const savedResponse = this.getLocalStorageQuestion().answer ? this.getLocalStorageQuestion().answer : '';
+    const savedResponse = this.responses;
     let answerControlOption = {};
     if (this.question_item.type === 'checkbox') {
       for (const answer of this.question_item.answers) {
@@ -109,13 +109,15 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
   }
 
   resumeLocalStorageAnswer() {
-    this.responses = JSON.parse(this.localStorage.get('questions'))[this.question_item.question.num].answer;
+    let questions = JSON.parse(this.localStorage.get('questions'));
+    this.responses = Object.keys(questions[this.question_item.question.num].answer ? questions[this.question_item.question.num].answer : []);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.initializeLocalStorage();
-    this.initializeForm();
     this.resumeLocalStorageAnswer();
+    this.initializeForm();
+    // this.resumeLocalStorageAnswer();
   }
 
   onSubmit(response?: string, n?: number) {
@@ -143,7 +145,12 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       savedQuestion[this.question_item.question.num] = {};
     }
     savedQuestion[this.question_item.question.num].question = this.question_item.question.question;
-    savedQuestion[this.question_item.question.num].answer = this.responses;
+    savedQuestion[this.question_item.question.num].answer = {};
+    for( let response of this.responses) {
+      savedQuestion[this.question_item.question.num].answer[response] = {}
+    }
+    //savedQuestion[this.question_item.question.num].answer = this.responses;
+    console.log(savedQuestion);
 
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 

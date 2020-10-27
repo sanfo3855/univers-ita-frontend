@@ -45,7 +45,7 @@
           </div>
         </div>
       </div>
-      <div *ngIf="question_item.type === 'select'">
+      <div *ngIf="question_item.type === 'select'" class="form-inline">
         <label>
           <select class="form-control" formControlName="value" (ngModelChange)="onSubmit()">
             <option *ngFor="let answer of question_item.answers" [ngValue]="answer.answer">{{answer.answer}}</option>
