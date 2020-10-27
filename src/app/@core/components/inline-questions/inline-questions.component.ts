@@ -12,21 +12,19 @@ export class InlineQuestionsComponent implements OnChanges {
   @Input() inline_sub_question_item: any;
   form: FormGroup;
 
+  @Input() dependentOn: any;
   @Input() enabling_response: any;
   @Input() super_responses: any;
-  @Input() dependentOn: any;
 
-  @Input() inline_sub_questions: any;
+  @Input() index: any
+
 
   @Input() changeValueTrigger: any;
   changeValue: any;
 
-  answered = [];
-
   inline_responses = [];
 
   show = false;
-
   constructor(private localStorage: LocalStorageService) {
   }
 
@@ -53,7 +51,20 @@ export class InlineQuestionsComponent implements OnChanges {
 
   initializeForm() {
     let savedResponse = '';
+    //RESTORE RESPONSES FROM LOCAL STORAGE
     const questions =  this.localStorage.getJSON('questions');
+    if(questions[this.dependentOn]){
+      if(questions[this.dependentOn].answer) {
+        if(questions[this.dependentOn].answer[this.enabling_response]){
+          if(questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num]) {
+            if(questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].answer){
+              savedResponse = questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].answer;
+            }
+          }
+        }
+      }
+    }
+    //INITIALIZE FORM WITH RESPONSES
     let answerControlOption = {};
     if (this.inline_sub_question_item.type === 'checkbox') {
       for (const answer of this.inline_sub_question_item.answers) {
@@ -103,6 +114,7 @@ export class InlineQuestionsComponent implements OnChanges {
   }
 
   onSubmit(response?: string, n?: number) {
+    // GET RESPONSES
     if (this.inline_sub_question_item.type === 'checkbox') {
       if (this.form.value[n]) {
         if (!this.inline_responses) {
@@ -119,15 +131,27 @@ export class InlineQuestionsComponent implements OnChanges {
     } else if (this.inline_sub_question_item.type === 'radiobutton' || this.inline_sub_question_item.type === 'textbox' || this.inline_sub_question_item.type === 'select') {
       this.inline_responses = [this.form.value.value];
     }
-    console.log('Question inline: ' + this.inline_sub_question_item.question + ' - Responses inline ' + this.inline_responses);
+    console.log('Question inline: ' + this.inline_sub_question_item.question.question + ' - Responses inline: ' + this.inline_responses);
+
+    // SAVE TO LOCAL STORAGE
     const questions =  this.localStorage.getJSON('questions');
     if(this.isEnabled()) {
       if(questions[this.dependentOn]) {
-
+        if(questions[this.dependentOn].answer[this.enabling_response]) {
+          if(!questions[this.dependentOn].answer[this.enabling_response]) {
+            questions[this.dependentOn].answer[this.enabling_response] = {}
+          }
+          if(!questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num]) {
+            questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num] = {};
+          }
+          questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].question = this.inline_sub_question_item.question.question;
+          questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].answer = this.inline_responses;
+        }
       }
     }
     this.localStorage.set('questions', JSON.stringify(questions));
 
+    // TRIGGER ONCHANGE
     this.changeValue = Math.random();
   }
 

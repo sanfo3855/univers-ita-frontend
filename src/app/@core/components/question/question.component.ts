@@ -33,7 +33,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
   form: FormGroup;
 
-
   answered = [];
 
   responses = [];
@@ -117,20 +116,18 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     this.initializeLocalStorage();
     this.resumeLocalStorageAnswer();
     this.initializeForm();
-    // this.resumeLocalStorageAnswer();
   }
 
-  onSubmit(response?: string, n?: number) {
-    // console.log("Question: " + this.question_item.question + "  - Response: " +response + " - Num: " + n);
+  onSubmit(new_response?: string, n?: number) {
     if (this.question_item.type === 'checkbox') {
       if (this.form.value[n]) {
         if (!this.responses) {
           this.responses = [];
         }
-        this.responses.push(response);
+        this.responses.push(new_response);
       } else {
         this.responses = this.responses.filter((val, i, arr) => {
-          if (val !== response) {
+          if (val !== new_response) {
             return val;
           }
         });
@@ -145,12 +142,14 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       savedQuestion[this.question_item.question.num] = {};
     }
     savedQuestion[this.question_item.question.num].question = this.question_item.question.question;
-    savedQuestion[this.question_item.question.num].answer = {};
-    for( let response of this.responses) {
-      savedQuestion[this.question_item.question.num].answer[response] = {}
+    if(!savedQuestion[this.question_item.question.num].answer){
+      savedQuestion[this.question_item.question.num].answer = {};
     }
-    //savedQuestion[this.question_item.question.num].answer = this.responses;
-    console.log(savedQuestion);
+    for( let response of this.responses) {
+      if(!savedQuestion[this.question_item.question.num].answer[response] || response === new_response){
+        savedQuestion[this.question_item.question.num].answer[response] = {}
+      }
+    }
 
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 

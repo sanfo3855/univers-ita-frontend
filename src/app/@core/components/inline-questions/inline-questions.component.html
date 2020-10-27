@@ -5,8 +5,8 @@
       <div *ngFor="let answer of inline_sub_question_item.answers" class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" (ngModelChange)="onSubmit(answer.answer, answer.num)"
                formControlName="{{answer.num}}"
-               id="check-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}">
-        <label class="form-check-label" for="check-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}">
+               id="check-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}-{{index}}">
+        <label class="form-check-label" for="check-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}-{{index}}">
           {{answer.answer}}
         </label>
       </div>
@@ -15,8 +15,8 @@
       <div *ngFor="let answer of inline_sub_question_item.answers" class="form-check form-check-inline">
         <input class="form-check-input" type="radio" (ngModelChange)="onSubmit(answer.answer)" name="value"
                formControlName="value"
-               id="radio-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}" value="{{answer.answer}}">
-        <label class="form-check-label" for="radio-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}">
+               id="radio-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}-{{index}}" value="{{answer.answer}}">
+        <label class="form-check-label" for="radio-question-{{inline_sub_question_item.question.num}}-answer-{{answer.num}}-{{index}}">
           {{answer.answer}}
         </label>
       </div>

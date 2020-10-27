@@ -5,7 +5,7 @@
   <div class="row">
     <form [formGroup]="form">
       <div *ngIf="question_item.type === 'checkbox'" class="checkbox">
-        <div *ngFor="let answer of question_item.answers" class="form-inline">
+        <div *ngFor="let answer of question_item.answers; let i = index" class="form-inline">
           <input type="checkbox" (ngModelChange)="onSubmit(answer.answer, answer.num)" formControlName="{{answer.num}}"
                  id="check-question-{{question_item.question.num}}-answer-{{answer.num}}">
           <label for="check-question-{{question_item.question.num}}-answer-{{answer.num}}">
@@ -13,14 +13,14 @@
           </label>
           <div *ngIf="inline_sub_questions" class="form-inline">
             <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
-              <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
+              <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num" [index]="i"
                                     [super_responses]="responses" [enabling_response]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
             </div>
           </div>
         </div>
       </div>
       <div *ngIf="question_item.type === 'radiobutton'" class="radio">
-        <div *ngFor="let answer of question_item.answers" class="form-inline">
+        <div *ngFor="let answer of question_item.answers; let i = index" class="form-inline">
           <input type="radio" (ngModelChange)="onSubmit(answer.answer)" name="value" formControlName="value"
                  id="radio-question-{{question_item.question.num}}-answer-{{answer.num}}" value="{{answer.answer}}">
           <label for="radio-question-{{question_item.question.num}}-answer-{{answer.num}}">
