@@ -4,6 +4,8 @@
   </div>
   <div class="row">
     <form [formGroup]="form">
+
+      <!-- CHECKBOX-->
       <div *ngIf="question_item.type === 'checkbox'" class="checkbox">
         <div *ngFor="let answer of question_item.answers; let i = index" class="form-inline">
           <input type="checkbox" (ngModelChange)="onSubmit(answer.answer, answer.num)" formControlName="{{answer.num}}"
@@ -19,6 +21,8 @@
           </div>
         </div>
       </div>
+
+      <!-- RADIO-->
       <div *ngIf="question_item.type === 'radiobutton'" class="radio">
         <div *ngFor="let answer of question_item.answers; let i = index" class="form-inline">
           <input type="radio" (ngModelChange)="onSubmit(answer.answer)" name="value" formControlName="value"
@@ -34,6 +38,8 @@
           </div>
         </div>
       </div>
+
+      <!-- TEXTBOX-->
       <div *ngIf="question_item.type === 'textbox'">
         <input type="text" class="form-control" (ngModelChange)="onSubmit()"
                formControlName="value" id="textbox-question-{{question_item.question.num}}">
@@ -41,10 +47,11 @@
         <div *ngIf="inline_sub_questions" class="form-inline">
           <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
             <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
-                                 [super_responses]="responses" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                 [super_responses]="responses" [enabling_response]="responses[0]" [changeValueTrigger]="changeValue"></app-inline-questions>
           </div>
         </div>
       </div>
+      <!-- CHECKBOX-->
       <div *ngIf="question_item.type === 'select'" class="form-inline">
         <label>
           <select class="form-control" formControlName="value" (ngModelChange)="onSubmit()">
@@ -54,7 +61,7 @@
         <div *ngIf="inline_sub_questions" class="form-inline">
           <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
             <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
-                                  [super_responses]="responses" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                  [super_responses]="responses"  [enabling_response]="responses[0]"  [changeValueTrigger]="changeValue"></app-inline-questions>
           </div>
         </div>
       </div>

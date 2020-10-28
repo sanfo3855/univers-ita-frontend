@@ -32,7 +32,7 @@ export class InlineQuestionsComponent implements OnChanges {
     if(this.inline_sub_question_item.super_answers === undefined) {
       return true;
     } else {
-      if(this.super_responses) {
+      if(this.super_responses.length > 0) {
         if(this.enabling_response === undefined) {
           return true;
         } else {

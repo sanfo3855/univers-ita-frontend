@@ -26,7 +26,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "1.1"
+            "num": "1e1"
           },
           "type": "select",
           "answers": [
@@ -48,7 +48,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "1.1"
+            "num": "1e1"
           },
           "type": "select",
           "answers": [
@@ -70,7 +70,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "1.1"
+            "num": "1e1"
           },
           "type": "select",
           "answers": [
@@ -92,7 +92,7 @@
         {
           "question": {
             "question": "sub domandina 2",
-            "num": "1.2"
+            "num": "1e2"
           },
           "type": "checkbox",
           "answers": [
@@ -138,7 +138,7 @@
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "2.1"
+                "num": "2e1"
               },
               "type": "textbox",
               "answers": "",
@@ -147,7 +147,7 @@
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "2.2"
+                "num": "2e2"
               },
               "type": "radiobutton",
               "answers": [
@@ -193,7 +193,7 @@
                 {
                   "question": {
                     "question": "sub domandina 1",
-                    "num": "3.1"
+                    "num": "3e1"
                   },
                   "type": "textbox",
                   "answers": "",
@@ -202,7 +202,7 @@
                 {
                   "question": {
                     "question": "sub domandina 1",
-                    "num": "3.2"
+                    "num": "3e2"
                   },
                   "type": "radiobutton",
                   "answers": [
@@ -272,7 +272,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "5.1"
+            "num": "5e1"
           },
           "type": "textbox",
           "answers": "",
@@ -281,7 +281,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "5.2"
+            "num": "5e2"
           },
           "type": "radiobutton",
           "answers": [
@@ -355,7 +355,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "8.1"
+            "num": "8e1"
           },
           "type": "select",
           "answers": [
@@ -377,7 +377,7 @@
         {
           "question": {
             "question": "sub domandina 2",
-            "num": "8.2"
+            "num": "8e2"
           },
           "type": "checkbox",
           "answers": [
@@ -423,7 +423,7 @@
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "9.1"
+                "num": "9e1"
               },
               "type": "radiobutton",
               "answers": [
@@ -469,7 +469,7 @@
                 {
                   "question": {
                     "question": "sub domandina 1",
-                    "num": "10.1"
+                    "num": "10e1"
                   },
                   "type": "textbox",
                   "answers": "",
@@ -478,7 +478,7 @@
                 {
                   "question": {
                     "question": "sub domandina 1",
-                    "num": "10.2"
+                    "num": "10e2"
                   },
                   "type": "radiobutton",
                   "answers": [
@@ -548,7 +548,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "12.1"
+            "num": "12e1"
           },
           "type": "textbox",
           "answers": "",
@@ -557,7 +557,7 @@
         {
           "question": {
             "question": "sub domandina 1",
-            "num": "12.2"
+            "num": "12e2"
           },
           "type": "radiobutton",
           "answers": [

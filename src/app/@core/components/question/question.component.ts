@@ -59,6 +59,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
   initializeForm() {
     const savedResponse = this.responses;
+    console.log()
     let answerControlOption = {};
     if (this.question_item.type === 'checkbox') {
       for (const answer of this.question_item.answers) {
@@ -145,12 +146,27 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     if(!savedQuestion[this.question_item.question.num].answer){
       savedQuestion[this.question_item.question.num].answer = {};
     }
-    for( let response of this.responses) {
-      if(!savedQuestion[this.question_item.question.num].answer[response] || response === new_response){
-        savedQuestion[this.question_item.question.num].answer[response] = {}
+    if(this.question_item.type === 'checkbox') {
+      for (let response of this.responses) {
+        if (!savedQuestion[this.question_item.question.num].answer[response] || response === new_response) {
+          if(this.question_item.inline_sub_questions) {
+            savedQuestion[this.question_item.question.num].answer[response] = {}
+          } else {
+            savedQuestion[this.question_item.question.num].answer[response] = {"-1":""}
+          }
+        }
       }
-    }
+    } else {
+      console.log(this.responses);
+      savedQuestion[this.question_item.question.num].answer = {};
+      if(this.question_item.inline_sub_questions) {
+        savedQuestion[this.question_item.question.num].answer[this.responses[0]] = {}
+      } else {
+        savedQuestion[this.question_item.question.num].answer[this.responses[0]] = {"-1":""}
+      }
 
+    }
+    console.log(savedQuestion);
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 
     this.changeValue = Math.random();
