@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-question',
@@ -165,7 +164,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       }
 
     }
-
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 
     this.changeValue = Math.random();
