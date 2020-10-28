@@ -6,9 +6,14 @@
     <div class="row">
       <div class="col-md-12 indent">
         <h1>Fase 2: Questionario</h1>
-        <div *ngFor="let item of questionObj">
-          <div class="row row-question">
-            <app-question [question_item]=item [dependant_sub_questions]=item.dependant_sub_questions [inline_sub_questions]=item.inline_sub_questions ></app-question>
+        <div *ngFor="let section of sectionObj">
+          <div>
+            <h3>{{section.section}}</h3>
+            <div *ngFor="let item of section.questions">
+              <div class="row row-question">
+                <app-question [question_item]=item [dependant_sub_questions]=item.dependant_sub_questions [inline_sub_questions]=item.inline_sub_questions ></app-question>
+              </div>
+            </div>
           </div>
         </div>
       </div>

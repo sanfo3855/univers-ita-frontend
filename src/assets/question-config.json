@@ -3,96 +3,13 @@
   "time": 5,
   "survey": [
     {
-      "question": {
-        "question": "Domandina 1",
-        "num": "1"
-      },
-      "type": "checkbox",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
-        },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ],
-      "inline_sub_questions": [
+      "section": "Nome sezione 1",
+      "num": 1,
+      "questions": [
         {
           "question": {
-            "question": "sub domandina 1",
-            "num": "1e1"
-          },
-          "type": "select",
-          "answers": [
-            {
-              "answer": "Risposta 4",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 5",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 6",
-              "num": 3
-            }
-          ],
-          "super_answers": ["Risposta 1"]
-        },
-        {
-          "question": {
-            "question": "sub domandina 1",
-            "num": "1e1"
-          },
-          "type": "select",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
-          "super_answers": ["Risposta 2"]
-        },
-        {
-          "question": {
-            "question": "sub domandina 1",
-            "num": "1e1"
-          },
-          "type": "select",
-          "answers": [
-            {
-              "answer": "Risposta 7",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 8",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 9",
-              "num": 3
-            }
-          ],
-          "super_answers": ["Risposta 3"]
-        },
-        {
-          "question": {
-            "question": "sub domandina 2",
-            "num": "1e2"
+            "question": "Domandina 1",
+            "num": "1"
           },
           "type": "checkbox",
           "answers": [
@@ -109,16 +26,238 @@
               "num": 3
             }
           ],
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-        }
-      ],
-      "dependant_sub_questions": [
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "1e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 4",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 5",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 6",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "1e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 2"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "1e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 7",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 8",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 9",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 2",
+                "num": "1e2"
+              },
+              "type": "checkbox",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ],
+          "dependant_sub_questions": [
+            {
+              "question": {
+                "question": "Domandina 2",
+                "num": "2"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2"],
+              "inline_sub_questions": [
+                {
+                  "question": {
+                    "question": "sub domandina 1",
+                    "num": "2e1"
+                  },
+                  "type": "textbox",
+                  "answers": "",
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                },
+                {
+                  "question": {
+                    "question": "sub domandina 1",
+                    "num": "2e2"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                }
+              ],
+              "dependant_sub_questions": [
+                {
+                  "question": {
+                    "question": "Domandina 3",
+                    "num": "3"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
+                  "inline_sub_questions": [
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "3e1"
+                      },
+                      "type": "textbox",
+                      "answers": "",
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    },
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "3e2"
+                      },
+                      "type": "radiobutton",
+                      "answers": [
+                        {
+                          "answer": "Risposta 1",
+                          "num": 1
+                        },
+                        {
+                          "answer": "Risposta 2",
+                          "num": 2
+                        },
+                        {
+                          "answer": "Risposta 3",
+                          "num": 3
+                        }
+                      ],
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           "question": {
-            "question": "Domandina 2",
-            "num": "2"
+            "question": "Domandina 4",
+            "num": "4"
           },
-          "type": "radiobutton",
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 5",
+            "num": "5"
+          },
+          "type": "select",
           "answers": [
             {
               "answer": "Risposta 1",
@@ -133,12 +272,11 @@
               "num": 3
             }
           ],
-          "super_answers": ["Risposta 1","Risposta 2"],
           "inline_sub_questions": [
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "2e1"
+                "num": "5e1"
               },
               "type": "textbox",
               "answers": "",
@@ -147,9 +285,105 @@
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "2e2"
+                "num": "5e2"
               },
               "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 6",
+            "num": "6"
+          },
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {
+            "question": "Domandina 7",
+            "num": "7"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 8",
+            "num": "8"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "8e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 2",
+                "num": "8e2"
+              },
+              "type": "checkbox",
               "answers": [
                 {
                   "answer": "Risposta 1",
@@ -170,8 +404,8 @@
           "dependant_sub_questions": [
             {
               "question": {
-                "question": "Domandina 3",
-                "num": "3"
+                "question": "Domandina 9",
+                "num": "9"
               },
               "type": "radiobutton",
               "answers": [
@@ -193,16 +427,7 @@
                 {
                   "question": {
                     "question": "sub domandina 1",
-                    "num": "3e1"
-                  },
-                  "type": "textbox",
-                  "answers": "",
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                },
-                {
-                  "question": {
-                    "question": "sub domandina 1",
-                    "num": "3e2"
+                    "num": "9e1"
                   },
                   "type": "radiobutton",
                   "answers": [
@@ -219,71 +444,75 @@
                       "num": 3
                     }
                   ],
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                  "super_answers": ["Risposta 1","Risposta 2"]
+                }
+              ],
+              "dependant_sub_questions": [
+                {
+                  "question": {
+                    "question": "Domandina 10",
+                    "num": "10"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
+                  "inline_sub_questions": [
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "10e1"
+                      },
+                      "type": "textbox",
+                      "answers": "",
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    },
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "10e2"
+                      },
+                      "type": "radiobutton",
+                      "answers": [
+                        {
+                          "answer": "Risposta 1",
+                          "num": 1
+                        },
+                        {
+                          "answer": "Risposta 2",
+                          "num": 2
+                        },
+                        {
+                          "answer": "Risposta 3",
+                          "num": 3
+                        }
+                      ],
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    }
+                  ]
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "question": {
-        "question": "Domandina 4",
-        "num": "4"
-      },
-      "type": "checkbox",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
-        },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ]
-    },
-    {
-      "question": {
-        "question": "Domandina 5",
-        "num": "5"
-      },
-      "type": "select",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
-        },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ],
-      "inline_sub_questions": [
-        {
-          "question": {
-            "question": "sub domandina 1",
-            "num": "5e1"
-          },
-          "type": "textbox",
-          "answers": "",
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
         },
         {
           "question": {
-            "question": "sub domandina 1",
-            "num": "5e2"
+            "question": "Domandina 11",
+            "num": "11"
           },
-          "type": "radiobutton",
+          "type": "checkbox",
           "answers": [
             {
               "answer": "Risposta 1",
@@ -297,65 +526,12 @@
               "answer": "Risposta 3",
               "num": 3
             }
-          ],
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-        }
-      ]
-    },
-    {
-      "question": {
-        "question": "Domandina 6",
-        "num": "6"
-      },
-      "type": "textbox",
-      "answers": ""
-    },
-    {
-      "question": {
-        "question": "Domandina 7",
-        "num": "7"
-      },
-      "type": "select",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
+          ]
         },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ]
-    },
-    {
-      "question": {
-        "question": "Domandina 8",
-        "num": "8"
-      },
-      "type": "checkbox",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
-        },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ],
-      "inline_sub_questions": [
         {
           "question": {
-            "question": "sub domandina 1",
-            "num": "8e1"
+            "question": "Domandina 12",
+            "num": "12"
           },
           "type": "select",
           "answers": [
@@ -372,58 +548,20 @@
               "num": 3
             }
           ],
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-        },
-        {
-          "question": {
-            "question": "sub domandina 2",
-            "num": "8e2"
-          },
-          "type": "checkbox",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-        }
-      ],
-      "dependant_sub_questions": [
-        {
-          "question": {
-            "question": "Domandina 9",
-            "num": "9"
-          },
-          "type": "radiobutton",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
           "inline_sub_questions": [
             {
               "question": {
                 "question": "sub domandina 1",
-                "num": "9e1"
+                "num": "12e1"
+              },
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "12e2"
               },
               "type": "radiobutton",
               "answers": [
@@ -440,14 +578,445 @@
                   "num": 3
                 }
               ],
-              "super_answers": ["Risposta 1","Risposta 2"]
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 13",
+            "num": "13"
+          },
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {
+            "question": "Domandina 14",
+            "num": "14"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Nome sezione 2",
+      "num": 2,
+      "questions": [
+        {
+          "question": {
+            "question": "Domandina 1",
+            "num": "15"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "15e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 4",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 5",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 6",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "15e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 2"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "15e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 7",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 8",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 9",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 2",
+                "num": "15e2"
+              },
+              "type": "checkbox",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
             }
           ],
           "dependant_sub_questions": [
             {
               "question": {
-                "question": "Domandina 10",
-                "num": "10"
+                "question": "Domandina 2",
+                "num": "16"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2"],
+              "inline_sub_questions": [
+                {
+                  "question": {
+                    "question": "sub domandina 1",
+                    "num": "16e1"
+                  },
+                  "type": "textbox",
+                  "answers": "",
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                },
+                {
+                  "question": {
+                    "question": "sub domandina 1",
+                    "num": "16e2"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                }
+              ],
+              "dependant_sub_questions": [
+                {
+                  "question": {
+                    "question": "Domandina 3",
+                    "num": "17"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
+                  "inline_sub_questions": [
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "17e1"
+                      },
+                      "type": "textbox",
+                      "answers": "",
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    },
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "17e2"
+                      },
+                      "type": "radiobutton",
+                      "answers": [
+                        {
+                          "answer": "Risposta 1",
+                          "num": 1
+                        },
+                        {
+                          "answer": "Risposta 2",
+                          "num": 2
+                        },
+                        {
+                          "answer": "Risposta 3",
+                          "num": 3
+                        }
+                      ],
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 4",
+            "num": "18"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 5",
+            "num": "19"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "19e1"
+              },
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "19e2"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 6",
+            "num": "20"
+          },
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {
+            "question": "Domandina 7",
+            "num": "21"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 8",
+            "num": "22"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "22e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 2",
+                "num": "22e2"
+              },
+              "type": "checkbox",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ],
+          "dependant_sub_questions": [
+            {
+              "question": {
+                "question": "Domandina 9",
+                "num": "23"
               },
               "type": "radiobutton",
               "answers": [
@@ -469,7 +1038,333 @@
                 {
                   "question": {
                     "question": "sub domandina 1",
-                    "num": "10e1"
+                    "num": "23e1"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2"]
+                }
+              ],
+              "dependant_sub_questions": [
+                {
+                  "question": {
+                    "question": "Domandina 10",
+                    "num": "24"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
+                  "inline_sub_questions": [
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "24e1"
+                      },
+                      "type": "textbox",
+                      "answers": "",
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    },
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "24e2"
+                      },
+                      "type": "radiobutton",
+                      "answers": [
+                        {
+                          "answer": "Risposta 1",
+                          "num": 1
+                        },
+                        {
+                          "answer": "Risposta 2",
+                          "num": 2
+                        },
+                        {
+                          "answer": "Risposta 3",
+                          "num": 3
+                        }
+                      ],
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 11",
+            "num": "25"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 12",
+            "num": "26"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "26e1"
+              },
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "26e2"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 13",
+            "num": "27"
+          },
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {
+            "question": "Domandina 14",
+            "num": "28"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Nome sezione 3",
+      "num": 3,
+      "questions": [
+        {
+          "question": {
+            "question": "Domandina 1",
+            "num": "29"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "29e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 4",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 5",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 6",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "29e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 2"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "29e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 7",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 8",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 9",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 2",
+                "num": "29e2"
+              },
+              "type": "checkbox",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ],
+          "dependant_sub_questions": [
+            {
+              "question": {
+                "question": "Domandina 2",
+                "num": "30"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2"],
+              "inline_sub_questions": [
+                {
+                  "question": {
+                    "question": "sub domandina 1",
+                    "num": "30e1"
                   },
                   "type": "textbox",
                   "answers": "",
@@ -478,7 +1373,7 @@
                 {
                   "question": {
                     "question": "sub domandina 1",
-                    "num": "10e2"
+                    "num": "30e2"
                   },
                   "type": "radiobutton",
                   "answers": [
@@ -497,69 +1392,94 @@
                   ],
                   "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
                 }
+              ],
+              "dependant_sub_questions": [
+                {
+                  "question": {
+                    "question": "Domandina 3",
+                    "num": "31"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
+                  "inline_sub_questions": [
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "31e1"
+                      },
+                      "type": "textbox",
+                      "answers": "",
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    },
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "31e2"
+                      },
+                      "type": "radiobutton",
+                      "answers": [
+                        {
+                          "answer": "Risposta 1",
+                          "num": 1
+                        },
+                        {
+                          "answer": "Risposta 2",
+                          "num": 2
+                        },
+                        {
+                          "answer": "Risposta 3",
+                          "num": 3
+                        }
+                      ],
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    }
+                  ]
+                }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "question": {
-        "question": "Domandina 11",
-        "num": "11"
-      },
-      "type": "checkbox",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
-        },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ]
-    },
-    {
-      "question": {
-        "question": "Domandina 12",
-        "num": "12"
-      },
-      "type": "select",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
-        },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ],
-      "inline_sub_questions": [
-        {
-          "question": {
-            "question": "sub domandina 1",
-            "num": "12e1"
-          },
-          "type": "textbox",
-          "answers": "",
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
         },
         {
           "question": {
-            "question": "sub domandina 1",
-            "num": "12e2"
+            "question": "Domandina 4",
+            "num": "32"
           },
-          "type": "radiobutton",
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 5",
+            "num": "33"
+          },
+          "type": "select",
           "answers": [
             {
               "answer": "Risposta 1",
@@ -574,36 +1494,344 @@
               "num": 3
             }
           ],
-          "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-        }
-      ]
-    },
-    {
-      "question": {
-        "question": "Domandina 13",
-        "num": "13"
-      },
-      "type": "textbox",
-      "answers": ""
-    },
-    {
-      "question": {
-        "question": "Domandina 14",
-        "num": "14"
-      },
-      "type": "select",
-      "answers": [
-        {
-          "answer": "Risposta 1",
-          "num": 1
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "34e1"
+              },
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "34e2"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ]
         },
         {
-          "answer": "Risposta 2",
-          "num": 2
+          "question": {
+            "question": "Domandina 6",
+            "num": "35"
+          },
+          "type": "textbox",
+          "answers": ""
         },
         {
-          "answer": "Risposta 3",
-          "num": 3
+          "question": {
+            "question": "Domandina 7",
+            "num": "36"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 8",
+            "num": "37"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "37e1"
+              },
+              "type": "select",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 2",
+                "num": "37e2"
+              },
+              "type": "checkbox",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ],
+          "dependant_sub_questions": [
+            {
+              "question": {
+                "question": "Domandina 9",
+                "num": "38"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
+              "inline_sub_questions": [
+                {
+                  "question": {
+                    "question": "sub domandina 1",
+                    "num": "38e1"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2"]
+                }
+              ],
+              "dependant_sub_questions": [
+                {
+                  "question": {
+                    "question": "Domandina 10",
+                    "num": "39"
+                  },
+                  "type": "radiobutton",
+                  "answers": [
+                    {
+                      "answer": "Risposta 1",
+                      "num": 1
+                    },
+                    {
+                      "answer": "Risposta 2",
+                      "num": 2
+                    },
+                    {
+                      "answer": "Risposta 3",
+                      "num": 3
+                    }
+                  ],
+                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
+                  "inline_sub_questions": [
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "39e1"
+                      },
+                      "type": "textbox",
+                      "answers": "",
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    },
+                    {
+                      "question": {
+                        "question": "sub domandina 1",
+                        "num": "39e2"
+                      },
+                      "type": "radiobutton",
+                      "answers": [
+                        {
+                          "answer": "Risposta 1",
+                          "num": 1
+                        },
+                        {
+                          "answer": "Risposta 2",
+                          "num": 2
+                        },
+                        {
+                          "answer": "Risposta 3",
+                          "num": 3
+                        }
+                      ],
+                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 11",
+            "num": "40"
+          },
+          "type": "checkbox",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 12",
+            "num": "41"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ],
+          "inline_sub_questions": [
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "41e1"
+              },
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            },
+            {
+              "question": {
+                "question": "sub domandina 1",
+                "num": "41e2"
+              },
+              "type": "radiobutton",
+              "answers": [
+                {
+                  "answer": "Risposta 1",
+                  "num": 1
+                },
+                {
+                  "answer": "Risposta 2",
+                  "num": 2
+                },
+                {
+                  "answer": "Risposta 3",
+                  "num": 3
+                }
+              ],
+              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
+            }
+          ]
+        },
+        {
+          "question": {
+            "question": "Domandina 13",
+            "num": "42"
+          },
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {
+            "question": "Domandina 14",
+            "num": "43"
+          },
+          "type": "select",
+          "answers": [
+            {
+              "answer": "Risposta 1",
+              "num": 1
+            },
+            {
+              "answer": "Risposta 2",
+              "num": 2
+            },
+            {
+              "answer": "Risposta 3",
+              "num": 3
+            }
+          ]
         }
       ]
     }

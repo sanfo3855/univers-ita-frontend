@@ -157,7 +157,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
         }
       }
     } else {
-      console.log(this.responses);
       savedQuestion[this.question_item.question.num].answer = {};
       if(this.question_item.inline_sub_questions) {
         savedQuestion[this.question_item.question.num].answer[this.responses[0]] = {}
@@ -166,7 +165,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       }
 
     }
-    console.log(savedQuestion);
+
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 
     this.changeValue = Math.random();
