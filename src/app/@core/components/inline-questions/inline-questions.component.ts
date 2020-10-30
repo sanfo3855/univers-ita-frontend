@@ -13,9 +13,11 @@ export class InlineQuestionsComponent implements OnChanges {
   form: FormGroup;
 
   @Input() dependentOn: any;
+  @Input() super_answer: any;
   @Input() enabling_response: any;
   @Input() super_responses: any;
 
+  @Input() enabled: any;
   @Input() index: any
 
 
@@ -97,7 +99,19 @@ export class InlineQuestionsComponent implements OnChanges {
   }
 
   initializeLocalStorage() {
-
+    if(!this.isEnabled()){
+      const questions =  this.localStorage.getJSON('questions');
+      if(questions[this.dependentOn]) {
+        if (questions[this.dependentOn].answer) {
+          if (questions[this.dependentOn].answer[this.enabling_response]) {
+            if (!questions[this.dependentOn].answer[this.enabling_response]["-1"]) {
+              questions[this.dependentOn].answer[this.enabling_response]["-1"] = "";
+            }
+          }
+        }
+      }
+      this.localStorage.set('questions', JSON.stringify(questions));
+    }
   }
 
   getLocalStorageQuestion() {

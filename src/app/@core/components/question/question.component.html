@@ -16,7 +16,8 @@
           <div *ngIf="inline_sub_questions" class="form-inline">
             <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
               <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num" [index]="i"
-                                    [super_responses]="responses" [enabling_response]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                    [super_responses]="responses" [enabling_response]="answer.answer"
+                                    [super_answer]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
             </div>
           </div>
         </div>
@@ -33,7 +34,8 @@
           <div *ngIf="inline_sub_questions" class="form-inline">
             <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
               <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
-                                    [super_responses]="responses" [enabling_response]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                    [super_responses]="responses" [enabling_response]="answer.answer"
+                                    [super_answer]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
             </div>
           </div>
         </div>
@@ -47,7 +49,8 @@
         <div *ngIf="inline_sub_questions" class="form-inline">
           <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
             <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
-                                 [super_responses]="responses" [enabling_response]="responses[0]" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                  [super_responses]="responses" [enabling_response]="responses[0]"
+                                  [super_answer]="responses[0]" [changeValueTrigger]="changeValue"></app-inline-questions>
           </div>
         </div>
       </div>
@@ -61,7 +64,8 @@
         <div *ngIf="inline_sub_questions" class="form-inline">
           <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
             <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
-                                  [super_responses]="responses"  [enabling_response]="responses[0]"  [changeValueTrigger]="changeValue"></app-inline-questions>
+                                  [super_responses]="responses"  [enabling_response]="responses[0]"
+                                  [super_answer]="responses[0]"  [changeValueTrigger]="changeValue"></app-inline-questions>
           </div>
         </div>
       </div>
@@ -72,7 +76,8 @@
   <div *ngFor="let item of dependant_sub_questions">
     <div class="row">
       <app-question class="indent" [question_item]=item [dependant_sub_questions]="item.dependant_sub_questions"
-                    [inline_sub_questions]=item.inline_sub_questions [super_responses]="responses" [changeValueTrigger]="changeValue"></app-question>
+                    [inline_sub_questions]=item.inline_sub_questions [super_responses]="responses"
+                    [changeValueTrigger]="changeValue"></app-question>
     </div>
   </div>
 </div>

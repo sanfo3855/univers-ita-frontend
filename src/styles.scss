@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap";
 
+.form-inline .form-control {
+  display: inline-block !important;
+  width: auto!important
+}
+
 @font-face {
   font-family: Cinzel;
   src: url(assets/fonts/Cinzel-Regular.woff) format("woff");

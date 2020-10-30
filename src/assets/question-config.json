@@ -3,871 +3,846 @@
   "time": 5,
   "survey": [
     {
-      "section": "Nome sezione 1",
-      "num": 1,
+      "section": "",
+      "num": 0,
       "questions": [
         {
-          "question": {
-            "question": "Domandina 1",
-            "num": "1"
-          },
-          "type": "checkbox",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
-          "inline_sub_questions": [
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "1e1"
-              },
-              "type": "select",
-              "answers": [
-                {
-                  "answer": "Risposta 4",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 5",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 6",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "1e1"
-              },
-              "type": "select",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 2"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "1e1"
-              },
-              "type": "select",
-              "answers": [
-                {
-                  "answer": "Risposta 7",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 8",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 9",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 3"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 2",
-                "num": "1e2"
-              },
-              "type": "checkbox",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            }
-          ],
-          "dependant_sub_questions": [
-            {
-              "question": {
-                "question": "Domandina 2",
-                "num": "2"
-              },
-              "type": "radiobutton",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2"],
-              "inline_sub_questions": [
-                {
-                  "question": {
-                    "question": "sub domandina 1",
-                    "num": "2e1"
-                  },
-                  "type": "textbox",
-                  "answers": "",
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                },
-                {
-                  "question": {
-                    "question": "sub domandina 1",
-                    "num": "2e2"
-                  },
-                  "type": "radiobutton",
-                  "answers": [
-                    {
-                      "answer": "Risposta 1",
-                      "num": 1
-                    },
-                    {
-                      "answer": "Risposta 2",
-                      "num": 2
-                    },
-                    {
-                      "answer": "Risposta 3",
-                      "num": 3
-                    }
-                  ],
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                }
-              ],
-              "dependant_sub_questions": [
-                {
-                  "question": {
-                    "question": "Domandina 3",
-                    "num": "3"
-                  },
-                  "type": "radiobutton",
-                  "answers": [
-                    {
-                      "answer": "Risposta 1",
-                      "num": 1
-                    },
-                    {
-                      "answer": "Risposta 2",
-                      "num": 2
-                    },
-                    {
-                      "answer": "Risposta 3",
-                      "num": 3
-                    }
-                  ],
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
-                  "inline_sub_questions": [
-                    {
-                      "question": {
-                        "question": "sub domandina 1",
-                        "num": "3e1"
-                      },
-                      "type": "textbox",
-                      "answers": "",
-                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                    },
-                    {
-                      "question": {
-                        "question": "sub domandina 1",
-                        "num": "3e2"
-                      },
-                      "type": "radiobutton",
-                      "answers": [
-                        {
-                          "answer": "Risposta 1",
-                          "num": 1
-                        },
-                        {
-                          "answer": "Risposta 2",
-                          "num": 2
-                        },
-                        {
-                          "answer": "Risposta 3",
-                          "num": 3
-                        }
-                      ],
-                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "question": {
-            "question": "Domandina 4",
-            "num": "4"
-          },
-          "type": "checkbox",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ]
-        },
-        {
-          "question": {
-            "question": "Domandina 5",
-            "num": "5"
-          },
+          "question": {"question":"Dove si trova l’università a cui sei iscritto?","num":"1"},
           "type": "select",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
+          "answers": [{"answer":"Milano","num":1},{"answer":"Bologna","num":2},{"answer":"Pisa","num":3},{"answer":"Macerata","num":4},{"answer":"Perugia","num":5},{"answer":"Napoli","num":6}]
+        },
+        {
+          "question": {"question":"A quale corso laurea sei iscritto/a?","num":"2"},
+          "type": "select",
+          "answers": [{"answer":"Infermieristica","num":1},{"answer":"Ingegneria","num":2},{"answer":" Lingue e letterature straniere","num":3},{"answer":"Economia","num":4},{"answer":"Farmacia","num":5},{"answer":"Giurisprudenza","num":6},{"answer":"Scienze della formazione primaria","num":7}]
+        },
+        {
+          "question": {"question":"Hai frequentato altri corsi universitari prima di iscriverti a quello attuale?","num":"3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"No","num":1},{"answer":"Sì, per un semestre","num":2},{"answer":"Sì, per un intero anno accademico","num":3},{"answer":"Sì, per più di un anno accademico","num":4}],
           "inline_sub_questions": [
             {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "5e1"
-              },
+              "question": {"question":"In quale corso di laurea?","num":"3e1"},
               "type": "textbox",
               "answers": "",
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "5e2"
-              },
-              "type": "radiobutton",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            }
-          ]
-        },
-        {
-          "question": {
-            "question": "Domandina 6",
-            "num": "6"
-          },
-          "type": "textbox",
-          "answers": ""
-        },
-        {
-          "question": {
-            "question": "Domandina 7",
-            "num": "7"
-          },
-          "type": "select",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ]
-        },
-        {
-          "question": {
-            "question": "Domandina 8",
-            "num": "8"
-          },
-          "type": "checkbox",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
-          "inline_sub_questions": [
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "8e1"
-              },
-              "type": "select",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 2",
-                "num": "8e2"
-              },
-              "type": "checkbox",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            }
-          ],
-          "dependant_sub_questions": [
-            {
-              "question": {
-                "question": "Domandina 9",
-                "num": "9"
-              },
-              "type": "radiobutton",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
-              "inline_sub_questions": [
-                {
-                  "question": {
-                    "question": "sub domandina 1",
-                    "num": "9e1"
-                  },
-                  "type": "radiobutton",
-                  "answers": [
-                    {
-                      "answer": "Risposta 1",
-                      "num": 1
-                    },
-                    {
-                      "answer": "Risposta 2",
-                      "num": 2
-                    },
-                    {
-                      "answer": "Risposta 3",
-                      "num": 3
-                    }
-                  ],
-                  "super_answers": ["Risposta 1","Risposta 2"]
-                }
-              ],
-              "dependant_sub_questions": [
-                {
-                  "question": {
-                    "question": "Domandina 10",
-                    "num": "10"
-                  },
-                  "type": "radiobutton",
-                  "answers": [
-                    {
-                      "answer": "Risposta 1",
-                      "num": 1
-                    },
-                    {
-                      "answer": "Risposta 2",
-                      "num": 2
-                    },
-                    {
-                      "answer": "Risposta 3",
-                      "num": 3
-                    }
-                  ],
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
-                  "inline_sub_questions": [
-                    {
-                      "question": {
-                        "question": "sub domandina 1",
-                        "num": "10e1"
-                      },
-                      "type": "textbox",
-                      "answers": "",
-                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                    },
-                    {
-                      "question": {
-                        "question": "sub domandina 1",
-                        "num": "10e2"
-                      },
-                      "type": "radiobutton",
-                      "answers": [
-                        {
-                          "answer": "Risposta 1",
-                          "num": 1
-                        },
-                        {
-                          "answer": "Risposta 2",
-                          "num": 2
-                        },
-                        {
-                          "answer": "Risposta 3",
-                          "num": 3
-                        }
-                      ],
-                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "question": {
-            "question": "Domandina 11",
-            "num": "11"
-          },
-          "type": "checkbox",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ]
-        },
-        {
-          "question": {
-            "question": "Domandina 12",
-            "num": "12"
-          },
-          "type": "select",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
-          "inline_sub_questions": [
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "12e1"
-              },
-              "type": "textbox",
-              "answers": "",
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "12e2"
-              },
-              "type": "radiobutton",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            }
-          ]
-        },
-        {
-          "question": {
-            "question": "Domandina 13",
-            "num": "13"
-          },
-          "type": "textbox",
-          "answers": ""
-        },
-        {
-          "question": {
-            "question": "Domandina 14",
-            "num": "14"
-          },
-          "type": "select",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
+              "super_answers": ["Sì, per un semestre","Sì, per un intero anno accademico","Sì, per più di un anno accademico"]
             }
           ]
         }
       ]
     },
     {
-      "section": "Nome sezione 2",
+      "section": "Profilo personale e familiare",
+      "num": 1,
+      "questions": [
+        {
+          "question": {"question":"Sesso","num":"4"},
+          "type": "select",
+          "answers": [{"answer":"Maschio","num":1},{"answer":"Femmina","num":2},{"answer":"Altro","num":3}]
+        },
+        {
+          "question": {"question":"Quanti anni hai?","num":"5"},
+          "type": "select",
+          "answers": [{"answer":"19","num":1},{"answer":"20","num":2},{"answer":"21","num":3},{"answer":"22","num":4},{"answer":"23","num":5},{"answer":"24","num":6},{"answer":"25","num":7},{"answer":"26","num":8},{"answer":"27","num":9},{"answer":"28","num":10},{"answer":"29","num":11},{"answer":"30","num":12},{"answer":"\u003e 30","num":13}]
+        },
+        {
+          "question": {"question":"Dove sei nato?","num":"6"},
+          "type": "radiobutton",
+          "answers":[{"answer":"Italia","num":1},{"answer":"Altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"6e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions": [
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "6e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Rep. Ceca","num":142},{"answer":"Rep. Centrafricana","num":143},{"answer":"Rep. Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["Altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Da dove proviene tua MADRE?","num": "7 a"},
+          "type": "radiobutton",
+          "answers":[{"answer":"Italia","num":1},{"answer":"Altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"7e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia ","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions":  [
+                {
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "7e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Rep. Ceca","num":142},{"answer":"Rep. Centrafricana","num":143},{"answer":"Rep. Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["Altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Da dove proviene tuo PADRE?","num": "7 b"},
+          "type": "radiobutton",
+          "answers":[{"answer":"Italia","num":1},{"answer":"Altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"8e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia ","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions":  [
+                {
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"8e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "8e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Rep. Ceca","num":142},{"answer":"Rep. Centrafricana","num":143},{"answer":"Rep. Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["Altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question":"Sei uno/a studente/essa fuori sede?","num":"8"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Si","num":1},{"answer":"No","num":2},{"answer":"Sono pendolare","num":3}]
+        },
+        {
+          "question": {"question":"Sei uno/a studente/essa lavoratore/trice?","num":"9"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Si","num":1},{"answer":"No","num":2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question":"Se sì, sei un/a lavoratore/trice, lavori","num":"10"},
+              "type": "radiobutton",
+              "answers": [{"answer":"A tempo pieno","num":1},{"answer":"Part-time","num":2},{"answer":"Saltuariamente","num":3}],
+              "super_answers": ["Si"]
+            }
+          ]
+        },
+        {
+          "question": {"question":"Nella casa in cui durante l’anno vivi più frequentemente hai a disposizione …","num":"11"},
+          "type": "checkbox",
+          "answers": [{"answer":"PC","num":1},{"answer":"Tablet","num":2},{"answer":"E-reader","num":3},{"answer":"Una stampante","num":4},{"answer":"Un collegamento Internet","num":5}]
+        },
+        {
+          "question": {"question": "Hai o hai avuto in passato difficoltà che ti abbiano reso difficile la lettura o la scrittura (ad es. DSA)?","num": "12"},
+          "type": "checkbox",
+          "answers": [{"answer":"Sì (DSA)","num":1},{"answer":"Sì (ipovedente)","num":2},{"answer":"Sì (altro)","num":3},{"answer":"No","num":4}]
+        },
+        {
+          "question": {"question": "Come definiresti la classe socio-economica della tua famiglia?","num": "13"},
+          "type": "select",
+          "answers": [{"answer":"Elevata","num":1},{"answer":"Medio-alta","num":2},{"answer":"Media","num":3},{"answer":"Medio-bassa","num":3},{"answer":"Bassa","num":3},{"answer":"Non so/non rispondo","num":3}],
+          "exclusive_answers":["Non so/non rispondo"]
+        },
+        {
+          "question": {"question": "Qual è il titolo di studio conseguito da tua MADRE?","num": "14 a"},
+          "type": "select",
+          "answers": [{"answer":"Nessun titolo di studio o licenza elementare","num":1},{"answer":"Licenza media","num":2},{"answer":"Diploma di istruzione liceale","num":3},{"answer":"Diploma di istruzione tecnico-professionale","num":4},{"answer":"Laurea (anche Conservatorio)","num":5},{"answer":"Dottorato","num":6},{"answer":"Non so, non rispondo","num":7}]
+        },
+        {
+          "question": {"question": "Qual è il titolo di studio conseguito da tuo PADRE?","num": "14 b"},
+          "type": "select",
+          "answers": [{"answer":"Nessun titolo di studio o licenza elementare","num":1},{"answer":"Licenza media","num":2},{"answer":"Diploma di istruzione liceale","num":3},{"answer":"Diploma di istruzione tecnico-professionale","num":4},{"answer":"Laurea (anche Conservatorio)","num":5},{"answer":"Dottorato","num":6},{"answer":"Non so, non rispondo","num":7}]
+        },
+        {
+          "question": {"question": "Cosa legge abitualmente tua MADRE?","num": "15 a"},
+          "type": "checkbox",
+          "answers": [{"answer":"Libri","num":1},{"answer":"Riviste","num":2},{"answer":"Quotidiani","num":3},{"answer":"Fumetti","num":4},{"answer":"Non so/non rispondo","num":5}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Ha abbonamenti o pubblicazioni di questo tipo?","num":"15ae1"},
+              "type": "radiobutton",
+              "answers": [{"answer":"Si","num":1},{"answer":"No","num":2}],
+              "super_answers": ["Riviste","Quotidiani","Fumetti"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Cosa legge abitualmente tuo PADRE?","num": "15 b"},
+          "type": "checkbox",
+          "answers": [{"answer":"Libri","num":1},{"answer":"Riviste","num":2},{"answer":"Quotidiani","num":3},{"answer":"Fumetti","num":4},{"answer":"Non so/non rispondo","num":5}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Ha abbonamenti o pubblicazioni di questo tipo?","num":"15be1"},
+              "type": "radiobutton",
+              "answers": [{"answer":"Si","num":1},{"answer":"No","num":2}],
+              "super_answers": ["Riviste","Quotidiani","Fumetti"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Biografia linguistica ed educativa",
       "num": 2,
       "questions": [
         {
-          "question": {
-            "question": "Domandina 1",
-            "num": "15"
-          },
-          "type": "checkbox",
-          "answers": [
-            {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
-            }
-          ],
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con i suoi GENITORI?","num": "16 a"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "15e1"
-              },
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16ae1"},
               "type": "select",
-              "answers": [
-                {
-                  "answer": "Risposta 4",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 5",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 6",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1"]
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
             },
             {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "15e1"
-              },
-              "type": "select",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 2"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 1",
-                "num": "15e1"
-              },
-              "type": "select",
-              "answers": [
-                {
-                  "answer": "Risposta 7",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 8",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 9",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 3"]
-            },
-            {
-              "question": {
-                "question": "sub domandina 2",
-                "num": "15e2"
-              },
-              "type": "checkbox",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-            }
-          ],
-          "dependant_sub_questions": [
-            {
-              "question": {
-                "question": "Domandina 2",
-                "num": "16"
-              },
-              "type": "radiobutton",
-              "answers": [
-                {
-                  "answer": "Risposta 1",
-                  "num": 1
-                },
-                {
-                  "answer": "Risposta 2",
-                  "num": 2
-                },
-                {
-                  "answer": "Risposta 3",
-                  "num": 3
-                }
-              ],
-              "super_answers": ["Risposta 1","Risposta 2"],
-              "inline_sub_questions": [
-                {
-                  "question": {
-                    "question": "sub domandina 1",
-                    "num": "16e1"
-                  },
-                  "type": "textbox",
-                  "answers": "",
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                },
-                {
-                  "question": {
-                    "question": "sub domandina 1",
-                    "num": "16e2"
-                  },
-                  "type": "radiobutton",
-                  "answers": [
-                    {
-                      "answer": "Risposta 1",
-                      "num": 1
-                    },
-                    {
-                      "answer": "Risposta 2",
-                      "num": 2
-                    },
-                    {
-                      "answer": "Risposta 3",
-                      "num": 3
-                    }
-                  ],
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                }
-              ],
-              "dependant_sub_questions": [
-                {
-                  "question": {
-                    "question": "Domandina 3",
-                    "num": "17"
-                  },
-                  "type": "radiobutton",
-                  "answers": [
-                    {
-                      "answer": "Risposta 1",
-                      "num": 1
-                    },
-                    {
-                      "answer": "Risposta 2",
-                      "num": 2
-                    },
-                    {
-                      "answer": "Risposta 3",
-                      "num": 3
-                    }
-                  ],
-                  "super_answers": ["Risposta 1","Risposta 2","Risposta 3"],
-                  "inline_sub_questions": [
-                    {
-                      "question": {
-                        "question": "sub domandina 1",
-                        "num": "17e1"
-                      },
-                      "type": "textbox",
-                      "answers": "",
-                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                    },
-                    {
-                      "question": {
-                        "question": "sub domandina 1",
-                        "num": "17e2"
-                      },
-                      "type": "radiobutton",
-                      "answers": [
-                        {
-                          "answer": "Risposta 1",
-                          "num": 1
-                        },
-                        {
-                          "answer": "Risposta 2",
-                          "num": 2
-                        },
-                        {
-                          "answer": "Risposta 3",
-                          "num": 3
-                        }
-                      ],
-                      "super_answers": ["Risposta 1","Risposta 2","Risposta 3"]
-                    }
-                  ]
-                }
-              ]
+              "question": {"question":"In quale altra lingua?","num":"16ae1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
             }
           ]
         },
         {
-          "question": {
-            "question": "Domandina 4",
-            "num": "18"
-          },
-          "type": "checkbox",
-          "answers": [
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con il/la COMPAGNO/A?","num": "16 b"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
             {
-              "answer": "Risposta 1",
-              "num": 1
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16be1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
             },
             {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
+              "question": {"question":"In quale altra lingua?","num":"16be1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
             }
           ]
         },
         {
-          "question": {
-            "question": "Domandina 5",
-            "num": "19"
-          },
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con TE e con i tuoi FRATELLI/ le tue SORELLE ADESSO?","num": "16 c"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16ce1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16ce1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con te e con TE e con i tuoi FRATELLI/le tue SORELLE QUANDO ERAVATE PICCOLI?","num": "16 d"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16de1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16de1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con gli ALTRI PARENTI?","num": "16 e"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16ee1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16ee1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE sul POSTO DI LAVORO?","num": "16 f"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16fe1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16fe1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con i SUOI AMICI?","num": "16 g"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16ge1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16ge1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con gli ESTRANEI?","num": "16 h"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16he1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16he1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con i suoi GENITORI?","num": "17 a"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17ae1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17ae1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con il/la COMPAGNO/A?","num": "17 b"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17be1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17be1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con TE e con i tuoi FRATELLI/ le tue SORELLE ADESSO?","num": "17 c"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17ce1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17ce1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con te e con TE e con i tuoi FRATELLI/le tue SORELLE QUANDO ERAVATE PICCOLI?","num": "17 d"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17de1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17de1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con gli ALTRI PARENTI?","num": "17 e"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17ee1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17ee1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE sul POSTO DI LAVORO?","num": "17 f"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17fe1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17fe1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con i SUOI AMICI?","num": "17 g"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17ge1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17ge1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE Con gli ESTRANEI?","num": "17 h"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17he1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17he1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Se hai fratelli/sorelle, in quali lingue/dialetti parlate e parlavate quando eravate piccoli?","num": "18"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"18e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"18e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Dove hai frequentato la SCUOLA PRIMARIA?","num": "19 a"},
           "type": "select",
           "answers": [
             {
@@ -1225,7 +1200,7 @@
       ]
     },
     {
-      "section": "Nome sezione 3",
+      "section": "Consumi culturali",
       "num": 3,
       "questions": [
         {
