@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {BackendApiService} from '../../@core/services/backend-api/backend-api.service';
 import {LocalStorageService} from '../../@core/services/local-storage/local-storage.service';
 import {TimerService} from '../../@core/services/timer/timer.service';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-writing',
@@ -23,7 +24,10 @@ export class WritingComponent implements OnInit {
 
   constructor(private backendApiService: BackendApiService,
               private localStorage: LocalStorageService,
-              public timer: TimerService) {
+              public timer: TimerService,
+              private titleService: Title) {
+
+    this.titleService.setTitle("Scrittura  - UniverS-ITA");
   }
 
   ngOnInit(): void {

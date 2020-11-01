@@ -5,3 +5,30 @@ h3 {
 .section {
   padding-bottom: 60px;
 }
+
+.center {
+  text-align: center;
+}
+
+.testo {
+  font-size: 1.2em;
+}
+
+.center .bottom-button  {
+  margin: 20px;
+  font-size: 1.5em;
+}
+
+.col-md-12 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-height: 22px;
+  margin-bottom: .625em;
+}
+
+.back-button {
+  font-size: 1em;
+  color: #fff;
+  background-color: #00436A;
+  border-color: #00436A;
+}

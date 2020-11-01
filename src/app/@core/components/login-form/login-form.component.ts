@@ -40,7 +40,7 @@ export class LoginFormComponent implements OnInit {
         if (data.success) {
           this.jwtTokenService.setToken(data.token);
           if (this.jwtTokenService.getDecodedToken().type === 'student') {
-            this.router.navigate(['/app-home']);
+            this.router.navigate(['/landing page']);
           } else if (this.jwtTokenService.getDecodedToken().type === 'admin') {
             this.router.navigate(['/admin']);
           }

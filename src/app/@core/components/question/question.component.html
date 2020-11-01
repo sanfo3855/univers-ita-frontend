@@ -42,7 +42,7 @@
       </div>
 
       <!-- TEXTBOX-->
-      <div *ngIf="question_item.type === 'textbox'">
+      <div *ngIf="question_item.type === 'textbox'" class="form-inline">
         <input type="text" class="form-control" (ngModelChange)="onSubmit()"
                formControlName="value" id="textbox-question-{{question_item.question.num}}">
         <label for="textbox-question-{{question_item.question.num}}"></label>

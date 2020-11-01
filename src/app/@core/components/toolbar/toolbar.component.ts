@@ -76,7 +76,7 @@ export class ToolbarComponent implements OnInit {
     this.localStorage.remove('questions');
     this.localStorage.remove('time');
     this.timer.stopTimer();
-    this.router.navigate(['/app-home']);
+    this.router.navigate(['/landing page']);
   }
 
   uploadTextNQuestions(): void {

@@ -1,30 +1,41 @@
 <div class="body-overflow">
   <app-header></app-header>
-  <app-toolbar [appPath]="['Home','App-Home','Writing','Survey','End']" [backButton]="['/survey','Questionario']"
+  <app-toolbar [appPath]="['Landing page','Introduzione','Scrittura','Questionario','Fine']" [backButton]="['/survey','Questionario']"
                [nextButton]=""  [submitButton]="['','Conferma']"></app-toolbar>
   <div class="content-wrapper">
     <div class="row">
-      <div class="col-md-12">
-        <h1>Fase 3: Riepilogo</h1>
-        <h2>Testo scritto</h2>
-        <div class="row">
-          <div class="text-container">
-            <p>{{this.writingText.text}}</p>
-          </div>
-        </div>
-        <br>
-        <h2>Risposte al Questionario</h2>
-        <div *ngFor="let question of this.questions | keyvalue">
-          <div class="row">
-            <h5>{{question.key}}) {{question.value.question}}</h5>
-            <div class="row text-container">
-              <p>{{question.value.answer}}</p>
-            </div>
-          </div>
-        </div>
+      <div>
+        <button type="button" id="back-button" class="btn btn-primary back-button" [routerLink]="['/questionario']"  [queryParams]="{'sezione':4}"><i class="fa fa-arrow-left"></i> Torna al questionario</button>
       </div>
     </div>
+    <div class="row">
+      <h1>Fine!</h1>
+      <div class="col-md-12">
+        <div class="center testo">
+          Grazie per aver partecipato alla raccolta dati del progetto UniverS-Ita!<br><br>
+
+          Trovi maggiori informazioni sul progetto <a href="https://site.unibo.it/univers-ita/it">qui</a>.<br><br>
+
+          Se hai domande, puoi contattarci all’indirizzo <a href="mailto:prin.universita@gmail.com">prin.universita@gmail.com</a><br><br><br>
+
+
+          Clicca su <i>concludi</i> per partecipare all’estrazione di un buono dei buoni da 25 € per l’acquisto di libri.
+        </div>
+        <div class="center">
+          <br><br>
+          <button type="button" id="bottom-button" class="btn btn-success bottom-button" (click)="this.imFeelingLucky()">Concludi</button>
+          <br><br>
+        </div>
+        <div *ngIf="this.responseLucky['lucky'] === true" class="center">
+          <h2>Hai vinto!  😊</h2>
+          Codice <b>{{this.responseLucky['code']}}</b> utilizzabile entro il {{this.responseLucky['expire']}} al seguente link <a href="https://www.amazon.it/">https://www.amazon.it/</a>
+        </div>
+        <div *ngIf="this.responseLucky['lucky'] === false" class="center">
+          <h2>Non hai vinto 😔 </h2>
+        </div>
+    </div>
   </div>
+  </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
 <router-outlet></router-outlet>

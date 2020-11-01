@@ -1,0 +1,30 @@
+<div class="body-overflow">
+  <app-header></app-header>
+  <app-toolbar [appPath]="['Landing Page','Introduzione']"></app-toolbar>
+  <div id="u-content-wrapper" class="content-wrapper">
+    <div class="row">
+      <div>
+        <button type="button" id="back-button" class="btn btn-primary back-button" [routerLink]="['/landing page']"><i class="fa fa-arrow-left"></i> Torna Indietro</button>
+      </div>
+      <br><br><br>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="testo">
+          Devi scrivere un testo di media lunghezza: tra le 250 e le 500 parole. Dovrai cercare di usare uno <b>stile formale</b>: quindi, scrivi nel modo più corretto possibile, come se scrivessi per un tuo professore.
+          <br><br><br>
+          Proprio perché la rilevazione è totalmente anonima, sarà impossibile associare il testo alla tua persona e quindi, partecipando alla rilevazione, rinunci alla proprietà intellettuale su di esso.
+          <br><br><br>
+          Il testo non sarà mai pubblicato integralmente e sarà utilizzato solo per scopi di ricerca.
+          <br><br><br>
+          Per accettare, clicca su <i>prosegui</i> e scopri la consegna (cioè il tema su cui dovrai scrivere il testo).
+        </div>
+        <div class="center">
+          <br><br>
+          <button type="button" id="bottom-button" class="btn btn-success bottom-button" [routerLink]="'/scrittura'">Prosegui</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

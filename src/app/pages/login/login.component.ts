@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {JWTTokenService} from '../../@core/services/JWT-token/jwt-token.service';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor() {
+  constructor(private titleService: Title) {
+    this.titleService.setTitle("Introduzione - UniverS-Ita");
   }
 
   ngOnInit(): void {
