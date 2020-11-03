@@ -4,10 +4,11 @@
   <div class="content-wrapper">
     <div class="row">
       <div>
-        <button *ngIf="lastSection === '4'" type="button" id="back-button-1" class="btn btn-success back-button  " [routerLink]="'/questionario'" [queryParams]="{'sezione':[3]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 3</button>
-        <button *ngIf="lastSection === '3'" type="button" id="back-button-2" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[2]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 2</button>
-        <button *ngIf="lastSection === '2'" type="button" id="back-button-3" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 1</button>
-        <button *ngIf="lastSection === '1'" type="button" id="back-button-4" class="btn btn-success back-button" [routerLink]="'/scrittura'"><i class="fa fa-arrow-left"></i> Torna alla Scrittura</button>
+        <button *ngIf="lastSection === '5'" type="button" id="back-button-1" class="btn btn-success back-button  " [routerLink]="'/questionario'" [queryParams]="{'sezione':[4]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 3</button>
+        <button *ngIf="lastSection === '4'" type="button" id="back-button-2" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[3]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 2 (Parte 2)</button>
+        <button *ngIf="lastSection === '3'" type="button" id="back-button-3" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[2]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 2 (Parte 1)</button>
+        <button *ngIf="lastSection === '2'" type="button" id="back-button-4" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 1</button>
+        <button *ngIf="lastSection === '1'" type="button" id="back-button-5" class="btn btn-success back-button" [routerLink]="'/scrittura'"><i class="fa fa-arrow-left"></i> Torna alla Scrittura</button>
       </div>
     </div>
     <div class="row">
@@ -32,10 +33,11 @@
           </div>
         </div>
         <div class="center">
-          <button *ngIf="lastSection === '1'" [disabled]="false" type="button" id="bottom-button-1" class="btn btn-success bottom-button  " [routerLink]="'/questionario'" [queryParams]="{'sezione':[2]}">Vai alla Sezione 2</button>
-          <button *ngIf="lastSection === '2'" [disabled]="false" type="button" id="bottom-button-2" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[3]}">Vai alla Sezione 3</button>
-          <button *ngIf="lastSection === '3'" [disabled]="false" type="button" id="bottom-button-3" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[4]}">Vai alla Sezione 4</button>
-          <button *ngIf="lastSection === '4'" [disabled]="false" type="button" id="bottom-button-4" class="btn btn-success bottom-button" (click)="this.sendToBackend()" [routerLink]="'/end'">Prosegui e Conferma</button>
+          <button *ngIf="lastSection === '1'" [disabled]="false" type="button" id="bottom-button-1" class="btn btn-success bottom-button  " [routerLink]="'/questionario'" [queryParams]="{'sezione':[2]}">Vai alla Sezione 2 (Parte 1)</button>
+          <button *ngIf="lastSection === '2'" [disabled]="false" type="button" id="bottom-button-2" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[3]}">Vai alla Sezione 2 (Parte 2)</button>
+          <button *ngIf="lastSection === '3'" [disabled]="false" type="button" id="bottom-button-3" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[4]}">Vai alla Sezione 3</button>
+          <button *ngIf="lastSection === '4'" [disabled]="false" type="button" id="bottom-button-4" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[5]}">Vai alla Sezione 4</button>
+          <button *ngIf="lastSection === '5'" [disabled]="false" type="button" id="bottom-button-5" class="btn btn-success bottom-button" (click)="this.sendToBackend()" [routerLink]="'/end'">Prosegui e Conferma</button>
         </div>
       </div>
     </div>

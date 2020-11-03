@@ -135,6 +135,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     } else if (this.question_item.type === 'radiobutton' || this.question_item.type === 'textbox' || this.question_item.type === 'select') {
       this.responses = [this.form.value.value];
     }
+
     console.log('Question ' + this.question_item.question.question + ' - Responses ' + this.responses);
 
     let savedQuestion = JSON.parse(this.localStorage.get('questions'));
@@ -146,12 +147,23 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       savedQuestion[this.question_item.question.num].answer = {};
     }
     if(this.question_item.type === 'checkbox') {
+      //eventualmente rimuovo l'oggetto della risposta
+      if(!this.form.value[n]) {
+        let tempAnswer = savedQuestion[this.question_item.question.num].answer;
+        savedQuestion[this.question_item.question.num].answer = {};
+        Object.keys(tempAnswer).filter(item => {
+          if(item != new_response){
+            savedQuestion[this.question_item.question.num].answer[item] = tempAnswer[item];
+          }
+        })
+      }
+      //aggiungo nuove risposte
       for (let response of this.responses) {
         if (!savedQuestion[this.question_item.question.num].answer[response] || response === new_response) {
-          if(this.question_item.inline_sub_questions) {
+          if (this.question_item.inline_sub_questions) {
             savedQuestion[this.question_item.question.num].answer[response] = {}
           } else {
-            savedQuestion[this.question_item.question.num].answer[response] = {"-1":""}
+            savedQuestion[this.question_item.question.num].answer[response] = {"-1": ""}
           }
         }
       }

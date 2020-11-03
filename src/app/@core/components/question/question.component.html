@@ -17,7 +17,7 @@
             <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
               <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num" [index]="i"
                                     [super_responses]="responses" [enabling_response]="answer.answer"
-                                    [super_answer]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                    [top_answer]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
             <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
               <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
                                     [super_responses]="responses" [enabling_response]="answer.answer"
-                                    [super_answer]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                    [top_answer]="answer.answer" [changeValueTrigger]="changeValue"></app-inline-questions>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
           <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
             <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
                                   [super_responses]="responses" [enabling_response]="responses[0]"
-                                  [super_answer]="responses[0]" [changeValueTrigger]="changeValue"></app-inline-questions>
+                                  [top_answer]="responses[0]" [changeValueTrigger]="changeValue"></app-inline-questions>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <div *ngFor="let item_sub of inline_sub_questions" class="form-inline">
             <app-inline-questions [inline_sub_question_item]=item_sub [dependentOn]="question_item.question.num"
                                   [super_responses]="responses"  [enabling_response]="responses[0]"
-                                  [super_answer]="responses[0]"  [changeValueTrigger]="changeValue"></app-inline-questions>
+                                  [top_answer]="responses[0]"  [changeValueTrigger]="changeValue"></app-inline-questions>
           </div>
         </div>
       </div>

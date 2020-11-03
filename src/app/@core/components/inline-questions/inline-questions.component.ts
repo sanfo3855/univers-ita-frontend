@@ -13,7 +13,7 @@ export class InlineQuestionsComponent implements OnChanges {
   form: FormGroup;
 
   @Input() dependentOn: any;
-  @Input() super_answer: any;
+  @Input() top_answer: any;
   @Input() enabling_response: any;
   @Input() super_responses: any;
 
@@ -57,10 +57,10 @@ export class InlineQuestionsComponent implements OnChanges {
     const questions =  this.localStorage.getJSON('questions');
     if(questions[this.dependentOn]){
       if(questions[this.dependentOn].answer) {
-        if(questions[this.dependentOn].answer[this.enabling_response]){
-          if(questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num]) {
-            if(questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].answer){
-              savedResponse = questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].answer;
+        if(questions[this.dependentOn].answer[this.top_answer]){
+          if(questions[this.dependentOn].answer[this.top_answer][this.inline_sub_question_item.question.num]) {
+            if(questions[this.dependentOn].answer[this.top_answer][this.inline_sub_question_item.question.num].answer){
+              savedResponse = questions[this.dependentOn].answer[this.top_answer][this.inline_sub_question_item.question.num].answer;
             }
           }
         }
@@ -103,9 +103,9 @@ export class InlineQuestionsComponent implements OnChanges {
       const questions =  this.localStorage.getJSON('questions');
       if(questions[this.dependentOn]) {
         if (questions[this.dependentOn].answer) {
-          if (questions[this.dependentOn].answer[this.enabling_response]) {
-            if (!questions[this.dependentOn].answer[this.enabling_response]["-1"]) {
-              questions[this.dependentOn].answer[this.enabling_response]["-1"] = "";
+          if (questions[this.dependentOn].answer[this.top_answer]) {
+            if (!questions[this.dependentOn].answer[this.top_answer]["-1"]) {
+              questions[this.dependentOn].answer[this.top_answer]["-1"] = "";
             }
           }
         }
@@ -127,7 +127,7 @@ export class InlineQuestionsComponent implements OnChanges {
     this.initializeForm();
   }
 
-  onSubmit(response?: string, n?: number) {
+  async onSubmit(response?: string, n?: number) {
     // GET RESPONSES
     if (this.inline_sub_question_item.type === 'checkbox') {
       if (this.form.value[n]) {
@@ -150,16 +150,17 @@ export class InlineQuestionsComponent implements OnChanges {
     // SAVE TO LOCAL STORAGE
     const questions =  this.localStorage.getJSON('questions');
     if(this.isEnabled()) {
+      console.log(this.dependentOn + " " + this.enabling_response + " " + this.inline_sub_question_item.question.num);
       if(questions[this.dependentOn]) {
-        if(questions[this.dependentOn].answer[this.enabling_response]) {
-          if(!questions[this.dependentOn].answer[this.enabling_response]) {
-            questions[this.dependentOn].answer[this.enabling_response] = {}
+        if(questions[this.dependentOn].answer[this.top_answer]) {
+          if(!questions[this.dependentOn].answer[this.top_answer]) {
+            questions[this.dependentOn].answer[this.top_answer] = {}
           }
-          if(!questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num]) {
-            questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num] = {};
+          if(!questions[this.dependentOn].answer[this.top_answer][this.inline_sub_question_item.question.num]) {
+            questions[this.dependentOn].answer[this.top_answer][this.inline_sub_question_item.question.num] = {};
           }
-          questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].question = this.inline_sub_question_item.question.question;
-          questions[this.dependentOn].answer[this.enabling_response][this.inline_sub_question_item.question.num].answer = this.inline_responses;
+          questions[this.dependentOn].answer[this.top_answer][this.inline_sub_question_item.question.num].question = this.inline_sub_question_item.question.question;
+          questions[this.dependentOn].answer[this.top_answer][this.inline_sub_question_item.question.num].answer = this.inline_responses;
         }
       }
     }
