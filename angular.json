@@ -40,10 +40,6 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
-                },
-                {
-                  "replace": "/assets/unibo-sigillo2x.png",
-                  "with": "/PRIN2017/assets/unibo-sigillo2x.png"
                 }
               ],
               "optimization": true,
