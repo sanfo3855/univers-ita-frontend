@@ -125,7 +125,9 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
   async onSubmit(new_response?: string, n?: number) {
     setTimeout(() => { // here
       this.loading = true;
-      this.form.disable()
+      if(this.question_item.type!=='textbox') {
+        this.form.disable()
+      }
     }, 100);
     if (this.question_item.type === 'checkbox') {
       if (this.form.value[n]) {
@@ -190,6 +192,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     setTimeout(() => { // here
       this.form.enable();
       this.loading = false;
-    }, 100);
+    }, 300);
   }
 }
