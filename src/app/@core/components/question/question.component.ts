@@ -190,6 +190,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     setTimeout(() => { // here
       this.form.enable();
       this.loading = false;
-    }, 300);
+    }, 100);
   }
 }
