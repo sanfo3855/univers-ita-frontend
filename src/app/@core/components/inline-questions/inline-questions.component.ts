@@ -27,6 +27,9 @@ export class InlineQuestionsComponent implements OnChanges {
   inline_responses = [];
 
   show = false;
+
+  loading = false;
+
   constructor(private localStorage: LocalStorageService) {
   }
 
@@ -128,6 +131,9 @@ export class InlineQuestionsComponent implements OnChanges {
   }
 
   async onSubmit(response?: string, n?: number) {
+    setTimeout(() => { // here
+      this.loading = true;
+    }, 100);
     // GET RESPONSES
     if (this.inline_sub_question_item.type === 'checkbox') {
       if (this.form.value[n]) {
@@ -168,6 +174,9 @@ export class InlineQuestionsComponent implements OnChanges {
 
     // TRIGGER ONCHANGE
     this.changeValue = Math.random();
+    setTimeout(() => { // here
+      this.loading = false;
+    }, 300);
   }
 
 }

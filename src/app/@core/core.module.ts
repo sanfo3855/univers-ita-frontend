@@ -13,6 +13,7 @@ import { CreateUserFormComponent } from './components/create-user-form/create-us
 import { NgbdModalConfirm, NgbdModalConfirmAutofocus, NgbdModalFocus } from './components/modal-focus/modal-focus.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InlineQuestionsComponent } from './components/inline-questions/inline-questions.component';
+import { SpinnerLoadingComponent } from './components/spinner-loading/spinner-loading.component';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { InlineQuestionsComponent } from './components/inline-questions/inline-q
     NgbdModalFocus],
   imports: [CommonModule, RouterModule, ReactiveFormsModule, NgbModule],
   declarations: [FooterComponent, HeaderComponent, ToolbarComponent, QuestionComponent, LoginFormComponent,
-    CreateUserFormComponent, NgbdModalFocus, NgbdModalConfirm, NgbdModalConfirmAutofocus, InlineQuestionsComponent],
+    CreateUserFormComponent, NgbdModalFocus, NgbdModalConfirm, NgbdModalConfirmAutofocus, InlineQuestionsComponent, SpinnerLoadingComponent],
   bootstrap: [NgbdModalFocus],
   entryComponents: [NgbdModalConfirm, NgbdModalConfirmAutofocus]
 })

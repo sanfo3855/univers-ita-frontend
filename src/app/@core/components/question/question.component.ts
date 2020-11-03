@@ -36,6 +36,8 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
   responses = [];
 
+  loading = false;
+
   constructor(private localStorage: LocalStorageService) {
   }
 
@@ -118,7 +120,11 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     this.initializeForm();
   }
 
-  onSubmit(new_response?: string, n?: number) {
+  async onSubmit(new_response?: string, n?: number) {
+    setTimeout(() => { // here
+      this.loading = true;
+      this.form.disable()
+    }, 100);
     if (this.question_item.type === 'checkbox') {
       if (this.form.value[n]) {
         if (!this.responses) {
@@ -179,5 +185,9 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 
     this.changeValue = Math.random();
+    setTimeout(() => { // here
+      this.form.enable();
+      this.loading = false;
+    }, 300);
   }
 }
