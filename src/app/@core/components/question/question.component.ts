@@ -101,9 +101,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     if (!localStorageQuestions[this.question_item.question.num]) {
       localStorageQuestions[this.question_item.question.num] = {};
     }
-    if (!localStorageQuestions[this.question_item.question.num].question) {
-      localStorageQuestions[this.question_item.question.num].question = "";
-    }
     if (!localStorageQuestions[this.question_item.question.num].answer) {
       localStorageQuestions[this.question_item.question.num].answer = {};
     }
