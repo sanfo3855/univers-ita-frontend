@@ -49,11 +49,11 @@ export class ToolbarComponent implements OnInit {
   }
 
   areQuestionsAnswered() {
-    const jsonObj = this.localStorage.getJSON('questions');
+    const savedQuestions = this.localStorage.getJSON('questions');
     let counterNotAnswered = 0;
-    Object.keys(jsonObj).map((key) => {
-      if (Object.keys(jsonObj[key]).length !== 0) {
-        if (jsonObj[key].answer.length === 0 || jsonObj[key].answer[0] === '') {
+    Object.keys(savedQuestions).map((key) => {
+      if (Object.keys(savedQuestions[key]).length !== 0) {
+        if (savedQuestions[key].answer.length === 0 || savedQuestions[key].answer[0] === '') {
           // console.log('answer lunghezza 0');
           counterNotAnswered++;
         }
@@ -62,7 +62,8 @@ export class ToolbarComponent implements OnInit {
         counterNotAnswered++;
       }
     });
-    return counterNotAnswered === 0;
+    // return counterNotAnswered === 0;
+    return true;
   }
 
   areTextFilled() {
@@ -75,7 +76,7 @@ export class ToolbarComponent implements OnInit {
     this.localStorage.remove('questions');
     this.localStorage.remove('time');
     this.timer.stopTimer();
-    this.router.navigate(['/app-home']);
+    this.router.navigate(['/landing page']);
   }
 
   uploadTextNQuestions(): void {

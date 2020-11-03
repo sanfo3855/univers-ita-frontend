@@ -1,140 +1,2070 @@
 {
   "time-bak": 3600,
   "time": 5,
+  "min_world": 250,
+  "max_world": 500,
   "survey": [
     {
-      "question": {
-        "question": "Domandina 1",
-        "num": 1
-      },
-      "type": "checkbox",
-      "answers": [
+      "section": "",
+      "num": 0,
+      "questions": [
         {
-          "answer": "Risposta 1",
-          "num": 1
-        },
-        {
-          "answer": "Risposta 2",
-          "num": 2
-        },
-        {
-          "answer": "Risposta 3",
-          "num": 3
-        }
-      ],
-      "if_answered": [
-        {
-          "question": {
-            "question": "Domandina 2",
-            "num": 2
-          },
-          "type": "radiobutton",
-          "answers": [
+          "question": {"question":"A quale Ateneo sei iscritto/a?","num":"1"},
+          "type": "textbox",
+          "answers": "",
+          "inline_sub_questions": [
             {
-              "answer": "Risposta 1",
-              "num": 1
-            },
-            {
-              "answer": "Risposta 2",
-              "num": 2
-            },
-            {
-              "answer": "Risposta 3",
-              "num": 3
+              "question": {"question":"presso quale corso di laurea?","num":"1e1"},
+              "type": "textbox",
+              "answers": ""
             }
-          ],
-          "if_answered": [{
-            "question": {
-              "question": "Domandina 3",
-              "num": 3
+          ]
+        },
+        {
+          "question": {"question":"Il  tuo corso di laurea è in una sede diversa dalla sede centrale dell'Ateneo?","num":"2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Si","num":1},{"answer":"No","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"indicaci in che luogo si trova:","num":"2e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Si"]
+            }
+          ]
+        },
+        {
+          "question": {"question":"Hai frequentato altri corsi universitari prima di iscriverti a quello attuale?","num":"3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"No","num":1},{"answer":"Sì, per un semestre","num":2},{"answer":"Sì, per un intero anno accademico","num":3},{"answer":"Sì, per più di un anno accademico","num":4}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale corso di laurea?","num":"3e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Sì, per un semestre","Sì, per un intero anno accademico","Sì, per più di un anno accademico"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Profilo personale e familiare",
+      "num": 1,
+      "questions": [
+        {
+          "question": {"question":"Sesso","num":"4"},
+          "type": "select",
+          "answers": [{"answer":"Maschio","num":1},{"answer":"Femmina","num":2},{"answer":"Altro","num":3}]
+        },
+        {
+          "question": {"question":"Quanti anni hai?","num":"5"},
+          "type": "select",
+          "answers": [{"answer":"19","num":1},{"answer":"20","num":2},{"answer":"21","num":3},{"answer":"22","num":4},{"answer":"23","num":5},{"answer":"24","num":6},{"answer":"25","num":7},{"answer":"26","num":8},{"answer":"27","num":9},{"answer":"28","num":10},{"answer":"29","num":11},{"answer":"30","num":12},{"answer":"\u003e 30","num":13}]
+        },
+        {
+          "question": {"question":"Dove sei nato?","num":"6"},
+          "type": "radiobutton",
+          "answers":[{"answer":"Italia","num":1},{"answer":"Altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"6e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions": [
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"6e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["Italia"]
             },
-            "type": "radiobutton",
-            "answers": [
-              {
-                "answer": "Risposta 1",
-                "num": 1
-              },
-              {
-                "answer": "Risposta 2",
-                "num": 2
-              },
-              {
-                "answer": "Risposta 3",
-                "num": 3
-              }
-            ]
-          }]
+            {
+              "question": {"question": "Nazione?","num": "6e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Repe Ceca","num":142},{"answer":"Repe Centrafricana","num":143},{"answer":"Repe Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["Altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Da dove proviene tua MADRE?","num": "7.1"},
+          "type": "radiobutton",
+          "answers":[{"answer":"Italia","num":1},{"answer":"Altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"7e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia ","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions":  [
+                {
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "7e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Repe Ceca","num":142},{"answer":"Repe Centrafricana","num":143},{"answer":"Repe Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["Altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Da dove proviene tuo PADRE?","num": "7.2"},
+          "type": "radiobutton",
+          "answers":[{"answer":"Italia","num":1},{"answer":"Altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"7e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia ","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions":  [
+                {
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"7e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "7e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Repe Ceca","num":142},{"answer":"Repe Centrafricana","num":143},{"answer":"Repe Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["Altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question":"Sei uno/a studente/essa fuori sede?","num":"8"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Si","num":1},{"answer":"No","num":2},{"answer":"Sono pendolare","num":3}]
+        },
+        {
+          "question": {"question":"Sei uno/a studente/essa lavoratore/trice?","num":"9"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Si","num":1},{"answer":"No","num":2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question":"Se sì, sei un/a lavoratore/trice, lavori","num":"10"},
+              "type": "radiobutton",
+              "answers": [{"answer":"A tempo pieno","num":1},{"answer":"Part-time","num":2},{"answer":"Saltuariamente","num":3}],
+              "super_answers": ["Si"]
+            }
+          ]
+        },
+        {
+          "question": {"question":"Nella casa in cui durante l’anno vivi più frequentemente hai a disposizione:","num":"11"},
+          "type": "checkbox",
+          "answers": [{"answer":"PC","num":1},{"answer":"Tablet","num":2},{"answer":"E-reader","num":3},{"answer":"Una stampante","num":4},{"answer":"Un collegamento Internet","num":5}]
+        },
+        {
+          "question": {"question": "Hai o hai avuto in passato difficoltà che ti abbiano reso difficile la lettura o la scrittura (ad ese DSA)?","num": "12"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Quali difficoltà di lettura o scrittura hai avuto?","num": "12.1"},
+              "type": "checkbox",
+              "answers": [{"answer":"DSA","num":1},{"answer":"Ipovedente","num":2},{"answer":"Altro","num":3}],
+              "super_answers": ["Sì"]
+            }
+          ]
+        },
+
+        {
+          "question": {"question": "Come definiresti la classe socio-economica della tua famiglia?","num": "13"},
+          "type": "select",
+          "answers": [{"answer":"Elevata","num":1},{"answer":"Medio-alta","num":2},{"answer":"Media","num":3},{"answer":"Medio-bassa","num":3},{"answer":"Bassa","num":3},{"answer":"Non so/non rispondo","num":3}]
+        },
+        {
+          "question": {"question": "Qual è il titolo di studio conseguito da tua MADRE?","num": "14.1"},
+          "type": "select",
+          "answers": [{"answer":"Nessun titolo di studio o licenza elementare","num":1},{"answer":"Licenza media","num":2},{"answer":"Diploma di istruzione liceale","num":3},{"answer":"Diploma di istruzione tecnico-professionale","num":4},{"answer":"Laurea (anche Conservatorio)","num":5},{"answer":"Dottorato","num":6},{"answer":"Non so, non rispondo","num":7}]
+        },
+        {
+          "question": {"question": "Qual è il titolo di studio conseguito da tuo PADRE?","num": "14.2"},
+          "type": "select",
+          "answers": [{"answer":"Nessun titolo di studio o licenza elementare","num":1},{"answer":"Licenza media","num":2},{"answer":"Diploma di istruzione liceale","num":3},{"answer":"Diploma di istruzione tecnico-professionale","num":4},{"answer":"Laurea (anche Conservatorio)","num":5},{"answer":"Dottorato","num":6},{"answer":"Non so, non rispondo","num":7}]
+        },
+        {
+          "question": {"question": "Tua MADRE legge abitualmente?","num": "15.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Cosa legge abitualmente tua MADRE?","num": "15.2"},
+              "type": "checkbox",
+              "answers": [{"answer":"Libri","num":1},{"answer":"Riviste","num":2},{"answer":"Quotidiani","num":3},{"answer":"Fumetti","num":4}],
+              "super_answers": ["Sì"],
+              "inline_sub_questions": [
+                {
+                  "question": {"question":"Ha abbonamenti o pubblicazioni di questo tipo?","num":"15e2e1"},
+                  "type": "radiobutton",
+                  "answers": [{"answer":"Si","num":1},{"answer":"No","num":2}],
+                  "super_answers": ["Riviste","Quotidiani","Fumetti"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Tuo PADRE legge abitualmente?","num": "15.3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Cosa legge abitualmente tua PADRE?","num": "15.4"},
+              "type": "checkbox",
+              "answers": [{"answer":"Libri","num":1},{"answer":"Riviste","num":2},{"answer":"Quotidiani","num":3},{"answer":"Fumetti","num":4}],
+              "super_answers": ["Sì"],
+              "inline_sub_questions": [
+                {
+                  "question": {"question":"Ha abbonamenti o pubblicazioni di questo tipo?","num":"15e4e1"},
+                  "type": "radiobutton",
+                  "answers": [{"answer":"Si","num":1},{"answer":"No","num":2}],
+                  "super_answers": ["Riviste","Quotidiani","Fumetti"]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "question": {
-        "question": "Domandina 4",
-        "num": 4
-      },
-      "type": "radiobutton",
-      "answers": [
+      "section": "Biografia linguistica ed educativa - Parte 1",
+      "num": 2,
+      "questions": [
         {
-          "answer": "Risposta 1",
-          "num": 1
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con i suoi GENITORI?","num": "16.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e1e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
         },
         {
-          "answer": "Risposta 2",
-          "num": 2
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con il/la COMPAGNO/A?","num": "16.2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e2e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
         },
         {
-          "answer": "Risposta 3",
-          "num": 3
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con TE e con i tuoi FRATELLI/ le tue SORELLE ADESSO?","num": "16.3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e3e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e3e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con te e con TE e con i tuoi FRATELLI/le tue SORELLE QUANDO ERAVATE PICCOLI?","num": "16.4"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e4e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e4e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con gli ALTRI PARENTI?","num": "16.5"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e5e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e5e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE sul POSTO DI LAVORO?","num": "16.6"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e6e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e6e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con i SUOI AMICI?","num": "16.7"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e7e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e7e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con gli ESTRANEI?","num": "16.8"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e8e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"16e8e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con i suoi GENITORI?","num": "17.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e1e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con il/la COMPAGNO/A?","num": "17.2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e2e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con TE e con i tuoi FRATELLI/ le tue SORELLE ADESSO?","num": "17.3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e3e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e3e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con te e con TE e con i tuoi FRATELLI/le tue SORELLE QUANDO ERAVATE PICCOLI?","num": "17.4"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e4e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e4e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con gli ALTRI PARENTI?","num": "17.5"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e5e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e5e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE sul POSTO DI LAVORO?","num": "17.6"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e6e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e6e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con i SUOI AMICI?","num": "17.7"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e7e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e7e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE Con gli ESTRANEI?","num": "17.8"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "exclusive_answers":["Non so/non rispondo"],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e8e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"17e8e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Se hai fratelli/sorelle, in quali lingue/dialetti parlate e parlavate quando eravate piccoli?","num": "18"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"18e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"18e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Dove hai frequentato la SCUOLA PRIMARIA?","num": "19.1"},
+          "type": "radiobutton",
+          "answers":[{"answer":"In Italia","num":1},{"answer":"In un'altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"19e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia ","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions":  [
+                {
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e1e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["In Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "19e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Repe Ceca","num":142},{"answer":"Repe Centrafricana","num":143},{"answer":"Repe Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["In un'altra nazione"]
+            },
+            {
+              "question": {"question": "Di che tipo di scuola si trattava?","num": "19e1e3"},
+              "type": "select",
+              "answers":[{"answer":"Scuola italiana","num":1},{"answer": "Scuola internazionale","num": 2}],
+              "super_answers": ["In Italia"]
+            },
+            {
+              "question": {"question": "Di che tipo di scuola si trattava?","num": "19e1e3"},
+              "type": "select",
+              "answers":[{"answer":"Scuola italiana","num":1},{"answer":"Scuola locale","num":2},{"answer": "Scuola internazionale","num": 3}],
+              "super_answers": ["In un'altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Dove hai frequentato la SCUOLA MEDIA?","num": "19.2"},
+          "type": "radiobutton",
+          "answers":[{"answer":"In Italia","num":1},{"answer":"In un'altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"19e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia ","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions":  [
+                {
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e2e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["In Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "19e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Repe Ceca","num":142},{"answer":"Repe Centrafricana","num":143},{"answer":"Repe Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["In un'altra nazione"]
+            },
+            {
+              "question": {"question": "Di che tipo di scuola si trattava?","num": "19e2e3"},
+              "type": "select",
+              "answers":[{"answer":"Scuola italiana","num":1},{"answer": "Scuola internazionale","num": 2}],
+              "super_answers": ["In Italia"]
+            },
+            {
+              "question": {"question": "Di che tipo di scuola si trattava?","num": "19e2e3"},
+              "type": "select",
+              "answers":[{"answer":"Scuola italiana","num":1},{"answer":"Scuola locale","num":2},{"answer": "Scuola internazionale","num": 3}],
+              "super_answers": ["In un'altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Dove hai frequentato la SCUOLA SUPERIORE?","num": "19.3"},
+          "type": "radiobutton",
+          "answers":[{"answer":"In Italia","num":1},{"answer":"In un'altra nazione","num":2}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"Regione?","num":"19e3e1"},
+              "type": "select",
+              "answers": [{"answer":"Abruzzo","num":1},{"answer":"Basilicata","num":2},{"answer":"Calabria","num":3},{"answer":"Campania","num":4},{"answer":"Emilia Romagna","num":5},{"answer":"Friuli Venezia Giulia ","num":6},{"answer":"Lazio","num":7},{"answer":"Liguria","num":8},{"answer":"Lombardia","num":9},{"answer":"Marche","num":10},{"answer":"Molise","num":11},{"answer":"Piemonte","num":12},{"answer":"Puglia","num":13},{"answer":"Sardegna","num":14},{"answer":"Sicilia","num":15},{"answer":"Toscana","num":16},{"answer":"Trentino-Alto Adige","num":17},{"answer":"Umbria","num":18},{"answer":"Valle d\u0027Aosta","num":19},{"answer":"Veneto","num":20}],
+              "inline_sub_questions":  [
+                {
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Chieti","num":1},{"answer":"L'Aquila","num":2},{"answer":"Pescara","num":3},{"answer":"Teramo","num":4}],
+                  "super_answers": ["Abruzzo"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Matera","num":1},{"answer":"Potenza","num":2}],
+                  "super_answers": ["Basilicata"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Catanzaro","num":1},{"answer":"Cosenza","num":2},{"answer":"Crotone","num":3},{"answer":"Reggio Calabria","num":4},{"answer":"Vibo Valentia","num":4}],
+                  "super_answers": ["Calabria"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Avellino","num":1},{"answer":"Benevento","num":2},{"answer":"Caserta","num":3},{"answer":"Napoli","num":4},{"answer":"Salerno","num":5}],
+                  "super_answers": ["Campania"]
+                },
+                {
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bologna","num":1},{"answer":"Ferrara","num":2},{"answer":"Forlì-Cesena","num":3},{"answer":"Modena","num":4},{"answer":"Parma","num":5},{"answer":"Piacenza","num":6},{"answer":"Ravenna","num":7},{"answer":"Reggio Emilia","num":8},{"answer":"Rimini","num":9}],
+                  "super_answers": ["Emilia Romagna"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Gorizia","num":1},{"answer":"Pordenone","num":2},{"answer":"Trieste","num":3},{"answer":"Udine","num":4}],
+                  "super_answers": ["Friuli Venezia Giulia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Frosinone","num":1},{"answer":"Latina","num":2},{"answer":"Rieti","num":3},{"answer":"Roma","num":4},{"answer":"Viterbo","num":5}],
+                  "super_answers": ["Lazio"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Genova","num":1},{"answer":"Imperia","num":2},{"answer":"La Spezia","num":3},{"answer":"Savona","num":4}],
+                  "super_answers": ["Liguria"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bergamo","num":1},{"answer":"Brescia","num":2},{"answer":"Como","num":3},{"answer":"Cremona","num":4},{"answer":"Lecco","num":5},{"answer":"Lodi","num":6},{"answer":"Mantova","num":7},{"answer":"Milano","num":8},{"answer":"Monza e Brianza","num":9},{"answer":"Pavia","num":10},{"answer":"Sondrio","num":11},{"answer":"Varese","num":12}],
+                  "super_answers": ["Lombardia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Ancona","num":1},{"answer":"Ascoli Piceno","num":2},{"answer":"Fermo","num":3},{"answer":"Macerata","num":4},{"answer":"Pesaro e Urbino","num":5}],
+                  "super_answers": ["Marche"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Campobasso","num":1},{"answer":"Isernia","num":2}],
+                  "super_answers": ["Molise"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Alessandria","num":1},{"answer":"Asti","num":2},{"answer":"Biella","num":3},{"answer":"Cuneo","num":4},{"answer":"Novara","num":5},{"answer":"Torino","num":6},{"answer":"Verbano-Cusio-Ossola","num":7},{"answer":"Vercelli","num":8}],
+                  "super_answers": ["Piemonte"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bari","num":1},{"answer":"Barletta-Andria-Trani","num":2},{"answer":"Brindisi","num":3},{"answer":"Foggia","num":4},{"answer":"Lecce","num":5},{"answer":"Taranto","num":6}],
+                  "super_answers": ["Puglia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Cagliari","num":1},{"answer":"Nuoro","num":2},{"answer":"Oristano","num":3},{"answer":"Sassari","num":4},{"answer":"Sud Sardegna","num":5}],
+                  "super_answers": ["Sardegna"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Agrigento","num":1},{"answer":"Caltanisetta","num":2},{"answer":"Catania","num":3},{"answer":"Enna","num":4},{"answer":"Messina","num":5},{"answer":"Palermo","num":6},{"answer":"Ragusa","num":7},{"answer":"Siracusa","num":8},{"answer":"Trapani","num":9}],
+                  "super_answers": ["Sicilia"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Arezzo","num":1},{"answer":"Firenze","num":2},{"answer":"Grosseto","num":3},{"answer":"Livorno","num":4},{"answer":"Lucca","num":5},{"answer":"Massa e Carrara","num":6},{"answer":"Pisa","num":7},{"answer":"Pistoia","num":8},{"answer":"Prato","num":9},{"answer":"Siena","num":10}],
+                  "super_answers": ["Toscana"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Bolzano","num":1},{"answer":"Trento","num":2}],
+                  "super_answers": ["Trentino-Alto Adige"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Perugia","num":1},{"answer":"Terni","num":2}],
+                  "super_answers": ["Umbria"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Aosta","num":1}],
+                  "super_answers": ["Valle d'Aosta"]
+                },{
+                  "question": {"question":"Provincia?","num":"19e3e2"},
+                  "type": "select",
+                  "answers": [{"answer":"Belluno","num":1},{"answer":"Padova","num":2},{"answer":"Rovigo","num":3},{"answer":"Treviso","num":4},{"answer":"Venezia","num":5},{"answer":"Verona","num":6},{"answer":"Vicenza","num":7}],
+                  "super_answers": ["Veneto"]
+                }
+              ],
+              "super_answers": ["In Italia"]
+            },
+            {
+              "question": {"question": "Nazione?","num": "19e3e1"},
+              "type": "select",
+              "answers": [{"answer":"Afghanistan","num":1},{"answer":"Albania","num":2},{"answer":"Algeria","num":3},{"answer":"Andorra","num":4},{"answer":"Angola","num":5},{"answer":"Anguilla","num":6},{"answer":"Antigua & Barbuda","num":7},{"answer":"Antille Olandesi","num":8},{"answer":"Arabia Saudita","num":9},{"answer":"Argentina","num":10},{"answer":"Armenia","num":11},{"answer":"Australia","num":12},{"answer":"Austria","num":13},{"answer":"Azerbaigian","num":14},{"answer":"Bahamas","num":15},{"answer":"Bahrain","num":16},{"answer":"Bangladesh","num":17},{"answer":"Barbados","num":18},{"answer":"Belgio","num":19},{"answer":"Belize","num":20},{"answer":"Benin","num":21},{"answer":"Bhutan","num":22},{"answer":"Bielorussia","num":23},{"answer":"Birmania","num":24},{"answer":"Bolivia","num":25},{"answer":"Bosnia ed Erzegovina","num":26},{"answer":"Botswana","num":27},{"answer":"Brasile","num":28},{"answer":"Brunei","num":29},{"answer":"Bulgaria","num":30},{"answer":"Burkina Faso","num":31},{"answer":"Burundi","num":32},{"answer":"Cambogia","num":33},{"answer":"Camerun","num":34},{"answer":"Canada","num":35},{"answer":"Capo Verde","num":36},{"answer":"Ciad","num":37},{"answer":"Ciad","num":38},{"answer":"Cina","num":39},{"answer":"Cipro","num":40},{"answer":"Colombia","num":41},{"answer":"Comore","num":42},{"answer":"Congo (Repubblica)","num":43},{"answer":"Congo (Repubblica Democratica)","num":44},{"answer":"Corea del Nord","num":45},{"answer":"Corea del Sud","num":46},{"answer":"Costa d'Avorio","num":47},{"answer":"Costa Rica","num":48},{"answer":"Croazia","num":49},{"answer":"Cuba","num":50},{"answer":"Danimarca","num":51},{"answer":"Dominica","num":52},{"answer":"Ecuador","num":53},{"answer":"Egitto","num":54},{"answer":"El Salvador","num":55},{"answer":"Emirati Arabi Uniti","num":56},{"answer":"Eritrea","num":57},{"answer":"Estonia","num":58},{"answer":"Etiopia","num":59},{"answer":"Figi","num":60},{"answer":"Filippine","num":61},{"answer":"Finlandia","num":62},{"answer":"Francia","num":63},{"answer":"Gabon","num":64},{"answer":"Gambia","num":65},{"answer":"Georgia","num":66},{"answer":"Germania","num":67},{"answer":"Ghana","num":68},{"answer":"Giamaica","num":69},{"answer":"Giappone","num":70},{"answer":"Gibuti","num":71},{"answer":"Giordania","num":72},{"answer":"Grecia","num":73},{"answer":"Grenada","num":74},{"answer":"Guatemala","num":75},{"answer":"Guinea","num":76},{"answer":"Guinea-Bissau","num":77},{"answer":"Guinea Equatoriale","num":78},{"answer":"Guyana","num":79},{"answer":"Haiti","num":80},{"answer":"Honduras","num":81},{"answer":"India","num":82},{"answer":"Indonesia","num":83},{"answer":"Iran","num":84},{"answer":"Iraq","num":85},{"answer":"Irlanda","num":86},{"answer":"Islanda","num":87},{"answer":"Isole Marshall","num":88},{"answer":"Isole Salomone","num":89},{"answer":"Israele","num":90},{"answer":"Kazakistan","num":91},{"answer":"Kenya","num":92},{"answer":"Israele","num":93},{"answer":"Kirghizistan","num":94},{"answer":"Kiribati","num":90},{"answer":"Kuwait","num":96},{"answer":"Laos","num":97},{"answer":"Lesotho","num":98},{"answer":"Lettonia"},{"answer":"Libano","num":100},{"answer":"Liberia","num":101},{"answer":"Libia","num":102},{"answer":"Liechtenstein","num":103},{"answer":"Lituania","num":104},{"answer":"Lussemburgo","num":105},{"answer":"Macedonia del Nord","num":106},{"answer":"Madagascar","num":107},{"answer":"Malawi","num":108},{"answer":"Maldive","num":109},{"answer":"Malaysia","num":110},{"answer":"Mali","num":111},{"answer":"Malta","num":112},{"answer":"Marocco","num":113},{"answer":"Mauritania","num":114},{"answer":"Mauritius","num":115},{"answer":"Messico","num":116},{"answer":"Micronesia","num":117},{"answer":"Moldavia","num":118},{"answer":"Monaco","num":119},{"answer":"Mongolia","num":120},{"answer":"Montenegro","num":121},{"answer":"Mozambico","num":122},{"answer":"Namibia","num":123},{"answer":"Nauru","num":124},{"answer":"Nepal","num":125},{"answer":"Nicaragua","num":126},{"answer":"Niger","num":127},{"answer":"Nigeria","num":128},{"answer":"Norvegia","num":129},{"answer":"Nuova Zelanda","num":130},{"answer":"Oman","num":131},{"answer":"Paesi Bassi","num":132},{"answer":"Pakistan","num":133},{"answer":"Palau","num":134},{"answer":"Palestina","num":135},{"answer":"Panama","num":136},{"answer":"Papua Nuova Guinea","num":137},{"answer":"Paraguay","num":138},{"answer":"Perù","num":139},{"answer":"Polonia","num":140},{"answer":"Qatar","num":141},{"answer":"Regno Unito","num":140},{"answer":"Repe Ceca","num":142},{"answer":"Repe Centrafricana","num":143},{"answer":"Repe Dominicana","num":144},{"answer":"Romania","num":145},{"answer":"Ruanda","num":146},{"answer":"Russia","num":147},{"answer":"Saint Kitts e Nevis","num":148},{"answer":"Saint Lucia","num":149},{"answer":"Saint Vincent e Grenadine","num":150},{"answer":"Samoa","num":151},{"answer":"San Marino","num":152},{"answer":"São Tomé e Príncipe","num":153},{"answer":"Senegal","num":154},{"answer":"Serbia","num":155},{"answer":"Seychelles","num":156},{"answer":"Sierra Leone","num":157},{"answer":"Singapore","num":158},{"answer":"Siria","num":159},{"answer":"Slovacchia","num":160},{"answer":"Slovenia","num":161},{"answer":"Somalia","num":162},{"answer":"Spagna","num":163},{"answer":"Sri Lanka","num":164},{"answer":"Stati Uniti","num":165},{"answer":"Sudafrica","num":166},{"answer":"Sudan","num":167},{"answer":"Sudan del Sud","num":168},{"answer":"Suriname","num":169},{"answer":"Svezia","num":171},{"answer":"Svizzera","num":172},{"answer":"Swaziland","num":173},{"answer":"Tagikistan","num":174},{"answer":"Taiwan","num":175},{"answer":"Tanzania","num":176},{"answer":"Thailandia","num":177},{"answer":"Timor Est","num":178},{"answer":"Togo","num":179},{"answer":"Tonga","num":180},{"answer":"Trinidad e Tobago","num":181},{"answer":"Tunisia","num":182},{"answer":"Turchia","num":183},{"answer":"Turkmenistan","num":184},{"answer":"Tuvalu","num":185},{"answer":"Ucraina","num":186},{"answer":"Uganda","num":187},{"answer":"Ungheria","num":188},{"answer":"Uruguay","num":189},{"answer":"Uzbekistan","num":190},{"answer":"Vanuatu","num":191},{"answer":"Città del Vaticano","num":192},{"answer":"Venezuela","num":193},{"answer":"Vietnam","num":194},{"answer":"Yemen","num":195},{"answer":"Zambia","num":196},{"answer":"Zimbabwe","num":197}],
+              "super_answers": ["In un'altra nazione"]
+            },
+            {
+              "question": {"question": "Di che tipo di scuola si trattava?","num": "19e3e3"},
+              "type": "select",
+              "answers":[{"answer":"Scuola italiana","num":1},{"answer": "Scuola internazionale","num": 3}],
+              "super_answers": ["In Italia"]
+            },
+            {
+              "question": {"question": "Di che tipo di scuola si trattava?","num": "19e3e3"},
+              "type": "select",
+              "answers":[{"answer":"Scuola italiana","num":1},{"answer":"Scuola locale","num":2},{"answer": "Scuola internazionale","num": 4}],
+              "super_answers": ["In un'altra nazione"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi in FAMIGLIA nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e1e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi con i COMPAGNI a SCUOLA nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e2e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi con gli AMICI al di FUORI DALLA SCUOLA nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e3e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e3e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi con gli ESTRANEI nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.4"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e4e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e4e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi in FAMIGLIA nel periodo della SCUOLA SUPERIORE?","num": "21.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e1e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi con i COMPAGNI a SCUOLA nel periodo della SCUOLA SUPERIORE?","num": "21.2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e2e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi con gli AMICI al di FUORI DALLA SCUOLA nel periodo della SCUOLA SUPERIORE?","num": "21.3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e3e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e3e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue/dialetti parlavi con gli ESTRANEI nel periodo della SCUOLA SUPERIORE?","num": "21.4"},
+          "type": "radiobutton",
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e4e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"20e4e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua"]
+            }
+          ]
         }
       ]
     },
     {
-      "question": {
-        "question": "Domandina 5",
-        "num": 5
-      },
-      "type": "radiobutton",
-      "answers": [
+      "section": "Biografia linguistica ed educativa - Parte 2",
+      "num": 3,
+      "questions": [
         {
-          "answer": "Risposta 1",
-          "num": 1
+          "question": {"question": "Durante la scuola superiore, hai trascorso soggiorni di studio all’estero?","num": "22"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Per quanto tempo hai trascorso soggiorni di studio all’estero?","num": "22.1"},
+              "type": "checkbox",
+              "answers": [{"answer":"Un intero anno scolastico","num":1},{"answer":"Alcuni mesi di frequenza scolastica","num":2},{"answer":"Corsi estivi di lingua","num":3}],
+              "super_answers": ["Sì"],
+              "inline_sub_questions": [
+                {
+                  "question": {"question": "dove?","num": "22e1e1"},
+                  "type": "textbox",
+                  "answers": "",
+                  "super_answers": ["Un intero anno scolastico","Alcuni mesi di frequenza scolastica","Corsi estivi di lingua"]
+                },
+                {
+                  "question": {"question": "in quale lingua studiavi principalmente?","num": "22e1e2"},
+                  "type": "textbox",
+                  "answers": "",
+                  "super_answers": ["Un intero anno scolastico","Alcuni mesi di frequenza scolastica","Corsi estivi di lingua"]
+                }
+              ]
+            }
+          ]
         },
         {
-          "answer": "Risposta 2",
-          "num": 2
+          "question": {"question": "Quale tipo di diploma hai conseguito?","num": "23"},
+          "type": "radiobutton",
+          "answers": [{"answer": "Diploma di istruzione liceale","num": 1},{"answer": "Diploma di istruzione tecnica","num": 2},{"answer": "Diploma di istruzione professionale","num": 3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "Quale indirizzo?","num": "23e1"},
+              "type": "select",
+              "answers": [{"answer":"Artistico","num":1},{"answer":"Classico","num":2},{"answer":"Linguistico","num":3},{"answer":"Musicale e coreutico","num":4},{"answer":"Scientifico","num":5},{"answer":"Scientifico - Scienze applicate","num":6},{"answer":"Scientifico - Indirizzo sportivo","num":7},{"answer":"Scienze umane","num":8},{"answer":"Scienze umane - economico sociale","num":9}],
+              "super_answers": ["Diploma di istruzione liceale"]
+            },
+            {
+              "question": {"question": "Quale indirizzo?","num": "23e1"},
+              "type": "select",
+              "answers": [{"answer":"Amministrazione, Finanza e Marketing","num":1},{"answer":"Turismo","num":2},{"answer":"Meccanica, Meccatronica ed Energia","num":3},{"answer":"Trasporti e Logistica","num":4},{"answer":"Elettronica ed Elettrotecnica","num":5},{"answer":"Informatica e Telecomunicazioni","num":6},{"answer":"Grafica e Comunicazione","num":7},{"answer":"Chimica, Materiali e Biotecnologie","num":8},{"answer":"Sistema Moda","num":9}],
+              "super_answers": ["Diploma di istruzione tecnica"]
+            },
+            {
+              "question": {"question": "Quale indirizzo?","num": "23e1"},
+              "type": "select",
+              "answers": [{"answer":"Agricoltura, sviluppo rurale, valorizzazione dei prodotti del territorio e gestione delle risorse forestali e montane","num":1},{"answer":"Pesca commerciale e produzioni ittiche","num":2},{"answer":"Industria e artigianato per il Made in Italy","num":3},{"answer":"Manutenzione e assistenza tecnica","num":4},{"answer":"Gestione delle acque e risanamento ambientale","num":5},{"answer":"Servizi commerciali","num":6},{"answer":"Enogastronomia e ospitalità alberghiera","num":7},{"answer":"Servizi per la sanità e l’assistenza sociale","num":8},{"answer":"Arti ausiliarie delle professioni sanitarie: odontotecnico","num":9},{"answer":"Arti ausiliarie delle professioni sanitarie: ottico","num":10}],
+              "super_answers": ["Diploma di istruzione professionale"]
+            }
+          ]
         },
         {
-          "answer": "Risposta 3",
-          "num": 3
+          "question": {"question": "Con quale livello di valutazione ti sei diplomato/a?","num": "24"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sufficiente (60-70)","num":1},{"answer":"Discreto (71-80)","num":2},{"answer":"Buono (81-90)","num":3},{"answer":"Ottimo (91-100)","num":4}]
+        },
+        {
+          "question": {"question": "Tra i professori che hai e hai avuto, ce ne sono alcuni che usavano/usano lingue diverse dall’italiano per spiegare materie non linguistiche (per esempio matematica, storia, scienze, ecc)?","num": "25"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
+          "dependant_sub_questions":[
+            {
+              "question": {"question": "In quale scuola hai o hai avuto professori che usavano/usano lingue diverse dall’italiano per spiegare materie non linguistiche?","num": "25.1"},
+              "type": "checkbox",
+              "answers": [{"answer":"Scuola primaria","num":1},{"answer":"Scuola media","num":2},{"answer":"Scuola superiore","num":3},{"answer":"Università","num":4}],
+              "super_answers": ["Sì"],
+              "inline_sub_questions": [
+                {
+                  "question": {"question": "Quale lingua?","num": "25e1e1"},
+                  "type": "textbox",
+                  "answers": "",
+                  "super_answers": ["Scuola primaria","Scuola media","Scuola superiore","Università"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": {"question": "In quali lingue sai conversare su argomenti quotidiani?","num": "26.1"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "In quali lingue sai seguire programmi radiotelevisivi come film e notiziari (senza sottotitoli)?","num": "26.2"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "In quali lingue sai seguire conferenze e dibattiti su temi specialistici che ti sono familiari?","num": "26.3"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "In quali lingue sai leggere saggi o articoli specialistici di livello universitario?","num": "26.4"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "In quali lingue sai scrivere brevi testi (ad esesmpio un messaggio per un amico o un conoscente, una richiesta di informazioni)?","num": "26.5"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "In quali lingue sai scrivere testi ampi e articolati, di registro formale e carattere specialistico?","num": "26.6"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "In quali lingue sai interagire per iscritto sui social?","num": "26.7"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "In quali lingue sai Parlare fluentemente a qualunque livello di complessità e in qualunque contesto, sia oralmente che per iscritto?","num": "26.8"},
+          "type": "textbox",
+          "answers": ""
+        },
+        {
+          "question": {"question": "Da quando ti sei diplomato/a ad oggi, hai o hai avuto esperienze di lavoro per le quali risulta essenziale avere ottime capacità di interazione orale in italiano e/o in altre lingue?","num": "27.1"},
+          "type": "select",
+          "answers": [{"answer":"No","num":1},{"answer":"Poche","num":2},{"answer":"Alcune","num":3},{"answer":"Molte","num":4}]
+        },
+        {
+          "question": {"question": "Da quando ti sei diplomato/a ad oggi, hai o hai avuto esperienze di lavoro per le quali risulta essenziale Leggere molto in italiano e/o in altre lingue (per esempio libri, giornali, siti e piattaforme)?","num": "27.2"},
+          "type": "select",
+          "answers": [{"answer":"No","num":1},{"answer":"Poche","num":2},{"answer":"Alcune","num":3},{"answer":"Molte","num":4}]
+        },
+        {
+          "question": {"question": "Da quando ti sei diplomato/a ad oggi, hai o hai avuto esperienze di lavoro per le quali risulta essenziale Avere ottime capacità di scrittura in italiano e/o in altre lingue (per esempio documenti, articoli e testi per il Web)","num": "27.3"},
+          "type": "select",
+          "answers": [{"answer":"No","num":1},{"answer":"Poche","num":2},{"answer":"Alcune","num":3},{"answer":"Molte","num":4}]
+        },
+        {
+          "question": {"question": "Da quando sei all’Università, quali lingue /dialetti hai usato/usi più spesso con le PERSONE CHE VIVONO CON TE?","num": "28.1"},
+          "type": "radiobutton",
+          "answers":  [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer": "Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia","num":"6"}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"28e1e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"28e1e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Da quando sei all’Università, quali lingue /dialetti hai usato/usi più spesso con gli AMICI CHE FREQUENTI?","num": "28.2"},
+          "type": "radiobutton",
+          "answers":  [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer": "Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia","num":"6"}],
+          "inline_sub_questions": [
+            {
+              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"28e2e1"},
+              "type": "select",
+              "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+            },
+            {
+              "question": {"question":"In quale altra lingua?","num":"28e2e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per leggere giornali e riviste?","num": "29.1"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e1e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per leggere libri?","num": "29.2"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e2e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per studiare su testi universitari?","num": "29.3"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e3e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per leggere fumetti?","num": "29.4"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e4e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per guardare film e serie tv (e spettacoli teatrali)?","num": "29.5"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e5e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per seguire youtuber?","num": "29.6"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e6e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per seguire personaggi famosi stranieri sui social?","num": "29.7"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e7e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Usi lingue diverse dall’italiano per scrivere commenti a blog o sui social network?","num": "29.8"},
+          "type": "select",
+          "answers": [{"answer":"Mai","num":1},{"answer":"Occasionalmente","num":2},{"answer":"Abitualmente","num":3}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "quale/i?","num": "29e8e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Occasionalmente","Abitualmente"]
+            }
+          ]
         }
       ]
     },
     {
-      "question": {
-        "question": "Domandina 6",
-        "num": 6
-      },
-      "type": "textbox",
-      "answers": ""
+      "section": "Consumi culturali",
+      "num": 4,
+      "questions": [
+        {
+          "question": {"question": "Ti informi attraverso:","num": "30"},
+          "type": "checkbox",
+          "answers": [{"answer":"TV","num":1},{"answer":"Giornali cartacei","num":2},{"answer":"Testate online","num":3},{"answer":"Piattaforme di condivisione video (es: Youtube)","num":4},{"answer":"Social","num":5},{"answer":"Radio","num":6},{"answer":"Altro","num":8}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "Con quale frequenza","num": "30e1"},
+              "type": "select",
+              "answers": [{"answer":"Tutti i giorni","num":1},{"answer":"Qualche volta a settimana","num":2},{"answer":"Raramente","num":3},{"answer":"Mai","num":4}],
+              "super_answers": ["TV","Giornali cartacei","Testate online","Piattaforme di condivisione video (es: Youtube)","Social","Radio","Altro"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Quanti libri, esclusi quelli universitari, leggi in un anno?","num": "31"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Nessuno","num":1},{"answer":"Meno di cinque","num":2},{"answer":"Tra cinque e dieci","num":3},{"answer":"Più di dieci","num":4}]
+        },
+        {
+          "question": {"question": "Nel tempo libero, preferisci leggere:","num": "32"},
+          "type": "checkbox",
+          "answers": [{"answer":"Romanzi","num":1},{"answer":"Poesie","num":2},{"answer":"Racconti","num":3},{"answer":"Fumetti","num":4},{"answer":"Testi di divulgazione scientifica","num":5},{"answer":"Riviste specializzate","num":6},{"answer":"Discussioni sui social","num":7}],
+          "max_answer": 3
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Film?","num": "33.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Serie TV?","num": "33.2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Telegiornali o notiziari?","num": "33.3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Talk show di politica, attualità, cronaca?","num": "33.4"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Talk show di intrattenimento?","num": "33.5"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Video di cantanti e gruppi musicali?","num": "33.6"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Video di influencer (YouTuber, TikToker)?","num": "33.7"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Quanto spesso guardi Partite di calcio o altri sport?","num": "33.8"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Di cosa ti interessi e che attività svolgi nel tempo libero?","num": "34"},
+          "type": "checkbox",
+          "answers": [{"answer":"Arte","num":1},{"answer":"Sport","num":2},{"answer":"Teatro","num":3},{"answer":"Fotografia e cinema","num":4},{"answer":"Musica","num":5},{"answer":"Vita sociale (cene, aperitivi)","num":6},{"answer":"Shopping","num":7},{"answer":"Escursionismo","num":8},{"answer":"Associazionismo/ Volontariato /attività politica","num":9},{"answer":"Ballo","num":10},{"answer":"Altro","num":11}],
+          "max_answers": 5,
+          "inline_sub_questions": [
+            {
+              "question": {"question": "specificare:","num": "34e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Altro"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Nel tuo tempo libero, quante ore al giorno passi su internet?","num": "35"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Meno di un’ora","num":1},{"answer":"1-2 ore","num":2},{"answer":"3-4 ore","num":3},{"answer":"5-6 ore","num":4},{"answer":"7-8 ore","num":5},{"answer":"9-10 ore","num":6},{"answer":"Più di 10 ore","num":7}]
+        },
+        {
+          "question": {"question": "Usi internet soprattutto per ","num": "36"},
+          "type": "checkbox",
+          "answers": [{"answer":"Ricerca di informazioni","num":1},{"answer":"Uso di social network","num":2},{"answer":"Comunicazione con amici o gruppi ristretti","num":3},{"answer":"Lezioni a distanza","num":4},{"answer":"Acquisti","num":5},{"answer":"Visione di video (film, serie tv, contenuti youtube, …)","num":6},{"answer":"Ascolto musica","num":7},{"answer":"Videogiochi","num":8},{"answer":"Mappe e navigatore","num":9},{"answer":"App bancarie","num":10},{"answer":"Dating","num":11},{"answer":"App salute e benessere","num":12},{"answer":"Altro","num":13}],
+          "max_answers": 5,
+          "inline_sub_questions": [
+            {
+              "question": {"question": "specificare:","num": "36e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Altro"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "question": {
-        "question": "Domandina 7",
-        "num": 7
-      },
-      "type": "select",
-      "answers": [
+      "section":"La scrittura",
+      "num": 5,
+      "questions": [
         {
-          "answer": "Risposta 1",
-          "num": 1
+          "question": {"question": "Quanto sei a tuo agio nello scrivere?","num": "37"},
+          "type": "radiobutton",
+          "answers": [{"answer": "Molto","num": 1},{"answer": "Abbastanza","num": 2},{"answer": "Poco","num": 3},{"answer": "Per niente","num": 4}]
         },
         {
-          "answer": "Risposta 2",
-          "num": 2
+          "question": {"question": "Ti piace scrivere nel tempo libero, fuori dall’Università?","num": "38"},
+          "type": "radiobutton",
+          "answers": [{"answer": "Sì","num": 1},{"answer": "no","num": 2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Che cosa scrivi nel tempo libero?","num": "38.1"},
+              "type": "checkbox",
+              "answers": [{"answer":"Articoli di giornale","num":1},{"answer":"Post su blog","num":2},{"answer":"Commenti su blog e social network","num":3},{"answer":"Post su social network","num":4},{"answer":"Romanzi/racconti/poesie","num":5},{"answer":"Testi di canzoni","num":6},{"answer":"Diario personale","num":7},{"answer":"Altro","num":8}],
+              "super_answer": ["Sì"],
+              "max_answers": 3,
+              "inline_sub_questions": [
+                {
+                  "question": {"question": "specificare:","num": "38e1e1"},
+                  "type": "textbox",
+                  "answers": "",
+                  "super_answers": ["Altro"]
+                }
+              ]
+            }
+          ]
         },
         {
-          "answer": "Risposta 3",
-          "num": 3
+          "question": {"question": "Segui corsi di scrittura (fuori e dentro l’Università)?","num": "39"},
+          "type": "radiobutton",
+          "answers": [{"answer": "Sì","num": 1},{"answer": "no","num": 2}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Quali corsi di scrittura frequenti?","num": "39.1"},
+              "type": "checkbox",
+              "answers": [{"answer":"Scrittura creativa","num":1},{"answer":"Scrittura per il web","num":2},{"answer":"Scrittura giornalistica","num":3},{"answer":"Scrittura pubblicitaria","num":4},{"answer":"Scrittura professionale","num":5},{"answer":"Scrittura accademica","num":6}],
+              "super_answers": ["Sì"],
+              "dependant_sub_questions": [
+                {
+                  "question": {"question": "I corsi di scrittura che frequenti sono universitari?","num": "39.2"},
+                  "type": "radiobutton",
+                  "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
+                  "super_answers": ["Scrittura creativa","Scrittura per il web","Scrittura giornalistica","Scrittura pubblicitaria","Scrittura professionale","Scrittura accademica"],
+                  "dependant_sub_questions": [
+                    {
+                      "question": {"question": "I corsi di scrittura universitari che frequenti di che tipo sono?","num": "39.3"},
+                      "type": "radiobutton",
+                      "answers": [{"answer":"Laboratori","num":1},{"answer":"Lettorati","num":2},{"answer":"Corsi di recupero","num":3}],
+                      "super_answers": ["Sì"]
+                    },
+                    {
+                      "question": {"question": "I corsi di scrittura universitari che frequenti sono obbligatori?","num": "39.4"},
+                      "type": "radiobutton",
+                      "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
+                      "super_answers": ["Sì"]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Ritieni adeguato il tempo che l’università dedica all’insegnamento della scrittura?","num": "40"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì, il tempo dedicato ai corsi è sufficiente","num":1},{"answer":"Sì, nonostante non sia dedicato tempo, ritengo che vada bene così","num":2},{"answer":"No, l’università dovrebbe dedicare più tempo","num":3},{"answer":"No, l’università dedica troppo tempo","num":4}]
+        },
+        {
+          "question": {"question": "Durante le lezioni universitarie, prendi appunti?","num": "41"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì, sempre","num":1},{"answer":"Sì, qualche volta","num":2},{"answer":"No, registro la lezione ma non prendo appunti","num":3},{"answer":"No, fotografo o scarico le slides ma non prendo appunti","num":4},{"answer":"No","num":5}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Come prendi appunti a lezione?","num": "41.1"},
+              "type": "radiobutton",
+              "answers": [{"answer":"A mano","num":1},{"answer":"Con il computer ","num":2},{"answer":"In entrambi i modi","num":3}]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Quando prepari un esame, prendi appunti?","num": "42"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì, sempre","num":1},{"answer":"Sì, qualche volta","num":2},{"answer":"No, registro la lezione ma non prendo appunti","num":3},{"answer":"No, fotografo o scarico le slides ma non prendo appunti","num":4},{"answer":"No","num":5}]
+        },
+        {
+          "question": {"question": "I corsi che segui prevedono un esame scritto?","num": "43"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sì, tutti","num":1},{"answer":"Sì, alcuni","num":2},{"answer":"No","num":3}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "In cosa consiste l'esame scritto dei corsi che lo prevedono?","num": "43.1"},
+              "type": "checkbox",
+              "answers": [{"answer":"Domande con risposta a crocette","num":1},{"answer":"Domande aperte","num":2},{"answer":"Esercizi da completare","num":3},{"answer":"Analisi del testo","num":4},{"answer":"Tesina o saggio breve","num":5},{"answer":"Relazione scientifica o rapporto di laboratorio","num":6},{"answer":"Relazione su attività di stage","num":7},{"answer":"Riassunto","num":8},{"answer":"Recensione","num":9},{"answer":"Traduzione","num":10},{"answer":"Commenti a sentenze","num":11},{"answer":"Presentazione Power Point","num":12},{"answer":"Esercizi di calcolo","num":13},{"answer":"Disegno grafico","num":14},{"answer":"Altro","num":15}],
+              "super_answers": ["Sì, tutti","Sì, alcuni"],
+              "max_answers": 5
+            }
+          ]
+        },
+        {
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di scrivere tesine o relazioni?","num": "44.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di rispondere per iscritto a domande aperte?","num": "44.2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di scrivere commenti critici?","num": "44.3"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di sviluppare la traccia di un tema?","num": "44.4"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di preparare una traccia scritta per una presentazione orale?","num": "44.5"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di tradurre in italiano da altre lingue, o viceversa?","num": "44.6"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) fai una scaletta degli argomenti prima di cominciare a scrivere?","num": "45.1"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Mai","num":4}]
+        },
+        {
+          "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) come lo scrivi?","num": "45.2"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Li scrivo con carta e penna","num":1},{"answer":"Li digito sul computer","num":2},{"answer":"Li digito sul tablet","num":3},{"answer":"Li digito sullo smartphone","num":4},{"answer":"Li detto a un programma di riconoscimento automatico del testo","num":5},{"answer":"Li detto a qualcun altro","num":6}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Se per scrivere testi per l'università usi computer, tablet o smartphone, usi il correttore ortografico?","num": "45.3"},
+              "type": "radiobutton",
+              "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Mai","num":4}],
+              "super_answers": ["Li digito sul computer","Li digito sul tablet","Li digito sullo smartphone"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) se correggi il tuo testo, ti concentri soprattutto:","num": "45.4"},
+          "type": "checkbox",
+          "answers": [{"answer":"Sull’ortografia","num":1},{"answer":"Sulla punteggiatura","num":2},{"answer":"Sulla scelta delle parole","num":3},{"answer":"Sul senso delle frasi","num":4},{"answer":"Sul collegamento logico tra una frase e l’altra","num":5},{"answer":"Sulla chiarezza di quello che vuoi dire","num":6},{"answer":"Sulla completezza di quello che vuoi dire","num":7},{"answer":"Altro","num":8}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) se correggi il tuo testo, ti concentri soprattutto:","num": "45e4e1"},
+              "type": "textbox",
+              "answers":"",
+              "super_answers": ["Altro"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Quando scrivi un testo per l’università, capita che il/la docente corregga la lingua del tuo testo?","num": "46"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}]
+        },
+        {
+          "question": {"question": "Quali sono i commenti relativi alla lingua del testo che più frequentemente i docenti fanno sui tuoi testi scritti? ","num": "47"},
+          "type": "checkbox",
+          "answers": [{"answer":"Nessun commento","num":1},{"answer":"Commenti positivi","num":2},{"answer":"Testo troppo lungo","num":3},{"answer":"Testo troppo corto","num":4},{"answer":"Frasi troppo lunghe","num":5},{"answer":"Lessico non adeguato","num":6},{"answer":"Mancanza di chiarezza","num":7},{"answer":"Stile non adeguato (ad esempio troppo vicino al parlato o troppo aulico)","num":8},{"answer":"Mancanza di collegamenti logici","num":9},{"answer":"Problemi di ortografia","num":10},{"answer":"Problemi di punteggiatura","num":11}]
+        },
+        {
+          "question": {"question": "Pensi che le correzioni dei docenti ti aiutino a scrivere meglio?","num": "48"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto","num":1},{"answer":"Abbastanza","num":2},{"answer":"Poco","num":3},{"answer":"Per niente","num":4}]
+        },
+        {
+          "question": {"question": "Scrivi e-mail ai docenti per chiedere spiegazioni o informazioni su corsi ed esami?","num": "49"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Quando scrivi e-mail ai docenti, rileggi per controllare il testo?","num": "49.1"},
+              "type": "radiobutton",
+              "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
+              "super_answers": ["Sempre","Spesso","A volte","Raramente"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Mediamente, durante il periodo in cui segui i corsi, quante ore scrivi al giorno (appunti, riassunti, schemi, esercizi, …)?","num": "50"},
+          "type": "radiobutton",
+          "answers": [{"answer":"1","num":1},{"answer":"2","num":2},{"answer":"3","num":3},{"answer":"4","num":4},{"answer":"5","num":5},{"answer":"6","num":6},{"answer":"7","num":7},{"answer":"8","num":8},{"answer":"Più di 8","num":9}]
+        },
+        {
+          "question": {"question": "Credi che la lettura di saggi, articoli, romanzi, racconti, fumetti ti aiuti a scrivere meglio?","num": "51"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Molto","num":1},{"answer":"Abbastanza","num":2},{"answer":"Poco","num":3},{"answer":"Per niente","num":4}]
+        },
+        {
+          "question": {"question": "Quale dispositivo utilizzi più spesso per scrivere in internet (post, commenti, tweet, …)","num": "52"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Computer","num":1},{"answer":"Smartphone","num":2},{"answer":"Tablet","num":3}]
+        },
+        {
+          "question": {"question": "Escludendo Whatsapp, Messenger, DM di Instagram e simili, scrivi post o commenti sui siti che frequenti?","num": "53"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai, leggo solo quello che scrivono gli altri","num":5},{"answer":"Altro","num":6}],
+          "inline_sub_questions": [
+            {
+              "question": {"question": "specificare:","num": "53e1"},
+              "type": "textbox",
+              "answers": "",
+              "super_answers": ["Altro"]
+            }
+          ]
+        },
+        {
+          "question": {"question": "Quando scrivi messaggi in rete nel tempo libero, fai attenzione a come scrivi?","num": "54"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}]
+        },
+        {
+          "question": {"question": "Quando scrivi post su Facebook o su Instagram, usi la funzione “modifica”?","num": "55"},
+          "type": "radiobutton",
+          "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
+          "dependant_sub_questions": [
+            {
+              "question": {"question": "Quando usi la funzione “modifica”, perchè lo fai?","num": "56"},
+              "type": "checkbox",
+              "answers": [{"answer":"Modificare il contenuto","num":1},{"answer":"Correggere ortografia e grammatica","num":2}]
+            }
+          ]
         }
       ]
     }

@@ -73,11 +73,18 @@ export class BackendApiService {
   public uploadTextNQuestion(writtenText: string, localAnsweredQuestions: any): Observable<any> {
     console.log(writtenText);
     const answeredQuestions = [];
-    Object.keys(localAnsweredQuestions).map((key) => {
-      answeredQuestions[Number(key) - 1] = localAnsweredQuestions[key];
+    console.log(Object.keys(localAnsweredQuestions).sort((left: any, right: any) => {return left - right}));
+    Object.keys(localAnsweredQuestions).sort((left: any, right: any) => {return left - right}).map((key,val) => {
+      localAnsweredQuestions[key].num = key;
+      answeredQuestions.push(localAnsweredQuestions[key]);
     });
     console.log(answeredQuestions);
     return this.http.post(this.textSurveyEndpoint + '/save', {text: writtenText, questions: answeredQuestions})
+      .pipe(catchError(BackendApiService.handleError));
+  }
+
+  public imFeelingLucky() {
+    return this.http.get(this.userEndpoint + '/imFeelingLucky' )
       .pipe(catchError(BackendApiService.handleError));
   }
 }

@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-question',
@@ -19,29 +18,52 @@ import {Router} from "@angular/router";
 })
 export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
-  @Input() question: any;
-  @Input() type: any;
-  @Input() answers: any;
-  @Input() enabled: any;
-  @Input() if_answered: any
+  @Input() question_item: any;
+  @Input() dependant_sub_questions: any;
+  @Input() inline_sub_questions: any;
 
-  form: FormGroup;
+  @Input() enabled: any;
+  @Input() super_responses = [];
 
   sub_question_enabled = false;
 
+  @Input() changeValueTrigger: any;
+  changeValue: any;
+
+  form: FormGroup;
+
   answered = [];
 
-  values = [];
+  responses = [];
+
+  loading = false;
 
   constructor(private localStorage: LocalStorageService) {
   }
 
+  isEnabled() {
+    if(this.question_item.super_answers === undefined) {
+      return true;
+    } else {
+      if(this.super_responses) {
+        for(let super_answer of this.question_item.super_answers) {
+          if(this.super_responses.includes(super_answer)){
+            return true;
+          }
+        }
+      } else {
+        return false;
+      }
+    }
+    return false;
+  }
+
   initializeForm() {
-    const savedResponse = this.getLocalStorageQuestion().answer ? this.getLocalStorageQuestion().answer : '';
+    const savedResponse = this.responses;
+    console.log()
     let answerControlOption = {};
-    if (this.type === 'checkbox') {
-      // console.log(savedResponse);
-      for (const answer of this.answers) {
+    if (this.question_item.type === 'checkbox') {
+      for (const answer of this.question_item.answers) {
         answerControlOption[answer.num] = new FormControl(false);
         for (const item of savedResponse) {
           if (answer.answer === item ) {
@@ -49,27 +71,25 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
           }
         }
       }
-    } else if (this.type === 'radiobutton' || this.type === 'textbox' || this.type === 'select') {
+    } else if (this.question_item.type === 'radiobutton' || this.question_item.type === 'textbox' || this.question_item.type === 'select') {
       answerControlOption = {
         value: new FormControl(savedResponse[0])
       };
     }
     this.form = new FormGroup(answerControlOption);
 
-    if (this.enabled) {
-        setTimeout(()=>this.form.enable(),1);
+    if (this.isEnabled()) {
+      setTimeout(()=>this.form.enable(),1);
     } else {
       setTimeout(()=>{
         this.form.disable();
       },1);
-      this.localStorage.removeQuestionAnswered(this.question.num);
+      this.localStorage.removeQuestionAnswered(this.question_item.question.num);
     }
 
-    if(this.if_answered != null) {
-      if(this.localStorage.isQuestionAnswered(this.question.num)) {
-        this.sub_question_enabled = true;
-      } else {
-        this.sub_question_enabled = false;
+    if (this.question_item) {
+      if (this.question_item.inline_sub_questions) {
+        this.inline_sub_questions = this.question_item.inline_sub_questions;
       }
     }
   }
@@ -79,60 +99,95 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       this.localStorage.set('questions', JSON.stringify({}));
     }
     const localStorageQuestions = JSON.parse(this.localStorage.get('questions'));
-    if (!localStorageQuestions[this.question.num]) {
-      localStorageQuestions[this.question.num] = {};
+    if (!localStorageQuestions[this.question_item.question.num]) {
+      localStorageQuestions[this.question_item.question.num] = {};
     }
     this.localStorage.set('questions', JSON.stringify(localStorageQuestions));
   }
 
   getLocalStorageQuestion() {
-    return JSON.parse(this.localStorage.get('questions'))[this.question.num];
+    return JSON.parse(this.localStorage.get('questions'))[this.question_item.question.num];
   }
 
   resumeLocalStorageAnswer() {
-    this.values = JSON.parse(this.localStorage.get('questions'))[this.question.num].answer;
+    let questions = JSON.parse(this.localStorage.get('questions'));
+    this.responses = Object.keys(questions[this.question_item.question.num].answer ? questions[this.question_item.question.num].answer : []);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.initializeLocalStorage();
-    this.initializeForm();
     this.resumeLocalStorageAnswer();
+    this.initializeForm();
   }
 
-  onSubmit(response?: string, n?: number) {
-    if (this.type === 'checkbox') {
+  async onSubmit(new_response?: string, n?: number) {
+    setTimeout(() => { // here
+      this.loading = true;
+      this.form.disable()
+    }, 100);
+    if (this.question_item.type === 'checkbox') {
       if (this.form.value[n]) {
-        if (!this.values) {
-          this.values = [];
+        if (!this.responses) {
+          this.responses = [];
         }
-        this.values.push(response);
+        this.responses.push(new_response);
       } else {
-        this.values = this.values.filter((val, i, arr) => {
-          if (val !== response) {
+        this.responses = this.responses.filter((val, i, arr) => {
+          if (val !== new_response) {
             return val;
           }
         });
       }
-    } else if (this.type === 'radiobutton' || this.type === 'textbox' || this.type === 'select') {
-      this.values = [this.form.value.value];
+    } else if (this.question_item.type === 'radiobutton' || this.question_item.type === 'textbox' || this.question_item.type === 'select') {
+      this.responses = [this.form.value.value];
     }
-    console.log('Updated ' + this.question.question + ': ' + this.values);
-    const savedQuestion = JSON.parse(this.localStorage.get('questions'));
-    if (!savedQuestion[this.question.num]) {
-      savedQuestion[this.question.num] = {};
+
+    console.log('Question ' + this.question_item.question.question + ' - Responses ' + this.responses);
+
+    let savedQuestion = JSON.parse(this.localStorage.get('questions'));
+    if (!savedQuestion[this.question_item.question.num]) {
+      savedQuestion[this.question_item.question.num] = {};
     }
-    savedQuestion[this.question.num].question = this.question.question;
-    savedQuestion[this.question.num].answer = this.values;
-    // console.log(savedQuestion);
+    savedQuestion[this.question_item.question.num].question = this.question_item.question.question;
+    if(!savedQuestion[this.question_item.question.num].answer){
+      savedQuestion[this.question_item.question.num].answer = {};
+    }
+    if(this.question_item.type === 'checkbox') {
+      //eventualmente rimuovo l'oggetto della risposta
+      if(!this.form.value[n]) {
+        let tempAnswer = savedQuestion[this.question_item.question.num].answer;
+        savedQuestion[this.question_item.question.num].answer = {};
+        Object.keys(tempAnswer).filter(item => {
+          if(item != new_response){
+            savedQuestion[this.question_item.question.num].answer[item] = tempAnswer[item];
+          }
+        })
+      }
+      //aggiungo nuove risposte
+      for (let response of this.responses) {
+        if (!savedQuestion[this.question_item.question.num].answer[response] || response === new_response) {
+          if (this.question_item.inline_sub_questions) {
+            savedQuestion[this.question_item.question.num].answer[response] = {}
+          } else {
+            savedQuestion[this.question_item.question.num].answer[response] = {"-1": ""}
+          }
+        }
+      }
+    } else {
+      savedQuestion[this.question_item.question.num].answer = {};
+      if(this.question_item.inline_sub_questions) {
+        savedQuestion[this.question_item.question.num].answer[this.responses[0]] = {}
+      } else {
+        savedQuestion[this.question_item.question.num].answer[this.responses[0]] = {"-1":""}
+      }
+
+    }
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 
-
-    if(this.if_answered != null) {
-      if(this.localStorage.isQuestionAnswered(this.question.num)) {
-        this.sub_question_enabled = true;
-      } else {
-        this.sub_question_enabled = false;
-      }
-    }
+    this.changeValue = Math.random();
+    setTimeout(() => { // here
+      this.form.enable();
+      this.loading = false;
+    }, 300);
   }
 }

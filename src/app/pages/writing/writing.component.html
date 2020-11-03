@@ -1,12 +1,21 @@
 <div class="body-overflow">
   <app-header></app-header>
-  <app-toolbar [appPath]="['Home','App-Home','Writing']" [backButton]="['/app-home','Indietro']"
-               [nextButton]="['/survey','Vai al questionario']"></app-toolbar>
+  <app-toolbar [appPath]="['Landing Page','Introduzione', 'Scrittura']"></app-toolbar>
   <div class="content-wrapper">
     <div class="row">
+      <div>
+        <button type="button" id="back-button" class="btn btn-primary back-button" [routerLink]="['/introduzione']"><i class="fa fa-arrow-left"></i> Torna Indietro</button>
+      </div>
+    </div>
+    <div class="row">
+      <h1>Scrittura del Testo</h1>
       <div class="col-md-12">
-        <h1>Fase 1: Scrittura</h1>
-        <p>Descrizione di cosa fare in questa fase</p>
+        <div class="testo">
+          <b>CONSEGNA:</b><br>
+          Immagina che il tuo Corso di laurea abbia aperto un sondaggio rivolto a tutti gli studenti, con l’obiettivo di raccogliere opinioni sul funzionamento
+          della didattica a distanza nei mesi di emergenza sanitaria. Scrivi un testo in cui esponi, in modo non schematico, i vantaggi e gli svantaggi della
+          didattica a distanza, secondo il tuo punto di vista.
+        </div>
         <div class="timer-group">
           Tempo restante: <span class="timer">{{this.timer.stringValue}}</span>
         </div>
@@ -16,14 +25,22 @@
             {{copyPasteError}}
           </div>
         </div>
-        <form [formGroup]="textForm">
+        <form [formGroup]="textForm" spellcheck="false">
           <div class="text-area-wrapper">
-          <textarea id="textarea" (ngModelChange)="onSubmit()"
+          <textarea *ngIf="this.timer.time !== 0" id="textarea-enabled" (ngModelChange)="onSubmit()"
                     (paste)="lockAction()" (copy)="lockAction()" (cut)="lockAction()"
-                    (click)="onSubmit()" class="form-control" formControlName="textarea"
+                    (click)="onSubmit()"class="form-control" formControlName="textarea"
+                    rows="10"></textarea>
+          <textarea *ngIf="this.timer.time === 0" id="textarea-disabled" disabled (ngModelChange)="onSubmit()"
+                    (paste)="lockAction()" (copy)="lockAction()" (cut)="lockAction()"
+                    (click)="onSubmit()"class="form-control" formControlName="textarea"
                     rows="10"></textarea>
           </div>
         </form>
+        <div class="center">
+          <br><br>
+          <button [disabled]="this.timer.time !== 0" type="button" id="bottom-button" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}">Prosegui</button>
+        </div>
       </div>
     </div>
   </div>

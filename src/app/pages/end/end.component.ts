@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LocalStorageService} from '../../@core/services/local-storage/local-storage.service';
+import {Title} from "@angular/platform-browser";
+import {BackendApiService} from "../../@core/services/backend-api/backend-api.service";
 
 @Component({
   selector: 'app-end',
@@ -10,13 +12,27 @@ export class EndComponent implements OnInit {
 
   writingText: any;
   questions: any;
-  constructor(public localStorage: LocalStorageService) { }
+  responseLucky: any;
+
+  constructor(public localStorage: LocalStorageService, private titleService: Title, private backendService:BackendApiService) {
+    this.titleService.setTitle("Fine - UniverS-ITA");
+    let lucky = this.localStorage.getJSON('imFeelingLucky')
+    if(lucky != null) {
+      this.responseLucky = lucky
+    }
+  }
 
   ngOnInit(): void {
-    const wt = this.localStorage.get('writing-text');
-    const q = this.localStorage.get('questions');
-    this.writingText = wt ? JSON.parse(wt) : {};
-    this.questions = q ? JSON.parse(q) : {};
+
+  }
+
+  imFeelingLucky(){
+    this.backendService.imFeelingLucky().subscribe((response) => {
+      console.log("Lucky: " + response['lucky'] + " - Code: " + response['code']);
+      this.localStorage.set('imFeelingLucky',JSON.stringify(response))
+      this.responseLucky = response;
+    });
+
   }
 
 }

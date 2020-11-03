@@ -1,15 +1,43 @@
 <div class="body-overflow">
   <app-header></app-header>
-  <app-toolbar [appPath]="['Home','App-Home','Writing','Survey']" [backButton]="['/writing','Scrittura']"
-               [nextButton]="['/end','Riepilogo']"></app-toolbar>
+  <app-toolbar [appPath]="['Landing page','Introduzione','Scrittura','Questionario']"></app-toolbar>
   <div class="content-wrapper">
     <div class="row">
+      <div>
+        <button *ngIf="lastSection === '5'" type="button" id="back-button-1" class="btn btn-success back-button  " [routerLink]="'/questionario'" [queryParams]="{'sezione':[4]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 3</button>
+        <button *ngIf="lastSection === '4'" type="button" id="back-button-2" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[3]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 2 (Parte 2)</button>
+        <button *ngIf="lastSection === '3'" type="button" id="back-button-3" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[2]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 2 (Parte 1)</button>
+        <button *ngIf="lastSection === '2'" type="button" id="back-button-4" class="btn btn-success back-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}"><i class="fa fa-arrow-left"></i> Torna alla Sezione 1</button>
+        <button *ngIf="lastSection === '1'" type="button" id="back-button-5" class="btn btn-success back-button" [routerLink]="'/scrittura'"><i class="fa fa-arrow-left"></i> Torna alla Scrittura</button>
+      </div>
+    </div>
+    <div class="row">
+      <h1>Questionario</h1>
+      <div *ngIf="sections[0]=== '0'" class="row testo">
+        Ti chiediamo ora di compilare un questionario. Troverai domande di tipo sociodemografico e altre
+        che invece riguardano le tue abitudini di scrittura.<br><br>
+        Ti ricordiamo di nuovo che la rilevazione dei dati è anonima: <b>le tue risposte non verranno mai
+        associate ai tuoi dati anagrafici e nessuno potrà risalire alla tua identità.</b><br><br>
+        È molto importante che tu risponda a tutte le domande. Se però una domanda ti crea qualunque
+        forma di disagio, seleziona la risposta <i>non so/non rispondo</i>.<br><br>
+      </div>
       <div class="col-md-12 indent">
-        <h1>Fase 2: Questionario</h1>
-        <div *ngFor="let item of questionObj">
-          <div class="row row-question">
-            <app-question [question]=item.question [type]=item.type [answers]=item.answers [if_answered]=item.if_answered [enabled]="true"></app-question>
+        <div *ngFor="let section of sections">
+          <div class="section">
+            <h3><span *ngIf="section !== '0'">Sezione:</span> {{sectionObj[section].section}}</h3>
+            <div *ngFor="let item of sectionObj[section].questions">
+              <div class="row row-question">
+                <app-question [question_item]=item [dependant_sub_questions]=item.dependant_sub_questions [inline_sub_questions]=item.inline_sub_questions ></app-question>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="center">
+          <button *ngIf="lastSection === '1'" [disabled]="false" type="button" id="bottom-button-1" class="btn btn-success bottom-button  " [routerLink]="'/questionario'" [queryParams]="{'sezione':[2]}">Vai alla Sezione 2 (Parte 1)</button>
+          <button *ngIf="lastSection === '2'" [disabled]="false" type="button" id="bottom-button-2" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[3]}">Vai alla Sezione 2 (Parte 2)</button>
+          <button *ngIf="lastSection === '3'" [disabled]="false" type="button" id="bottom-button-3" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[4]}">Vai alla Sezione 3</button>
+          <button *ngIf="lastSection === '4'" [disabled]="false" type="button" id="bottom-button-4" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[5]}">Vai alla Sezione 4</button>
+          <button *ngIf="lastSection === '5'" [disabled]="false" type="button" id="bottom-button-5" class="btn btn-success bottom-button" (click)="this.sendToBackend()" [routerLink]="'/end'">Prosegui e Conferma</button>
         </div>
       </div>
     </div>

@@ -20,15 +20,17 @@ import {HttpClientModule} from '@angular/common/http';
 import {LoggedGuard} from './@core/services/logged-guard/logged.guard';
 import {StatsComponent} from './pages/stats/stats.component';
 import {CommonModule} from '@angular/common';
+import {IntroductionComponent} from "./pages/introduction/introduction.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'app-home', pathMatch: 'full'},
+  {path: '', redirectTo: 'landing page', pathMatch: 'full'},
   {path: 'home', canActivate: [RedirectGuard], component: RedirectGuard, data: {externalUrl: 'https://site.unibo.it/univers-ita'}},
-  {path: 'app-home', component: AppHomeComponent},
+  {path: 'landing page', component: AppHomeComponent},
   {path: 'login', component: LoginComponent, canActivate: [LoggedGuard]},
+  {path: 'introduzione', component: IntroductionComponent},
   {path: 'admin', component: AdminComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
-  {path: 'survey', component: SurveyComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
-  {path: 'writing', component: WritingComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
+  {path: 'questionario', pathMatch: 'full', component: SurveyComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
+  {path: 'scrittura', component: WritingComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'end', component: EndComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'stats', component: StatsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
   {path: '**', component: PageNotFoundComponent}
