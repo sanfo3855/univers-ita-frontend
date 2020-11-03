@@ -1986,7 +1986,7 @@
           "answers": [{"answer":"Sull’ortografia","num":1},{"answer":"Sulla punteggiatura","num":2},{"answer":"Sulla scelta delle parole","num":3},{"answer":"Sul senso delle frasi","num":4},{"answer":"Sul collegamento logico tra una frase e l’altra","num":5},{"answer":"Sulla chiarezza di quello che vuoi dire","num":6},{"answer":"Sulla completezza di quello che vuoi dire","num":7},{"answer":"Altro","num":8}],
           "inline_sub_questions": [
             {
-              "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) se correggi il tuo testo, ti concentri soprattutto:","num": "45e4e1"},
+              "question": {"question": "specifica","num": "45e4e1"},
               "type": "textbox",
               "answers":"",
               "super_answers": ["Altro"]
