@@ -60,7 +60,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
   initializeForm() {
     const savedResponse = this.responses;
-    console.log()
     let answerControlOption = {};
     if (this.question_item.type === 'checkbox') {
       for (const answer of this.question_item.answers) {
@@ -142,7 +141,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       this.responses = [this.form.value.value];
     }
 
-    console.log('Question ' + this.question_item.question.question + ' - Responses ' + this.responses);
+    // console.log('Question ' + this.question_item.question.question + ' - Responses ' + this.responses);
 
     let savedQuestion = JSON.parse(this.localStorage.get('questions'));
     if (!savedQuestion[this.question_item.question.num]) {

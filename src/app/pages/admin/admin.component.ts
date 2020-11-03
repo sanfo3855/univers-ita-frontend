@@ -45,7 +45,7 @@ export class AdminComponent implements OnInit {
   }
 
   changeValidity(username: string, value: boolean) {
-    console.log('Changing validity of ' + username + ' to ' + value);
+    //console.log('Changing validity of ' + username + ' to ' + value);
     this.users.map(item => {
       if (item.username === username) {
         item.validity = value ? 'Si' : 'No';

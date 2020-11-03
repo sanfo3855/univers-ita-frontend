@@ -71,14 +71,14 @@ export class BackendApiService {
   }
 
   public uploadTextNQuestion(writtenText: string, localAnsweredQuestions: any): Observable<any> {
-    console.log(writtenText);
+    //console.log(writtenText);
     const answeredQuestions = [];
-    console.log(Object.keys(localAnsweredQuestions).sort((left: any, right: any) => {return left - right}));
+    //console.log(Object.keys(localAnsweredQuestions).sort((left: any, right: any) => {return left - right}));
     Object.keys(localAnsweredQuestions).sort((left: any, right: any) => {return left - right}).map((key,val) => {
       localAnsweredQuestions[key].num = key;
       answeredQuestions.push(localAnsweredQuestions[key]);
     });
-    console.log(answeredQuestions);
+    //console.log(answeredQuestions);
     return this.http.post(this.textSurveyEndpoint + '/save', {text: writtenText, questions: answeredQuestions})
       .pipe(catchError(BackendApiService.handleError));
   }

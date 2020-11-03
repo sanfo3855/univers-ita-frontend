@@ -151,12 +151,12 @@ export class InlineQuestionsComponent implements OnChanges {
     } else if (this.inline_sub_question_item.type === 'radiobutton' || this.inline_sub_question_item.type === 'textbox' || this.inline_sub_question_item.type === 'select') {
       this.inline_responses = [this.form.value.value];
     }
-    console.log('Question inline: ' + this.inline_sub_question_item.question.question + ' - Responses inline: ' + this.inline_responses);
+    // console.log('Question inline: ' + this.inline_sub_question_item.question.question + ' - Responses inline: ' + this.inline_responses);
 
     // SAVE TO LOCAL STORAGE
     const questions =  this.localStorage.getJSON('questions');
     if(this.isEnabled()) {
-      console.log(this.dependentOn + " " + this.enabling_response + " " + this.inline_sub_question_item.question.num);
+      // console.log(this.dependentOn + " " + this.enabling_response + " " + this.inline_sub_question_item.question.num);
       if(questions[this.dependentOn]) {
         if(questions[this.dependentOn].answer[this.top_answer]) {
           if(!questions[this.dependentOn].answer[this.top_answer]) {

@@ -53,11 +53,6 @@ export class WritingComponent implements OnInit {
     return this.writingText.text.split(/[^\s]+/).length - 1;
   }
 
-  getDisabledValue() {
-    console.log(this.timer.time);
-    return !(this.timer.time > 0);
-  }
-
   lockAction() {
     this.copyPasteError = 'Azioni di Taglia, Copia ed Incolla non permesse';
     return false;
