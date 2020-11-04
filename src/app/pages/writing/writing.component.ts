@@ -4,6 +4,7 @@ import {BackendApiService} from '../../@core/services/backend-api/backend-api.se
 import {LocalStorageService} from '../../@core/services/local-storage/local-storage.service';
 import {TimerService} from '../../@core/services/timer/timer.service';
 import {Title} from "@angular/platform-browser";
+import * as config from '../../../assets/question-config.json';
 
 @Component({
   selector: 'app-writing',
@@ -16,7 +17,7 @@ export class WritingComponent implements OnInit {
   });
 
   writingText: any;
-  maxWord = 300;
+  maxWord = config['max_word'] ? config['max_word'] : 500;
   remainingWord: number;
 
   copyPasteError = '';
