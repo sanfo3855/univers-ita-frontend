@@ -1,5 +1,4 @@
 {
-  "time-bak": 3600,
   "time": 3600,
   "min_word": 250,
   "max_word": 500,
@@ -1611,7 +1610,7 @@
               "question": {"question":"Quale dialetto o lingua minoritaria d’Italia?","num":"28e2e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia italiano che un dialetto o una lingua minoritaria d’Italia","Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia"]
+              "super_answers": ["Un dialetto o una lingua minoritaria d’Italia","Sia italiano che un dialetto o una lingua minoritaria d’Italia","Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"Quale altra lingua?","num":"28e2e1"},
@@ -1970,7 +1969,7 @@
         {
           "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) come lo scrivi?","num": "45.2"},
           "type": "radiobutton",
-          "answers": [{"answer":"Lo scrivo con carta e penna","num":1},{"answer":"Li digito sul computer","num":2},{"answer":"Lo digito sul tablet","num":3},{"answer":"Lo digito sullo smartphone","num":4},{"answer":"Lo detto a un programma di riconoscimento automatico del testo","num":5},{"answer":"Lo detto a qualcun altro","num":6}],
+          "answers": [{"answer":"Lo scrivo con carta e penna","num":1},{"answer":"Lo digito sul computer","num":2},{"answer":"Lo digito sul tablet","num":3},{"answer":"Lo digito sullo smartphone","num":4},{"answer":"Lo detto a un programma di riconoscimento automatico del testo","num":5},{"answer":"Lo detto a qualcun altro","num":6}],
           "dependant_sub_questions": [
             {
               "question": {"question": "Se per scrivere testi per l'università usi computer, tablet o smartphone, usi il correttore ortografico?","num": "45.3"},
