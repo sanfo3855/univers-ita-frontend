@@ -29,7 +29,7 @@ export class LoggedGuard implements CanActivate {
       this.localStorage.remove('questions');
       this.localStorage.remove('time');
       this.timer.stopTimer();
-      this.router.navigate(['/app-home']);
+      this.router.navigate(['/landing page']);
       return false;
     } else {
       return true;

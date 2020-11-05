@@ -464,7 +464,7 @@
           "answers": [{"answer":"PC","num":1},{"answer":"Tablet","num":2},{"answer":"E-reader","num":3},{"answer":"Una stampante","num":4},{"answer":"Un collegamento Internet","num":5}]
         },
         {
-          "question": {"question": "Hai o hai avuto in passato difficoltà che ti abbiano reso difficile la lettura o la scrittura (ad ese DSA)?","num": "12"},
+          "question": {"question": "Hai o hai avuto in passato difficoltà che ti abbiano reso difficile la lettura o la scrittura?","num": "12"},
           "type": "radiobutton",
           "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
           "dependant_sub_questions": [
@@ -519,7 +519,7 @@
           "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Cosa legge abitualmente tua PADRE?","num": "15.4"},
+              "question": {"question": "Cosa legge abitualmente tuo PADRE?","num": "15.4"},
               "type": "checkbox",
               "answers": [{"answer":"Libri","num":1},{"answer":"Riviste","num":2},{"answer":"Quotidiani","num":3},{"answer":"Fumetti","num":4}],
               "super_answers": ["Sì"],
@@ -543,13 +543,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con i suoi GENITORI?","num": "16.1"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e1e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e1e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e1e1"},
@@ -562,14 +562,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con il/la COMPAGNO/A?","num": "16.2"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e2e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e2e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e2e1"},
@@ -582,14 +582,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con TE e con i tuoi FRATELLI/ le tue SORELLE ADESSO?","num": "16.3"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e3e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e3e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e3e1"},
@@ -602,14 +602,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con te e con TE e con i tuoi FRATELLI/le tue SORELLE QUANDO ERAVATE PICCOLI?","num": "16.4"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e4e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e4e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e4e1"},
@@ -622,14 +622,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con gli ALTRI PARENTI?","num": "16.5"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e5e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e5e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e5e1"},
@@ -642,14 +642,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE sul POSTO DI LAVORO?","num": "16.6"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e6e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e6e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e6e1"},
@@ -662,14 +662,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con i SUOI AMICI?","num": "16.7"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e7e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e7e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e7e1"},
@@ -682,14 +682,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tua MADRE con gli ESTRANEI?","num": "16.8"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"16e8e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"16e8e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"16e8e1"},
@@ -702,14 +702,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con i suoi GENITORI?","num": "17.1"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e1e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e1e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e1e1"},
@@ -722,14 +722,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con il/la COMPAGNO/A?","num": "17.2"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e2e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e2e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e2e1"},
@@ -742,14 +742,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con TE e con i tuoi FRATELLI/ le tue SORELLE ADESSO?","num": "17.3"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e3e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e3e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e3e1"},
@@ -762,14 +762,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con te e con TE e con i tuoi FRATELLI/le tue SORELLE QUANDO ERAVATE PICCOLI?","num": "17.4"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e4e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e4e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e4e1"},
@@ -782,14 +782,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con gli ALTRI PARENTI?","num": "17.5"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e5e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e5e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e5e1"},
@@ -802,14 +802,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE sul POSTO DI LAVORO?","num": "17.6"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e6e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e6e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e6e1"},
@@ -822,14 +822,14 @@
         {
           "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con i SUOI AMICI?","num": "17.7"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e7e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e7e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e7e1"},
@@ -840,16 +840,16 @@
           ]
         },
         {
-          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE Con gli ESTRANEI?","num": "17.8"},
+          "question": {"question": "In quali lingue/dialetti parla abitualmente tuo PADRE con gli ESTRANEI?","num": "17.8"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer":"non so/non rispondo","num":6}],
           "exclusive_answers":["Non so/non rispondo"],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"17e8e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"17e8e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"17e8e1"},
@@ -860,15 +860,15 @@
           ]
         },
         {
-          "question": {"question": "Se hai fratelli/sorelle, in quali lingue/dialetti parlate e parlavate quando eravate piccoli?","num": "18"},
+          "question": {"question": "Se hai FRATELLI/SORELLE, in quali lingue/dialetti parlate e parlavate quando eravate piccoli?","num": "18"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"18e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"18e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"18e1"},
@@ -1295,13 +1295,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi in FAMIGLIA nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.1"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e1e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e1e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e1e1"},
@@ -1314,13 +1314,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi con i COMPAGNI a SCUOLA nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.2"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e2e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e2e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e2e1"},
@@ -1333,13 +1333,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi con gli AMICI al di FUORI DALLA SCUOLA nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.3"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e3e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e3e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e3e1"},
@@ -1352,13 +1352,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi con gli ESTRANEI nel periodo della SCUOLA PRIMARIA e MEDIA?","num": "20.4"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e4e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e4e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e4e1"},
@@ -1371,13 +1371,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi in FAMIGLIA nel periodo della SCUOLA SUPERIORE?","num": "21.1"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e1e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e1e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e1e1"},
@@ -1390,13 +1390,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi con i COMPAGNI a SCUOLA nel periodo della SCUOLA SUPERIORE?","num": "21.2"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e2e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e2e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e2e1"},
@@ -1409,13 +1409,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi con gli AMICI al di FUORI DALLA SCUOLA nel periodo della SCUOLA SUPERIORE?","num": "21.3"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e3e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e3e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e3e1"},
@@ -1428,13 +1428,13 @@
         {
           "question": {"question": "In quali lingue/dialetti parlavi con gli ESTRANEI nel periodo della SCUOLA SUPERIORE?","num": "21.4"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"20e4e1"},
+              "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"20e4e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto o una lingua minoritaria d’Italia"]
             },
             {
               "question": {"question":"In quale altra lingua?","num":"20e4e1"},
@@ -1508,7 +1508,7 @@
           "answers": [{"answer":"Sufficiente (60-70)","num":1},{"answer":"Discreto (71-80)","num":2},{"answer":"Buono (81-90)","num":3},{"answer":"Ottimo (91-100)","num":4}]
         },
         {
-          "question": {"question": "Tra i professori che hai e hai avuto, ce ne sono alcuni che usavano/usano lingue diverse dall’italiano per spiegare materie non linguistiche (per esempio matematica, storia, scienze, ecc)?","num": "25"},
+          "question": {"question": "Tra i professori che hai e hai avuto, ce ne sono alcuni che usavano/usano lingue diverse dall’italiano per spiegare materie non linguistiche (per esempio matematica, storia, scienze, …)?","num": "25"},
           "type": "radiobutton",
           "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
           "dependant_sub_questions":[
@@ -1549,7 +1549,7 @@
           "answers": ""
         },
         {
-          "question": {"question": "In quali lingue sai scrivere brevi testi (ad esesmpio un messaggio per un amico o un conoscente, una richiesta di informazioni)?","num": "26.5"},
+          "question": {"question": "In quali lingue sai scrivere brevi testi (ad esempio un messaggio per un amico o un conoscente, una richiesta di informazioni)?","num": "26.5"},
           "type": "textbox",
           "answers": ""
         },
@@ -1564,7 +1564,7 @@
           "answers": ""
         },
         {
-          "question": {"question": "In quali lingue sai Parlare fluentemente a qualunque livello di complessità e in qualunque contesto, sia oralmente che per iscritto?","num": "26.8"},
+          "question": {"question": "In quali lingue sai parlare fluentemente a qualunque livello di complessità e in qualunque contesto, sia oralmente che per iscritto?","num": "26.8"},
           "type": "textbox",
           "answers": ""
         },
@@ -1574,50 +1574,50 @@
           "answers": [{"answer":"No","num":1},{"answer":"Poche","num":2},{"answer":"Alcune","num":3},{"answer":"Molte","num":4}]
         },
         {
-          "question": {"question": "Da quando ti sei diplomato/a ad oggi, hai o hai avuto esperienze di lavoro per le quali risulta essenziale Leggere molto in italiano e/o in altre lingue (per esempio libri, giornali, siti e piattaforme)?","num": "27.2"},
+          "question": {"question": "Da quando ti sei diplomato/a ad oggi, hai o hai avuto esperienze di lavoro per le quali risulta essenziale leggere molto in italiano e/o in altre lingue (per esempio libri, giornali, siti e piattaforme)?","num": "27.2"},
           "type": "select",
           "answers": [{"answer":"No","num":1},{"answer":"Poche","num":2},{"answer":"Alcune","num":3},{"answer":"Molte","num":4}]
         },
         {
-          "question": {"question": "Da quando ti sei diplomato/a ad oggi, hai o hai avuto esperienze di lavoro per le quali risulta essenziale Avere ottime capacità di scrittura in italiano e/o in altre lingue (per esempio documenti, articoli e testi per il Web)","num": "27.3"},
+          "question": {"question": "Da quando ti sei diplomato/a ad oggi, hai o hai avuto esperienze di lavoro per le quali risulta essenziale avere ottime capacità di scrittura in italiano e/o in altre lingue (per esempio documenti, articoli e testi per il Web)","num": "27.3"},
           "type": "select",
           "answers": [{"answer":"No","num":1},{"answer":"Poche","num":2},{"answer":"Alcune","num":3},{"answer":"Molte","num":4}]
         },
         {
           "question": {"question": "Da quando sei all’Università, quali lingue /dialetti hai usato/usi più spesso con le PERSONE CHE VIVONO CON TE?","num": "28.1"},
           "type": "radiobutton",
-          "answers":  [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer": "Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia","num":"6"}],
+          "answers":  [{"answer":"Italiano","num":1},{"answer":"Un dialetto o una lingua minoritaria d’Italia","num":2},{"answer":"Un’altra lingua","num":3},{"answer":"Sia italiano che un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia italiano che un’altra lingua","num":5},{"answer": "Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia","num":"6"}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"28e1e1"},
+              "question": {"question":"Quale dialetto o lingua minoritaria d’Italia?","num":"28e1e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+              "super_answers": ["Un dialetto o una lingua minoritaria d’Italia","Sia italiano che un dialetto o una lingua minoritaria d’Italia","Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia"]
             },
             {
-              "question": {"question":"In quale altra lingua?","num":"28e1e1"},
+              "question": {"question":"Quale altra lingua?","num":"28e1e1"},
               "type": "textbox",
               "answers": "",
-              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+              "super_answers": ["Un’altra lingua","Sia italiano che un’altra lingua","Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia"]
             }
           ]
         },
         {
           "question": {"question": "Da quando sei all’Università, quali lingue /dialetti hai usato/usi più spesso con gli AMICI CHE FREQUENTI?","num": "28.2"},
           "type": "radiobutton",
-          "answers":  [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto italiano o in una lingua minoritaria","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer": "Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia","num":"6"}],
+          "answers":  [{"answer":"Italiano","num":1},{"answer":"Un dialetto o una lingua minoritaria d’Italia","num":2},{"answer":"Un’altra lingua","num":3},{"answer":"Sia italiano che un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia italiano che un’altra lingua","num":5},{"answer": "Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia","num":"6"}],
           "inline_sub_questions": [
             {
-              "question": {"question":"In quale dialetto o lingua minoritaria?","num":"28e2e1"},
+              "question": {"question":"Quale dialetto o lingua minoritaria d’Italia?","num":"28e2e1"},
               "type": "select",
               "answers": [{"answer":"Piemontese","num":1},{"answer":"Lombardo","num":2},{"answer":"Ligure o Emiliano-Romagnolo","num":2},{"answer":"Veneto","num":2},{"answer":"Veneto-trentino o Veneto-giuliano","num":2},{"answer":"Toscano","num":2},{"answer":"Romanesco","num":2},{"answer":"Laziale","num":2},{"answer":"Marchigiano o Umbro","num":2},{"answer":"salentino","num":2},{"answer":"Calabrese meridionale o Siciliano","num":2},{"answer":"Sardo","num":2},{"answer":"Friulano","num":2},{"answer":"Francese","num":2},{"answer":"Franco-provenzale","num":2},{"answer":"Occitano (provenzale)","num":2},{"answer":"Tedesco","num":2},{"answer":"Ladino","num":2},{"answer":"Sloveno","num":2},{"answer":"Croato","num":2},{"answer":"Albanese (arbëresh)","num":2},{"answer":"Greco (grico, grecanico)","num":2},{"answer":"Catalano","num":2}],
-              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia in italiano che in un dialetto italiano o in una lingua minoritaria","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+              "super_answers": ["In un dialetto o in una lingua minoritaria d’Italia","Sia italiano che un dialetto o una lingua minoritaria d’Italia","Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia"]
             },
             {
-              "question": {"question":"In quale altra lingua?","num":"28e2e1"},
+              "question": {"question":"Quale altra lingua?","num":"28e2e1"},
               "type": "textbox",
               "answers": "",
-              "super_answers": ["In un’altra lingua","Sia in italiano che in un’altra lingua","Sia un’altra lingua che un dialetto o in una lingua minoritaria d’Italia"]
+              "super_answers": ["Un’altra lingua","Sia italiano che un’altra lingua","Sia un’altra lingua che un dialetto o una lingua minoritaria d’Italia"]
             }
           ]
         },
@@ -1756,49 +1756,49 @@
           "max_answer": 3
         },
         {
-          "question": {"question": "Quanto spesso guardi Film?","num": "33.1"},
+          "question": {"question": "Quanto spesso guardi film?","num": "33.1"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Quanto spesso guardi Serie TV?","num": "33.2"},
+          "question": {"question": "Quanto spesso guardi serie TV?","num": "33.2"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Quanto spesso guardi Telegiornali o notiziari?","num": "33.3"},
+          "question": {"question": "Quanto spesso guardi telegiornali o notiziari?","num": "33.3"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Quanto spesso guardi Talk show di politica, attualità, cronaca?","num": "33.4"},
+          "question": {"question": "Quanto spesso guardi talk show di politica, attualità, cronaca?","num": "33.4"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Quanto spesso guardi Talk show di intrattenimento?","num": "33.5"},
+          "question": {"question": "Quanto spesso guardi talk show di intrattenimento?","num": "33.5"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Quanto spesso guardi Video di cantanti e gruppi musicali?","num": "33.6"},
+          "question": {"question": "Quanto spesso guardi video di cantanti e gruppi musicali?","num": "33.6"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Quanto spesso guardi Video di influencer (YouTuber, TikToker)?","num": "33.7"},
+          "question": {"question": "Quanto spesso guardi video di influencer (YouTuber, TikToker)?","num": "33.7"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Quanto spesso guardi Partite di calcio o altri sport?","num": "33.8"},
+          "question": {"question": "Quanto spesso guardi partite di calcio o altri sport?","num": "33.8"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
           "question": {"question": "Di cosa ti interessi e che attività svolgi nel tempo libero?","num": "34"},
           "type": "checkbox",
-          "answers": [{"answer":"Arte","num":1},{"answer":"Sport","num":2},{"answer":"Teatro","num":3},{"answer":"Fotografia e cinema","num":4},{"answer":"Musica","num":5},{"answer":"Vita sociale (cene, aperitivi)","num":6},{"answer":"Shopping","num":7},{"answer":"Escursionismo","num":8},{"answer":"Associazionismo/ Volontariato /attività politica","num":9},{"answer":"Ballo","num":10},{"answer":"Altro","num":11}],
+          "answers": [{"answer":"Arte","num":1},{"answer":"Sport","num":2},{"answer":"Teatro","num":3},{"answer":"Fotografia e cinema","num":4},{"answer":"Musica","num":5},{"answer":"Vita sociale (cene, aperitivi)","num":6},{"answer":"Shopping","num":7},{"answer":"Escursionismo","num":8},{"answer":"Associazionismo / volontariato / attività politica","num":9},{"answer":"Ballo","num":10},{"answer":"Altro","num":11}],
           "max_answers": 5,
           "inline_sub_questions": [
             {
@@ -1963,25 +1963,25 @@
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) fai una scaletta degli argomenti prima di cominciare a scrivere?","num": "45.1"},
+          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) fai una scaletta degli argomenti prima di cominciare a scrivere?","num": "45.1"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) come lo scrivi?","num": "45.2"},
+          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) come lo scrivi?","num": "45.2"},
           "type": "radiobutton",
-          "answers": [{"answer":"Li scrivo con carta e penna","num":1},{"answer":"Li digito sul computer","num":2},{"answer":"Li digito sul tablet","num":3},{"answer":"Li digito sullo smartphone","num":4},{"answer":"Li detto a un programma di riconoscimento automatico del testo","num":5},{"answer":"Li detto a qualcun altro","num":6}],
+          "answers": [{"answer":"Lo scrivo con carta e penna","num":1},{"answer":"Li digito sul computer","num":2},{"answer":"Lo digito sul tablet","num":3},{"answer":"Lo digito sullo smartphone","num":4},{"answer":"Lo detto a un programma di riconoscimento automatico del testo","num":5},{"answer":"Lo detto a qualcun altro","num":6}],
           "dependant_sub_questions": [
             {
               "question": {"question": "Se per scrivere testi per l'università usi computer, tablet o smartphone, usi il correttore ortografico?","num": "45.3"},
               "type": "radiobutton",
               "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Mai","num":4}],
-              "super_answers": ["Li digito sul computer","Li digito sul tablet","Li digito sullo smartphone"]
+              "super_answers": ["Lo digito sul computer","Lo digito sul tablet","Lo digito sullo smartphone"]
             }
           ]
         },
         {
-          "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, etc) se correggi il tuo testo, ti concentri soprattutto:","num": "45.4"},
+          "question": {"question": "Se devi scrivere un testo per l’Università (esami, relazioni, …) se correggi il tuo testo, ti concentri soprattutto:","num": "45.4"},
           "type": "checkbox",
           "answers": [{"answer":"Sull’ortografia","num":1},{"answer":"Sulla punteggiatura","num":2},{"answer":"Sulla scelta delle parole","num":3},{"answer":"Sul senso delle frasi","num":4},{"answer":"Sul collegamento logico tra una frase e l’altra","num":5},{"answer":"Sulla chiarezza di quello che vuoi dire","num":6},{"answer":"Sulla completezza di quello che vuoi dire","num":7},{"answer":"Altro","num":8}],
           "inline_sub_questions": [
