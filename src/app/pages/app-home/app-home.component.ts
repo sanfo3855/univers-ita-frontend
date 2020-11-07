@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {JWTTokenService} from '../../@core/services/JWT-token/jwt-token.service';
 import {Title} from "@angular/platform-browser";
+import {LocalStorageService} from "../../@core/services/local-storage/local-storage.service";
 
 @Component({
   selector: 'app-app-home',
@@ -9,11 +10,12 @@ import {Title} from "@angular/platform-browser";
 })
 export class AppHomeComponent implements OnInit {
 
-  constructor(public jwtTokenService: JWTTokenService, private titleService: Title) {
+  constructor(public jwtTokenService: JWTTokenService, private titleService: Title, private localStorage: LocalStorageService) {
     this.titleService.setTitle("Landing page - UniverS-Ita");
   }
 
   ngOnInit(): void {
+    this.localStorage.setJSON('last-page',{page:'Landing Page'})
   }
 
 }

@@ -32,6 +32,7 @@ export class WritingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.localStorage.setJSON('last-page',{page:'Scrittura'});
     const wt = this.localStorage.get('writing-text');
     this.writingText = wt ? JSON.parse(wt) : {text: '', locked: false};
     if (this.writingText.text) {

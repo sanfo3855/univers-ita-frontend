@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {JWTTokenService} from '../../@core/services/JWT-token/jwt-token.service';
 import {Title} from "@angular/platform-browser";
+import {LocalStorageService} from "../../@core/services/local-storage/local-storage.service";
 
 @Component({
   selector: 'app-login',
@@ -14,11 +15,12 @@ export class LoginComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private localStorage: LocalStorageService) {
     this.titleService.setTitle("Introduzione - UniverS-Ita");
   }
 
   ngOnInit(): void {
+
   }
 
   onSubmit() {

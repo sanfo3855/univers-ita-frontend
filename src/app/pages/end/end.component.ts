@@ -23,6 +23,7 @@ export class EndComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.localStorage.setJSON('last-page',{page:'fine'})
 
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {Title} from "@angular/platform-browser";
+import {LocalStorageService} from "../../@core/services/local-storage/local-storage.service";
 
 @Component({
   selector: 'app-page-not-found',

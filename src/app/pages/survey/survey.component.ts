@@ -10,7 +10,7 @@ import {BackendApiService} from "../../@core/services/backend-api/backend-api.se
   templateUrl: './survey.component.html',
   styleUrls: ['./survey.component.scss']
 })
-export class SurveyComponent implements OnChanges {
+export class SurveyComponent implements OnInit, OnChanges {
 
   sectionObj = questionJson.default.survey;
   sections: any[] = [];
@@ -26,6 +26,10 @@ export class SurveyComponent implements OnChanges {
     this.titleService.setTitle("Questionario (sezione " + this.lastSection + ")  - UniverS-ITA");
   }
 
+  ngOnInit(): void {
+    this.localStorage.setJSON('last-page',{page:'Questionario', queryParams: this.activatedRoute.snapshot.queryParams})
+  }
+
   ngOnChanges(): void {}
 
   sendToBackend() {
@@ -36,5 +40,6 @@ export class SurveyComponent implements OnChanges {
       console.log('Testo e Riposte questionario inviate');
     });
   }
+
 
 }
