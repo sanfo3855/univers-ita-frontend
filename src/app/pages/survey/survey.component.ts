@@ -31,7 +31,8 @@ export class SurveyComponent implements OnChanges {
   sendToBackend() {
     const text = this.localStorage.getJSON('writing-text').text;
     const questions = this.localStorage.getJSON('questions');
-    this.backendService.uploadTextNQuestion(text, questions).subscribe((data) => {
+    const student = this.localStorage.get('student');
+    this.backendService.uploadTextNQuestion(text, questions ,student).subscribe((data) => {
       console.log('Testo e Riposte questionario inviate');
     });
   }

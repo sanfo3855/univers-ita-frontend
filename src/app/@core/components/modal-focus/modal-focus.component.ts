@@ -84,7 +84,7 @@ export class NgbdModalFocus {
     this._modalService.open(MODALS[name]).result.then((result) => {
       console.log(result);
       if (result === 'Ok click') {
-        this.uploadTextNQuestions();
+
       }
     }, (reason) => {
       console.log(reason);
@@ -92,12 +92,4 @@ export class NgbdModalFocus {
   }
 
   // @Directive({selector:})
-
-  uploadTextNQuestions(): void {
-    const text = this.localStorage.getJSON('writing-text').text;
-    const questions = this.localStorage.getJSON('questions');
-    this.backendService.uploadTextNQuestion(text, questions).subscribe((data) => {
-      console.log('sent');
-    });
-  }
 }

@@ -28,48 +28,6 @@ export class ToolbarComponent implements OnInit {
 
   }
 
-  isDisabled() {
-    if (this.nextButton) {
-      if (this.nextButton[0] === '/survey') {
-        return !this.isTimeFinished();
-      } else if (this.nextButton[0] === '/end') {
-        return !this.areQuestionsAnswered();
-      } else if (this.nextButton[0] === '/writing') {
-        return false;
-      }
-    } else if (this.submitButton) {
-      return !this.areQuestionsAnswered();
-    }
-  }
-
-  isTimeFinished() {
-    if (this.localStorage.get('time')) {
-      return this.localStorage.get('time') === '0';
-    }
-  }
-
-  areQuestionsAnswered() {
-    const savedQuestions = this.localStorage.getJSON('questions');
-    let counterNotAnswered = 0;
-    Object.keys(savedQuestions).map((key) => {
-      if (Object.keys(savedQuestions[key]).length !== 0) {
-        if (savedQuestions[key].answer.length === 0 || savedQuestions[key].answer[0] === '') {
-          // console.log('answer lunghezza 0');
-          counterNotAnswered++;
-        }
-      } else {
-        // console.log('obj lunghezza 0');
-        counterNotAnswered++;
-      }
-    });
-    // return counterNotAnswered === 0;
-    return true;
-  }
-
-  areTextFilled() {
-    return this.localStorage.getJSON('text').length !== 0 && this.localStorage.getJSON('text') !== '';
-  }
-
   logOut(): void {
     this.jwtTokenService.resetToken();
     this.localStorage.remove('writing-text');
@@ -77,14 +35,6 @@ export class ToolbarComponent implements OnInit {
     this.localStorage.remove('time');
     this.timer.stopTimer();
     this.router.navigate(['/landing page']);
-  }
-
-  uploadTextNQuestions(): void {
-    const text = this.localStorage.getJSON('writing-text').text;
-    const questions = this.localStorage.getJSON('questions');
-    this.backendService.uploadTextNQuestion(text, questions).subscribe((data) => {
-        console.log('sent');
-    });
   }
 
 }

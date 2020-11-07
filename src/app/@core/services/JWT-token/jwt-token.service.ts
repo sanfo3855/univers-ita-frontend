@@ -18,6 +18,7 @@ export class JWTTokenService {
       this.jwtToken = token;
       this.localStorage.set('jwt-token', token);
       this.localStorage.set('user-type', this.getDecodedToken().type);
+      this.localStorage.set('student', this.getDecodedToken().username);
     }
   }
 

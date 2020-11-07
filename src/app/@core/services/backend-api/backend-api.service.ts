@@ -70,16 +70,14 @@ export class BackendApiService {
       .pipe(catchError(BackendApiService.handleError));
   }
 
-  public uploadTextNQuestion(writtenText: string, localAnsweredQuestions: any): Observable<any> {
-    //console.log(writtenText);
+  public uploadTextNQuestion(writtenText: string, localAnsweredQuestions: any, student: any): Observable<any> {
     const answeredQuestions = [];
-    //console.log(Object.keys(localAnsweredQuestions).sort((left: any, right: any) => {return left - right}));
     Object.keys(localAnsweredQuestions).sort((left: any, right: any) => {return left - right}).map((key,val) => {
       localAnsweredQuestions[key].num = key;
       answeredQuestions.push(localAnsweredQuestions[key]);
     });
     //console.log(answeredQuestions);
-    return this.http.post(this.textSurveyEndpoint + '/save', {text: writtenText, questions: answeredQuestions})
+    return this.http.post(this.textSurveyEndpoint + '/save', {text: writtenText, questions: answeredQuestions, student:student})
       .pipe(catchError(BackendApiService.handleError));
   }
 
