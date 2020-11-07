@@ -16,6 +16,7 @@ export class InlineQuestionsComponent implements OnChanges {
   @Input() top_answer: any;
   @Input() enabling_response: any;
   @Input() super_responses: any;
+  @Input() super_question_type: any;
 
   @Input() enabled: any;
   @Input() index: any
@@ -42,7 +43,10 @@ export class InlineQuestionsComponent implements OnChanges {
           return true;
         } else {
           for (let super_answer of this.inline_sub_question_item.super_answers) {
-            if (this.super_responses.includes(super_answer) && super_answer === this.enabling_response) {
+            if (this.super_question_type !== 'textbox' && this.super_responses.includes(super_answer) && super_answer === this.enabling_response) {
+              return true;
+            }
+            if(this.super_question_type === 'textbox' && !this.super_responses.includes(super_answer) && super_answer !== this.enabling_response) {
               return true;
             }
           }

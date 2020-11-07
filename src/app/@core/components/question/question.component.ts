@@ -24,6 +24,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
   @Input() enabled: any;
   @Input() super_responses = [];
+  @Input() super_question_type: any;
 
   sub_question_enabled = false;
 
@@ -47,7 +48,9 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     } else {
       if(this.super_responses) {
         for(let super_answer of this.question_item.super_answers) {
-          if(this.super_responses.includes(super_answer)){
+          if(this.super_question_type !== 'textbox' && this.super_responses.includes(super_answer)){
+            return true;
+          } else if (this.super_question_type === 'textbox' && !this.super_responses.includes(super_answer) && this.super_responses[0]){
             return true;
           }
         }

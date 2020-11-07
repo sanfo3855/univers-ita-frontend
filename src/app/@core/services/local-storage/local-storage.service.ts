@@ -27,7 +27,7 @@ export class LocalStorageService {
 
   removeQuestionAnswered(num: any) {
     let updatedQuestions = this.getJSON('questions')
-    updatedQuestions[num].answer = []
+    updatedQuestions[num] = {}
     this.set('questions',JSON.stringify(updatedQuestions));
   }
 }
