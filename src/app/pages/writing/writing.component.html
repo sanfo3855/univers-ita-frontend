@@ -20,6 +20,7 @@
           Tempo restante: <span class="timer">{{this.timer.stringValue}}</span>
         </div>
         <div class="word-counter-group">
+          Parole scritte: <span class="word-counter">{{this.maxWord - this.remainingWord}}</span><br>
           Parole rimanenti: <span class="word-counter">{{this.remainingWord}}</span>
           <div *ngIf="copyPasteError!==''" class="copyPasteError">
             {{copyPasteError}}
@@ -27,19 +28,24 @@
         </div>
         <form [formGroup]="textForm" spellcheck="false">
           <div class="text-area-wrapper">
-          <textarea *ngIf="this.timer.time !== 0" id="textarea-enabled" (ngModelChange)="onSubmit()"
+          <textarea *ngIf="this.timer.time !== 0 || this.isDemo" id="textarea-enabled" (ngModelChange)="onSubmit()"
                     (paste)="lockAction()" (copy)="lockAction()" (cut)="lockAction()"
                     (click)="onSubmit()"class="form-control" formControlName="textarea"
                     rows="10"></textarea>
-          <textarea *ngIf="this.timer.time === 0" id="textarea-disabled" disabled (ngModelChange)="onSubmit()"
+          <textarea *ngIf="this.timer.time === 0 && !this.isDemo" id="textarea-disabled" disabled (ngModelChange)="onSubmit()"
                     (paste)="lockAction()" (copy)="lockAction()" (cut)="lockAction()"
                     (click)="onSubmit()"class="form-control" formControlName="textarea"
                     rows="10"></textarea>
           </div>
         </form>
+        <div class="center testo" *ngIf="this.timer.time === 0 && !(this.remainingWord < this.maxWord -this.minWord)">
+          <span style="color: red">
+            Non hai raggiunto il limite consentito di {{this.minWord+20}} parole<br><br>
+            Non puoi proseguire
+          </span></div>
         <div class="center">
           <br><br>
-          <button [disabled]="this.timer.time !== 0 && this.remainingWord !== 0" type="button" id="bottom-button" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}">Prosegui</button>
+          <button [disabled]="this.timer.time !== 0 || !(this.remainingWord < this.maxWord -this.minWord)" type="button" id="bottom-button" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}">Prosegui</button>
         </div>
       </div>
     </div>

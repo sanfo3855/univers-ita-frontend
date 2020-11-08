@@ -17,11 +17,14 @@ export class WritingComponent implements OnInit {
   });
 
   writingText: any;
-  maxWord = config['max_word'] ? config['max_word'] : 500;
-  remainingWord: number;
+  minWord = Number(config['min_word'] ? config['min_word'] : 230);
+  maxWord = Number(config['max_word'] ? config['max_word'] : 500);
+
+  remainingWord= Number(config['max_word'] ? config['max_word'] : 500);
 
   copyPasteError = '';
 
+  isDemo: boolean;
 
   constructor(private backendApiService: BackendApiService,
               private localStorage: LocalStorageService,
@@ -29,9 +32,12 @@ export class WritingComponent implements OnInit {
               private titleService: Title) {
 
     this.titleService.setTitle("Scrittura  - UniverS-ITA");
+
   }
 
   ngOnInit(): void {
+    this.isDemo = this.localStorage.get('student') === 'demo-student';
+
     this.localStorage.setJSON('last-page',{page:'Scrittura'});
     const wt = this.localStorage.get('writing-text');
     this.writingText = wt ? JSON.parse(wt) : {text: '', locked: false};
@@ -56,7 +62,10 @@ export class WritingComponent implements OnInit {
   }
 
   lockAction() {
-    this.copyPasteError = 'Azioni di Taglia, Copia ed Incolla non permesse';
-    return false;
+    if(!this.isDemo) {
+      this.copyPasteError = 'Azioni di Taglia, Copia ed Incolla non permesse';
+      return false;
+    }
+    return true;
   }
 }

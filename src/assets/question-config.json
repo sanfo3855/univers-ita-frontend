@@ -1,6 +1,6 @@
 {
-  "time": 5,
-  "min_word": 250,
+  "time": 60,
+  "min_word": 230,
   "max_word": 500,
   "survey": [
     {
