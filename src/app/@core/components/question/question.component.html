@@ -2,6 +2,9 @@
   <div class="row">
     <h6>{{question_item.question.num}}) {{question_item.question.question}}</h6>
   </div>
+  <div *ngIf="question_item.type === 'checkbox'" class="suggestion">
+    <i>(Puoi selezionare più risposte)</i>
+  </div>
   <div class="row">
     <form [formGroup]="form">
 
@@ -57,7 +60,8 @@
           </div>
         </div>
       </div>
-      <!-- CHECKBOX-->
+
+      <!-- SELECT -->
       <div *ngIf="question_item.type === 'select'" class="form-inline">
         <label>
           <select class="form-control" formControlName="value" (ngModelChange)="onSubmit()">
@@ -82,7 +86,8 @@
     <div class="row">
       <app-question class="indent" [question_item]=item [dependant_sub_questions]="item.dependant_sub_questions"
                     [inline_sub_questions]=item.inline_sub_questions [super_responses]="responses"
-                    [changeValueTrigger]="changeValue" [super_question_type]="question_item.type"></app-question>
+                    [super_enabled]="isEnabled()" [changeValueTrigger]="changeValue"
+                    [super_question_type]="question_item.type"></app-question>
     </div>
   </div>
 </div>

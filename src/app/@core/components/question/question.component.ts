@@ -25,16 +25,13 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
   @Input() enabled: any;
   @Input() super_responses = [];
   @Input() super_question_type: any;
-
-  sub_question_enabled = false;
+  @Input() super_enabled: any = true;
 
   @Input() changeValueTrigger: any;
   changeValue: any;
 
   form: FormGroup;
-
   answered = [];
-
   responses = [];
 
   loading = false;
@@ -43,20 +40,23 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
   }
 
   isEnabled() {
-    if(this.question_item.super_answers === undefined) {
-      return true;
-    } else {
-      if(this.super_responses) {
-        for(let super_answer of this.question_item.super_answers) {
-          if(this.super_question_type !== 'textbox' && this.super_responses.includes(super_answer)){
-            return true;
-          } else if (this.super_question_type === 'textbox' && !this.super_responses.includes(super_answer) && this.super_responses[0]){
-            return true;
-          }
-        }
+    if(this.super_enabled === true){
+      if(this.question_item.super_answers === undefined) {
+        return true;
       } else {
-        return false;
+        if(this.super_responses) {
+          for(let super_answer of this.question_item.super_answers) {
+            if(this.super_question_type !== 'textbox' && this.super_responses.includes(super_answer)){
+              return true;
+            } else if (this.super_question_type === 'textbox' && !this.super_responses.includes(super_answer) && this.super_responses[0]){
+              return true;
+            }
+          }
+        } else {
+          return false;
+        }
       }
+      return false;
     }
     return false;
   }
@@ -86,6 +86,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       setTimeout(()=>{
         this.form.disable();
       },1);
+      this.form.reset()
       this.localStorage.removeQuestionAnswered(this.question_item.question.num);
     }
 
