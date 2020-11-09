@@ -31,7 +31,7 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
   {path: 'questionario', pathMatch: 'full', component: SurveyComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'scrittura', component: WritingComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
-  {path: 'end', component: EndComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
+  {path: 'fine', component: EndComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'stats', component: StatsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
