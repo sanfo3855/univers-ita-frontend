@@ -10,7 +10,7 @@ import {LocalStorageService} from "../../@core/services/local-storage/local-stor
 })
 export class AppHomeComponent implements OnInit {
 
-  constructor(public jwtTokenService: JWTTokenService, private titleService: Title, private localStorage: LocalStorageService) {
+  constructor(public jwtTokenService: JWTTokenService, private titleService: Title, public localStorage: LocalStorageService) {
     this.titleService.setTitle("Landing page - UniverS-Ita");
   }
 
