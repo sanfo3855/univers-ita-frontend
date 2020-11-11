@@ -15,6 +15,8 @@
       </div>
     </div>
     <div id="login" class="tool-login">
+      <div class="logon-info" *ngIf="this.localStorage.get('user-type')==='admin'">Accesso <i>Admin</i>: <b>{{this.localStorage.get('student').replace("-", " ").replace("_"," ")}}</b></div>
+      <div class="logon-info" *ngIf="this.localStorage.get('user-type')==='student'">Ateneo e Indirizzo: <b>{{this.localStorage.get('student').replace("-", " ").replace("_"," ")}}</b></div>
       <button *ngIf="!jwtTokenService.getToken()" type="button" id="login-button" class="btn btn-custom-blue" routerLink="/login">Accedi</button>
       <button *ngIf="jwtTokenService.getToken()" type="button" id="logout-button" class="btn btn-custom-blue" (click)="logOut()">Esci</button>
     </div>
