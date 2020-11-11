@@ -2067,13 +2067,13 @@
           "answers": [{"answer":"Meno di un’ora","num":1},{"answer":"1-2 ore","num":2},{"answer":"3-4 ore","num":3},{"answer":"5-6 ore","num":4},{"answer":"7-8 ore","num":5},{"answer":"9-10 ore","num":6},{"answer":"Più di 10 ore","num":7}]
         },
         {
-          "question": {"question": "Usi internet soprattutto per ","num": "37"},
+          "question": {"question": "Usi internet soprattutto per ","num": "38"},
           "type": "checkbox",
           "answers": [{"answer":"Ricerca di informazioni","num":1},{"answer":"Uso di social network","num":2},{"answer":"Comunicazione con amici o gruppi ristretti","num":3},{"answer":"Lezioni a distanza","num":4},{"answer":"Acquisti","num":5},{"answer":"Visione di video (film, serie tv, contenuti youtube, …)","num":6},{"answer":"Ascolto musica","num":7},{"answer":"Videogiochi","num":8},{"answer":"Mappe e navigatore","num":9},{"answer":"App bancarie","num":10},{"answer":"Dating","num":11},{"answer":"App salute e benessere","num":12},{"answer":"Altro","num":13}],
           "max_answers": 5,
           "inline_sub_questions": [
             {
-              "question": {"question": "specificare:","num": "37e1"},
+              "question": {"question": "specificare:","num": "38e1"},
               "type": "textbox",
               "answers": "",
               "super_answers": ["Altro"]
@@ -2087,23 +2087,23 @@
       "num": 5,
       "questions": [
         {
-          "question": {"question": "Quanto sei a tuo agio nello scrivere?","num": "38"},
+          "question": {"question": "Quanto sei a tuo agio nello scrivere?","num": "39"},
           "type": "radiobutton",
           "answers": [{"answer": "Molto","num": 1},{"answer": "Abbastanza","num": 2},{"answer": "Poco","num": 3},{"answer": "Per niente","num": 4}]
         },
         {
-          "question": {"question": "Ti piace scrivere nel tempo libero, fuori dall’università?","num": "39"},
+          "question": {"question": "Ti piace scrivere nel tempo libero, fuori dall’università?","num": "40"},
           "type": "radiobutton",
           "answers": [{"answer": "Sì","num": 1},{"answer": "No","num": 2}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Che cosa scrivi nel tempo libero?","num": "39.1"},
+              "question": {"question": "Che cosa scrivi nel tempo libero?","num": "40.1"},
               "type": "checkbox",
               "answers": [{"answer":"Articoli di giornale","num":1},{"answer":"Post su blog","num":2},{"answer":"Commenti su blog e social network","num":3},{"answer":"Post su social network","num":4},{"answer":"Romanzi/racconti/poesie","num":5},{"answer":"Testi di canzoni","num":6},{"answer":"Diario personale","num":7},{"answer":"Altro","num":8}],
               "super_answers": ["Sì"],
               "inline_sub_questions": [
                 {
-                  "question": {"question": "specificare:","num": "39e1e1"},
+                  "question": {"question": "specificare:","num": "40e1e1"},
                   "type": "textbox",
                   "answers": "",
                   "super_answers": ["Altro"]
@@ -2113,30 +2113,30 @@
           ]
         },
         {
-          "question": {"question": "Segui corsi di scrittura (fuori e dentro l’università)?","num": "40"},
+          "question": {"question": "Segui corsi di scrittura (fuori e dentro l’università)?","num": "41"},
           "type": "radiobutton",
           "answers": [{"answer": "Sì","num": 1},{"answer": "No","num": 2}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Quali corsi di scrittura frequenti?","num": "40.1"},
+              "question": {"question": "Quali corsi di scrittura frequenti?","num": "41.1"},
               "type": "checkbox",
               "answers": [{"answer":"Scrittura creativa","num":1},{"answer":"Scrittura per il web","num":2},{"answer":"Scrittura giornalistica","num":3},{"answer":"Scrittura pubblicitaria","num":4},{"answer":"Scrittura professionale","num":5},{"answer":"Scrittura accademica","num":6}],
               "super_answers": ["Sì"],
               "dependant_sub_questions": [
                 {
-                  "question": {"question": "I corsi di scrittura che frequenti sono universitari?","num": "40.2"},
+                  "question": {"question": "I corsi di scrittura che frequenti sono universitari?","num": "41.2"},
                   "type": "radiobutton",
                   "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
                   "super_answers": ["Scrittura creativa","Scrittura per il web","Scrittura giornalistica","Scrittura pubblicitaria","Scrittura professionale","Scrittura accademica"],
                   "dependant_sub_questions": [
                     {
-                      "question": {"question": "I corsi di scrittura universitari che frequenti di che tipo sono?","num": "40.3"},
+                      "question": {"question": "I corsi di scrittura universitari che frequenti di che tipo sono?","num": "41.3"},
                       "type": "radiobutton",
                       "answers": [{"answer":"Laboratori","num":1},{"answer":"Lettorati","num":2},{"answer":"Corsi di recupero","num":3}],
                       "super_answers": ["Sì"]
                     },
                     {
-                      "question": {"question": "I corsi di scrittura universitari che frequenti sono obbligatori?","num": "40.4"},
+                      "question": {"question": "I corsi di scrittura universitari che frequenti sono obbligatori?","num": "41.4"},
                       "type": "radiobutton",
                       "answers": [{"answer":"Sì","num":1},{"answer":"No","num":2}],
                       "super_answers": ["Sì"]
@@ -2148,17 +2148,17 @@
           ]
         },
         {
-          "question": {"question": "Ritieni adeguato il tempo che l’università dedica all’insegnamento della scrittura?","num": "41"},
+          "question": {"question": "Ritieni adeguato il tempo che l’università dedica all’insegnamento della scrittura?","num": "42"},
           "type": "radiobutton",
           "answers": [{"answer":"Sì, il tempo dedicato ai corsi è sufficiente","num":1},{"answer":"Sì, nonostante non sia dedicato tempo, ritengo che vada bene così","num":2},{"answer":"No, l’università dovrebbe dedicare più tempo","num":3},{"answer":"No, l’università dedica troppo tempo","num":4}]
         },
         {
-          "question": {"question": "Durante le lezioni universitarie, prendi appunti?","num": "42"},
+          "question": {"question": "Durante le lezioni universitarie, prendi appunti?","num": "43"},
           "type": "radiobutton",
           "answers": [{"answer":"Sì, sempre","num":1},{"answer":"Sì, qualche volta","num":2},{"answer":"No, registro la lezione ma non prendo appunti","num":3},{"answer":"No, fotografo o scarico le slides ma non prendo appunti","num":4},{"answer":"No","num":5}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Come prendi appunti a lezione?","num": "42.1"},
+              "question": {"question": "Come prendi appunti a lezione?","num": "43.1"},
               "type": "radiobutton",
               "answers": [{"answer":"A mano","num":1},{"answer":"Con il computer ","num":2},{"answer":"In entrambi i modi","num":3}],
               "super_answers": ["Sì, sempre", "Sì, qualche volta"]
@@ -2166,17 +2166,17 @@
           ]
         },
         {
-          "question": {"question": "Quando prepari un esame, prendi appunti?","num": "43"},
+          "question": {"question": "Quando prepari un esame, prendi appunti?","num": "44"},
           "type": "radiobutton",
           "answers": [{"answer":"Sì, direttamente sul libro di testo o sulle fotocopie","num":1},{"answer":"Sì, scrivendo direttamente su file (es. note pdf)","num":2},{"answer":"Sì, su un foglio a parte","num":3},{"answer":"No, ma sottolineo le parti rilevanti del libro","num":4},{"answer":"No","num":5}]
         },
         {
-          "question": {"question": "I corsi che segui prevedono un esame scritto?","num": "44"},
+          "question": {"question": "I corsi che segui prevedono un esame scritto?","num": "45"},
           "type": "radiobutton",
           "answers": [{"answer":"Sì, tutti","num":1},{"answer":"Sì, alcuni","num":2},{"answer":"No","num":3}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "In cosa consiste l'esame scritto dei corsi che lo prevedono?","num": "44.1"},
+              "question": {"question": "In cosa consiste l'esame scritto dei corsi che lo prevedono?","num": "45.1"},
               "type": "checkbox",
               "answers": [{"answer":"Domande con risposta a crocette","num":1},{"answer":"Domande aperte","num":2},{"answer":"Esercizi da completare","num":3},{"answer":"Analisi del testo","num":4},{"answer":"Tesina o saggio breve","num":5},{"answer":"Relazione scientifica o rapporto di laboratorio","num":6},{"answer":"Relazione su attività di stage","num":7},{"answer":"Riassunto","num":8},{"answer":"Recensione","num":9},{"answer":"Traduzione","num":10},{"answer":"Commenti a sentenze","num":11},{"answer":"Presentazione Power Point","num":12},{"answer":"Esercizi di calcolo","num":13},{"answer":"Disegno grafico","num":14},{"answer":"Altro","num":15}],
               "super_answers": ["Sì, tutti","Sì, alcuni"],
@@ -2185,47 +2185,47 @@
           ]
         },
         {
-          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di scrivere tesine o relazioni?","num": "45.1"},
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di scrivere tesine o relazioni?","num": "46.1"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di rispondere per iscritto a domande aperte?","num": "45.2"},
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di rispondere per iscritto a domande aperte?","num": "46.2"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di scrivere commenti critici?","num": "45.3"},
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di scrivere commenti critici?","num": "46.3"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di sviluppare la traccia di un tema?","num": "45.4"},
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di sviluppare la traccia di un tema?","num": "46.4"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di preparare una traccia scritta per una presentazione orale?","num": "45.5"},
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di preparare una traccia scritta per una presentazione orale?","num": "46.5"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di tradurre in italiano da altre lingue, o viceversa?","num": "45.6"},
+          "question": {"question": "Escludendo gli esami, nella tua esperienza universitaria, quanto spesso ti è stato chiesto di tradurre in italiano da altre lingue, o viceversa?","num": "46.6"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto spesso","num":1},{"answer":"Spesso","num":2},{"answer":"Qualche volta","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) fai una scaletta degli argomenti prima di cominciare a scrivere?","num": "46.1"},
+          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) fai una scaletta degli argomenti prima di cominciare a scrivere?","num": "47.1"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Mai","num":4}]
         },
         {
-          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) come lo scrivi?","num": "46.2"},
+          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) come lo scrivi?","num": "47.2"},
           "type": "radiobutton",
           "answers": [{"answer":"Lo scrivo con carta e penna","num":1},{"answer":"Lo digito sul computer","num":2},{"answer":"Lo digito sul tablet","num":3},{"answer":"Lo digito sullo smartphone","num":4},{"answer":"Lo detto a un programma di riconoscimento automatico del testo","num":5},{"answer":"Lo detto a qualcun altro","num":6}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Se per scrivere testi per l'università usi computer, tablet o smartphone, usi il correttore ortografico?","num": "46.3"},
+              "question": {"question": "Se per scrivere testi per l'università usi computer, tablet o smartphone, usi il correttore ortografico?","num": "47.3"},
               "type": "radiobutton",
               "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Mai","num":4}],
               "super_answers": ["Lo digito sul computer","Lo digito sul tablet","Lo digito sullo smartphone"]
@@ -2233,12 +2233,12 @@
           ]
         },
         {
-          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) se correggi il tuo testo, ti concentri soprattutto:","num": "46.4"},
+          "question": {"question": "Se devi scrivere un testo per l’università (esami, relazioni, …) se correggi il tuo testo, ti concentri soprattutto:","num": "47.4"},
           "type": "checkbox",
           "answers": [{"answer":"Sull’ortografia","num":1},{"answer":"Sulla punteggiatura","num":2},{"answer":"Sulla scelta delle parole","num":3},{"answer":"Sul senso delle frasi","num":4},{"answer":"Sul collegamento logico tra una frase e l’altra","num":5},{"answer":"Sulla chiarezza di quello che vuoi dire","num":6},{"answer":"Sulla completezza di quello che vuoi dire","num":7},{"answer":"Altro","num":8}],
           "inline_sub_questions": [
             {
-              "question": {"question": "specifica","num": "46e4e1"},
+              "question": {"question": "specifica","num": "47e4e1"},
               "type": "textbox",
               "answers":"",
               "super_answers": ["Altro"]
@@ -2246,27 +2246,27 @@
           ]
         },
         {
-          "question": {"question": "Quando scrivi un testo per l’università, capita che il/la docente corregga la lingua del tuo testo?","num": "47"},
+          "question": {"question": "Quando scrivi un testo per l’università, capita che il/la docente corregga la lingua del tuo testo?","num": "48"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}]
         },
         {
-          "question": {"question": "Quali sono i commenti relativi alla lingua del testo che più frequentemente i docenti fanno sui tuoi testi scritti? ","num": "48"},
+          "question": {"question": "Quali sono i commenti relativi alla lingua del testo che più frequentemente i docenti fanno sui tuoi testi scritti? ","num": "49"},
           "type": "checkbox",
           "answers": [{"answer":"Nessun commento","num":1},{"answer":"Commenti positivi","num":2},{"answer":"Testo troppo lungo","num":3},{"answer":"Testo troppo corto","num":4},{"answer":"Frasi troppo lunghe","num":5},{"answer":"Lessico non adeguato","num":6},{"answer":"Mancanza di chiarezza","num":7},{"answer":"Stile non adeguato (ad esempio troppo vicino al parlato o troppo aulico)","num":8},{"answer":"Mancanza di collegamenti logici","num":9},{"answer":"Problemi di ortografia","num":10},{"answer":"Problemi di punteggiatura","num":11}]
         },
         {
-          "question": {"question": "Le correzioni del docente ti hanno aiutato a scrivere meglio?","num": "49"},
+          "question": {"question": "Le correzioni del docente ti hanno aiutato a scrivere meglio?","num": "50"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto","num":1},{"answer":"Abbastanza","num":2},{"answer":"Poco","num":3},{"answer":"Per niente","num":4}]
         },
         {
-          "question": {"question": "Scrivi e-mail ai docenti per chiedere spiegazioni o informazioni su corsi ed esami?","num": "50"},
+          "question": {"question": "Scrivi e-mail ai docenti per chiedere spiegazioni o informazioni su corsi ed esami?","num": "52"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Quando scrivi e-mail ai docenti, rileggi per controllare il testo?","num": "50.1"},
+              "question": {"question": "Quando scrivi e-mail ai docenti, rileggi per controllare il testo?","num": "52.1"},
               "type": "radiobutton",
               "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
               "super_answers": ["Sempre","Spesso","A volte","Raramente"]
@@ -2274,27 +2274,27 @@
           ]
         },
         {
-          "question": {"question": "Mediamente, durante il periodo in cui segui i corsi, quante ore scrivi al giorno (appunti, riassunti, schemi, esercizi, …)?","num": "51"},
+          "question": {"question": "Mediamente, durante il periodo in cui segui i corsi, quante ore scrivi al giorno (appunti, riassunti, schemi, esercizi, …)?","num": "52"},
           "type": "radiobutton",
           "answers": [{"answer":"1","num":1},{"answer":"2","num":2},{"answer":"3","num":3},{"answer":"4","num":4},{"answer":"5","num":5},{"answer":"6","num":6},{"answer":"7","num":7},{"answer":"8","num":8},{"answer":"Più di 8","num":9}]
         },
         {
-          "question": {"question": "Credi che la lettura di saggi, articoli, romanzi, racconti, fumetti ti aiuti a scrivere meglio?","num": "52"},
+          "question": {"question": "Credi che la lettura di saggi, articoli, romanzi, racconti, fumetti ti aiuti a scrivere meglio?","num": "53"},
           "type": "radiobutton",
           "answers": [{"answer":"Molto","num":1},{"answer":"Abbastanza","num":2},{"answer":"Poco","num":3},{"answer":"Per niente","num":4}]
         },
         {
-          "question": {"question": "Quale dispositivo utilizzi più spesso per scrivere in internet (post, commenti, tweet, …)?","num": "53"},
+          "question": {"question": "Quale dispositivo utilizzi più spesso per scrivere in internet (post, commenti, tweet, …)?","num": "54"},
           "type": "radiobutton",
           "answers": [{"answer":"Computer","num":1},{"answer":"Smartphone","num":2},{"answer":"Tablet","num":3}]
         },
         {
-          "question": {"question": "Escludendo Whatsapp, Messenger, DM di Instagram e simili, scrivi post o commenti sui siti che frequenti?","num": "54"},
+          "question": {"question": "Escludendo Whatsapp, Messenger, DM di Instagram e simili, scrivi post o commenti sui siti che frequenti?","num": "55"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai, leggo solo quello che scrivono gli altri","num":5},{"answer":"Altro","num":6}],
           "inline_sub_questions": [
             {
-              "question": {"question": "specificare:","num": "54e1"},
+              "question": {"question": "specificare:","num": "55e1"},
               "type": "textbox",
               "answers": "",
               "super_answers": ["Altro"]
@@ -2302,17 +2302,17 @@
           ]
         },
         {
-          "question": {"question": "Quando scrivi messaggi in rete nel tempo libero, fai attenzione a come scrivi?","num": "55"},
+          "question": {"question": "Quando scrivi messaggi in rete nel tempo libero, fai attenzione a come scrivi?","num": "56"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}]
         },
         {
-          "question": {"question": "Quando scrivi post su Facebook o su Instagram, usi la funzione “modifica”?","num": "56"},
+          "question": {"question": "Quando scrivi post su Facebook o su Instagram, usi la funzione “modifica”?","num": "57"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Quando usi la funzione “modifica”, perchè lo fai?","num": "57"},
+              "question": {"question": "Quando usi la funzione “modifica”, perchè lo fai?","num": "58"},
               "type": "checkbox",
               "answers": [{"answer":"Modificare il contenuto","num":1},{"answer":"Correggere ortografia e grammatica","num":2}],
               "super_answers": ["Sempre","Spesso","A volte"]
