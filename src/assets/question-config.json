@@ -1,5 +1,5 @@
 {
-  "time": 3600,
+  "time": 60,
   "min_word": 230,
   "max_word": 500,
   "survey": [
@@ -2168,7 +2168,7 @@
         {
           "question": {"question": "Quando prepari un esame, prendi appunti?","num": "44"},
           "type": "radiobutton",
-          "answers": [{"answer":"Sì, direttamente sul libro di testo o sulle fotocopie","num":1},{"answer":"Sì, scrivendo direttamente su file (es. note pdf)","num":2},{"answer":"Sì, su un foglio a parte","num":3},{"answer":"No, ma sottolineo le parti rilevanti del libro","num":4},{"answer":"No","num":5}]
+          "answers": [{"answer":"Sì, direttamente sul libro di testo o sulle fotocopie","num":1},{"answer":"Sì, scrivendo direttamente su file (ad esempio note pdf)","num":2},{"answer":"Sì, su un foglio a parte","num":3},{"answer":"No, ma sottolineo le parti rilevanti del libro","num":4},{"answer":"No","num":5}]
         },
         {
           "question": {"question": "I corsi che segui prevedono un esame scritto?","num": "45"},
