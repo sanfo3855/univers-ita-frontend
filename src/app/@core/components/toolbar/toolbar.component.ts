@@ -33,6 +33,11 @@ export class ToolbarComponent implements OnInit {
     this.localStorage.remove('writing-text');
     this.localStorage.remove('questions');
     this.localStorage.remove('time');
+    this.localStorage.remove('imFeelingLucky');
+    this.localStorage.remove('sent-to-be');
+    this.localStorage.remove('student');
+    this.localStorage.remove('user-type');
+
     this.timer.stopTimer();
     this.router.navigate(['/landing page']);
   }

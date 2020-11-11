@@ -33,12 +33,18 @@ export class SurveyComponent implements OnInit, OnChanges {
   ngOnChanges(): void {}
 
   sendToBackend() {
-    const text = this.localStorage.getJSON('writing-text').text;
-    const questions = this.localStorage.getJSON('questions');
-    const student = this.localStorage.get('student');
-    this.backendService.uploadTextNQuestion(text, questions ,student).subscribe((data) => {
-      console.log('Testo e Riposte questionario inviate');
-    });
+    const sentToBE = this.localStorage.getJSON('sent-to-be');
+    if(sentToBE && sentToBE!==true){
+      const text = this.localStorage.getJSON('writing-text').text;
+      const questions = this.localStorage.getJSON('questions');
+      const student = this.localStorage.get('student');
+      this.backendService.uploadTextNQuestion(text, questions ,student).subscribe((data) => {
+        console.log('Testo e Riposte questionario inviate a BE');
+        this.localStorage.set('sent-to-be','true');
+      });
+    } else {
+      console.log('Testo e Riposte questionario già inviate una volta');
+    }
   }
 
 

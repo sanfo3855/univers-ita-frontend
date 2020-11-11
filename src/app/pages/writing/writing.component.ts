@@ -70,7 +70,7 @@ export class WritingComponent implements OnInit {
 
   wordCounter() {
     this.copyPasteError = '';
-    return this.textForm.value.textarea.length ? this.textForm.value.textarea.match(/\S+/g).length : 0;
+    return this.writingText.text.length ? this.writingText.text.match(/\S+/g).length : 0;
   }
 
   lockAction() {

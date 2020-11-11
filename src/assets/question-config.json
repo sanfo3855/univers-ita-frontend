@@ -2261,12 +2261,12 @@
           "answers": [{"answer":"Molto","num":1},{"answer":"Abbastanza","num":2},{"answer":"Poco","num":3},{"answer":"Per niente","num":4}]
         },
         {
-          "question": {"question": "Scrivi e-mail ai docenti per chiedere spiegazioni o informazioni su corsi ed esami?","num": "52"},
+          "question": {"question": "Scrivi e-mail ai docenti per chiedere spiegazioni o informazioni su corsi ed esami?","num": "51"},
           "type": "radiobutton",
           "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
           "dependant_sub_questions": [
             {
-              "question": {"question": "Quando scrivi e-mail ai docenti, rileggi per controllare il testo?","num": "52.1"},
+              "question": {"question": "Quando scrivi e-mail ai docenti, rileggi per controllare il testo?","num": "51.1"},
               "type": "radiobutton",
               "answers": [{"answer":"Sempre","num":1},{"answer":"Spesso","num":2},{"answer":"A volte","num":3},{"answer":"Raramente","num":4},{"answer":"Mai","num":5}],
               "super_answers": ["Sempre","Spesso","A volte","Raramente"]

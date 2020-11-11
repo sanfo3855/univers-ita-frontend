@@ -1,10 +1,10 @@
 <div class="body-overflow">
   <app-header></app-header>
-  <app-toolbar [appPath]="['Landing page','Introduzione','Scrittura','Questionario','Fine']" [backButton]="['/survey','Questionario']"
+  <app-toolbar [appPath]="['Landing page','Introduzione','Fine']" [backButton]="['/survey','Questionario']"
                [nextButton]=""  [submitButton]="['','Conferma']"></app-toolbar>
   <div class="content-wrapper">
     <div class="row">
-      <div>
+      <div *ngIf="this.localStorage.get('student')==='demo-student'">
         <button type="button" id="back-button" class="btn btn-primary back-button" [routerLink]="['/questionario']"  [queryParams]="{'sezione':5}"><i class="fa fa-arrow-left"></i> Torna al questionario</button>
       </div>
     </div>

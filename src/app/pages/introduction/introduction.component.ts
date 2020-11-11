@@ -9,7 +9,7 @@ import {LocalStorageService} from "../../@core/services/local-storage/local-stor
 })
 export class IntroductionComponent implements OnInit {
 
-  constructor(private titleService: Title, private localStorage: LocalStorageService) {
+  constructor(private titleService: Title, public localStorage: LocalStorageService) {
     this.titleService.setTitle("Introduzione - UniverS-Ita");
   }
 
