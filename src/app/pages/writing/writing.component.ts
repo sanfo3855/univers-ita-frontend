@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
+import {Component, HostListener, OnChanges, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {BackendApiService} from '../../@core/services/backend-api/backend-api.service';
 import {LocalStorageService} from '../../@core/services/local-storage/local-storage.service';
@@ -47,18 +47,30 @@ export class WritingComponent implements OnInit {
     this.remainingWord = this.maxWord - this.wordCounter();
   }
 
-  onSubmit() {
-    if (!this.timer.interval){
-      this.timer.startTimer();
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if(this.remainingWord > 0){
+      if (!this.timer.interval){
+        this.timer.startTimer();
+      }
+      this.writingText.text = this.textForm.value.textarea;
+      this.remainingWord = this.maxWord -  this.wordCounter();
+      this.localStorage.set('writing-text', JSON.stringify(this.writingText));
+    } else{
+      if(event.keyCode !== 32) {
+        this.writingText.text = this.textForm.value.textarea;
+        this.remainingWord = this.maxWord -  this.wordCounter();
+        this.localStorage.set('writing-text', JSON.stringify(this.writingText));
+      } else {
+        event.preventDefault();
+      }
+
     }
-    this.remainingWord = this.maxWord -  this.wordCounter();
-    this.writingText.text = this.textForm.value.textarea;
-    this.localStorage.set('writing-text', JSON.stringify(this.writingText));
   }
 
   wordCounter() {
     this.copyPasteError = '';
-    return this.writingText.text.split(/[^\s]+/).length - 1;
+    return this.textForm.value.textarea.length ? this.textForm.value.textarea.match(/\S+/g).length : 0;
   }
 
   lockAction() {
