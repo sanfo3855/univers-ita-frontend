@@ -38,9 +38,18 @@
           Se completi la raccolta dati, parteciperai automaticamente all’estrazione di numerosi buoni da 25 €
           per l’acquisto (entro il TERMINE) di libri.
         </div>
-        <div class="center">
+        <div class="center" *ngIf="!this.localStorage.get('sent-to-be') || this.localStorage.get('student')==='demo-student'">
           <br><br>
           <button type="button" id="bottom-button" class="btn btn-success" [routerLink]="'/introduzione'">Inizia</button>
+        </div>
+        <div class="center" *ngIf="this.localStorage.get('sent-to-be')">
+          <br><br>
+          <div class="testo" style="color: red">
+            Hai già partecipato alla raccolta dati.
+            <br><br>
+            Puoi solo accedere al riepilogo finale cliccando sul tasto <i>fine</i>
+          </div>
+          <button type="button" id="bottom-button-fine" class="btn btn-success bottom-button-fine bottom-button" [routerLink]="'/fine'">Fine</button>
         </div>
 
       </div>

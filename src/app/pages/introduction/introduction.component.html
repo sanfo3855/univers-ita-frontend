@@ -19,15 +19,18 @@
           <br><br><br>
           Per accettare, clicca su <i>prosegui</i> e scopri la consegna (cioè il tema su cui dovrai scrivere il testo).
         </div>
-        <div class="center" *ngIf="!this.localStorage.get('sent-to-be')">
+        <div class="center" *ngIf="!this.localStorage.get('sent-to-be') || this.localStorage.get('student')==='demo-student'">
           <br><br>
           <button type="button" id="bottom-button" class="btn btn-success bottom-button" [routerLink]="'/scrittura'">Prosegui</button>
         </div>
         <div class="center" *ngIf="this.localStorage.get('sent-to-be')">
           <br><br>
-          <button [disabled]="true" type="button" id="bottom-button-disabled" class="btn btn-success bottom-button">Prosegui</button>
-          <br><br>
-          <div class="testo" style="color: red">Hai già partecipato alla raccolta dati, non puoi procedere</div>
+          <div class="testo" style="color: red">
+            Hai già partecipato alla raccolta dati.
+            <br><br>
+            Puoi solo accedere al riepilogo finale cliccando sul tasto <i>fine</i>
+          </div>
+          <button type="button" id="bottom-button-fine" class="btn btn-success bottom-button-fine bottom-button" [routerLink]="'/fine'">Fine</button>
         </div>
       </div>
     </div>
