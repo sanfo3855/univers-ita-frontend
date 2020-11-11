@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'questionario', pathMatch: 'full', component: SurveyComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'scrittura', component: WritingComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'fine', component: EndComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
-  {path: 'stats', component: StatsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
+  {path: 'monitoraggio', component: StatsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 

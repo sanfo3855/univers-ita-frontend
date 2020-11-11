@@ -85,6 +85,11 @@ export class BackendApiService {
     return this.http.get(this.userEndpoint + '/imFeelingLucky' )
       .pipe(catchError(BackendApiService.handleError));
   }
+
+  public getDataStats() {
+    return this.http.get(this.textSurveyEndpoint + '/stats' )
+      .pipe(catchError(BackendApiService.handleError));
+  }
 }
 
 @Injectable()

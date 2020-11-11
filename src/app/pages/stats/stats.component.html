@@ -1,9 +1,25 @@
 <div class="body-overflow">
   <app-header></app-header>
-  <app-toolbar [appPath]="['Statistiche']"></app-toolbar>
+  <app-toolbar [appPath]="['Admin','Monitoraggio']"></app-toolbar>
   <div class="container">
     <div class="row">
-
+      <h3 class="title">Monitoraggio misurazioni</h3>
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username (Ateneo e Indirizzo)</th>
+          <th scope="col">Misurazioni Raccolte</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let measure of this.measurements; let i=index">
+          <th scope="row">{{i+1}}</th>
+          <td width="25%">{{measure.username}}</td>
+          <td width="75%">{{measure.count}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 <!--  <app-footer></app-footer>-->
