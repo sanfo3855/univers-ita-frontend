@@ -12,15 +12,10 @@ export class TimerService {
   time: number;
   stringValue = this.getStringValue();
   interval;
-  isDemo: boolean;
 
   constructor(private localStorage: LocalStorageService) {
-    this.isDemo = this.localStorage.get('student') === 'demo-student';
     if (!this.time) {
       this.time = this.timeDefault;
-    }
-    if(this.isDemo) {
-      this.time = 60;
     }
     this.loadPreviousTime();
   }

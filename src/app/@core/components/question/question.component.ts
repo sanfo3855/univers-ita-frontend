@@ -36,6 +36,9 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
 
   loading = false;
 
+  @Input() showError: false;
+  isResponded: boolean;
+
   constructor(private localStorage: LocalStorageService) {
   }
 
@@ -88,6 +91,16 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
       },1);
       this.form.reset()
       this.localStorage.removeQuestionAnswered(this.question_item.question.num);
+    }
+
+    if(this.isEnabled()) {
+      if ((savedResponse.length > 0 && savedResponse[0] !== '') || (this.question_item.super_answers && this.question_item.super_answers[0] === "")) {
+        this.sendRespondedEvent(true);
+      } else {
+        this.sendRespondedEvent(false);
+      }
+    } else {
+      this.sendRespondedEvent(null);
     }
 
     if (this.question_item) {
@@ -192,10 +205,32 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
     }
     this.localStorage.set('questions', JSON.stringify(savedQuestion));
 
+    if(this.responses.length > 0 && this.responses[0] !== '') {
+      this.sendRespondedEvent(true);
+    } else {
+      this.sendRespondedEvent(false);
+    }
+
+
     this.changeValue = Math.random();
     setTimeout(() => { // here
       this.form.enable();
       this.loading = false;
     }, 300);
+  }
+
+  sendRespondedEvent(value: boolean) {
+    this.isResponded = value;
+    let isRespondedList = this.localStorage.getJSON('isRespondedList');
+    if(!isRespondedList) isRespondedList = {}
+    isRespondedList[this.question_item.question.num] = value
+    this.localStorage.setJSON('isRespondedList', isRespondedList);
+  }
+
+  getIsResponded(){
+    if (this.isEnabled()){
+      return this.isResponded;
+    }
+    return true;
   }
 }

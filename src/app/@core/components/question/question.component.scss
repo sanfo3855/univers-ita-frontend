@@ -29,3 +29,18 @@ label {
   color: #afafaf;
   padding-left: 20px;
 }
+
+.responded {
+
+}
+
+.not-responded {
+  color: red;
+
+  select {
+    border-color: red;
+  }
+  input {
+    border-color: red;
+  }
+}

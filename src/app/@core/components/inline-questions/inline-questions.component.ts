@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {LocalStorageService} from "../../services/local-storage/local-storage.service";
 
@@ -30,6 +30,9 @@ export class InlineQuestionsComponent implements OnChanges {
   show = false;
 
   loading = false;
+
+  @Input() showError: false;
+  isResponded: boolean;
 
   constructor(private localStorage: LocalStorageService) {
   }
@@ -92,6 +95,16 @@ export class InlineQuestionsComponent implements OnChanges {
     this.form = new FormGroup(answerControlOption);
 
     if(this.isEnabled()) {
+      if (savedResponse.length > 0 && savedResponse[0] !== '') {
+        this.sendRespondedEvent(true);
+      } else {
+        this.sendRespondedEvent(false);
+      }
+    } else {
+      this.sendRespondedEvent(null);
+    }
+
+    if(this.isEnabled()) {
       setTimeout(() => {
         this.form.enable();
         this.show = true;
@@ -113,6 +126,7 @@ export class InlineQuestionsComponent implements OnChanges {
           if (questions[this.dependentOn].answer[this.top_answer]) {
             if (!questions[this.dependentOn].answer[this.top_answer]["-1"]) {
               questions[this.dependentOn].answer[this.top_answer]["-1"] = "";
+              this.sendRespondedEvent(null);
             }
           }
         }
@@ -176,6 +190,13 @@ export class InlineQuestionsComponent implements OnChanges {
     }
     this.localStorage.set('questions', JSON.stringify(questions));
 
+    //SET RESPONDED
+    if(this.inline_responses.length > 0 && this.inline_responses[0] !== '') {
+      this.sendRespondedEvent(true);
+    } else {
+      this.sendRespondedEvent(false);
+    }
+
     // TRIGGER ONCHANGE
     this.changeValue = Math.random();
     setTimeout(() => { // here
@@ -183,4 +204,18 @@ export class InlineQuestionsComponent implements OnChanges {
     }, 300);
   }
 
+  sendRespondedEvent(value: boolean) {
+    this.isResponded = value;
+    let isRespondedList = this.localStorage.getJSON('isRespondedList');
+    if(!isRespondedList) isRespondedList = {}
+    isRespondedList[this.inline_sub_question_item.question.num] = value
+    this.localStorage.setJSON('isRespondedList', isRespondedList);
+  }
+
+  getIsResponded(){
+    if (this.isEnabled()){
+      return this.isResponded;
+    }
+    return true;
+  }
 }

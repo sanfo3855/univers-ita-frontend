@@ -27,17 +27,21 @@
             <h3><span *ngIf="section !== '0'">Sezione:</span> {{sectionObj[section].section}}</h3>
             <div *ngFor="let item of sectionObj[section].questions">
               <div class="row row-question">
-                <app-question [question_item]=item [dependant_sub_questions]=item.dependant_sub_questions [inline_sub_questions]=item.inline_sub_questions ></app-question>
+                <app-question [question_item]=item [dependant_sub_questions]=item.dependant_sub_questions [inline_sub_questions]=item.inline_sub_questions [showError]="showError"></app-question>
               </div>
             </div>
           </div>
         </div>
+        <div *ngIf="showError" class="center testo error">
+          Hai lasciato delle domande senza risposta.<br>
+          Ricontrolla e rispondi a tutte le domande per proseguire
+        </div>
         <div class="center">
-          <button *ngIf="lastSection === '1'" [disabled]="false" type="button" id="bottom-button-1" class="btn btn-success bottom-button  " [routerLink]="'/questionario'" [queryParams]="{'sezione':[2]}">Vai alla Sezione 2 (Parte 1)</button>
-          <button *ngIf="lastSection === '2'" [disabled]="false" type="button" id="bottom-button-2" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[3]}">Vai alla Sezione 2 (Parte 2)</button>
-          <button *ngIf="lastSection === '3'" [disabled]="false" type="button" id="bottom-button-3" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[4]}">Vai alla Sezione 3</button>
-          <button *ngIf="lastSection === '4'" [disabled]="false" type="button" id="bottom-button-4" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[5]}">Vai alla Sezione 4</button>
-          <button *ngIf="lastSection === '5'" [disabled]="false" type="button" id="bottom-button-5" class="btn btn-success bottom-button" (click)="this.sendToBackend()" [routerLink]="'/fine'">Prosegui e Conferma</button>
+          <button *ngIf="lastSection === '1'" [disabled]="false" type="button" id="bottom-button-1" class="btn btn-success bottom-button" (click)="checkResponseAndNavigate('/questionario',{'sezione':[2]})">Vai alla Sezione 2 (Parte 1)</button>
+          <button *ngIf="lastSection === '2'" [disabled]="false" type="button" id="bottom-button-2" class="btn btn-success bottom-button" (click)="checkResponseAndNavigate('/questionario',{'sezione':[3]})">Vai alla Sezione 2 (Parte 2)</button>
+          <button *ngIf="lastSection === '3'" [disabled]="false" type="button" id="bottom-button-3" class="btn btn-success bottom-button" (click)="checkResponseAndNavigate('/questionario',{'sezione':[4]})">Vai alla Sezione 3</button>
+          <button *ngIf="lastSection === '4'" [disabled]="false" type="button" id="bottom-button-4" class="btn btn-success bottom-button" (click)="checkResponseAndNavigate('/questionario',{'sezione':[5]})">Vai alla Sezione 4</button>
+          <button *ngIf="lastSection === '5'" [disabled]="false" type="button" id="bottom-button-5" class="btn btn-success bottom-button" (click)="checkResponseAndNavigate('/fine')">Prosegui e Conferma</button>
         </div>
       </div>
     </div>
