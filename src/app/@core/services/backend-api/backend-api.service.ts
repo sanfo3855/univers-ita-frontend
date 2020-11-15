@@ -22,6 +22,7 @@ export class BackendApiService {
 
   private userEndpoint = '/api/user';
   private textSurveyEndpoint = '/api/text-survey';
+  private couponsEndpoint = '/api/coupon';
 
   constructor(private http: HttpClient,
               private jwtTokenService: JWTTokenService,
@@ -82,7 +83,22 @@ export class BackendApiService {
   }
 
   public imFeelingLucky() {
-    return this.http.get(this.userEndpoint + '/imFeelingLucky' )
+    return this.http.get(this.couponsEndpoint + '/imFeelingLucky' )
+      .pipe(catchError(BackendApiService.handleError));
+  }
+
+  public uploadCoupon(couponsList, expirationDate, site) {
+    return this.http.post(this.couponsEndpoint + '/upload', {coupons:couponsList, expirationDate:expirationDate, site:site})
+      .pipe(catchError(BackendApiService.handleError));
+  }
+
+  public getCoupons() {
+    return this.http.get(this.couponsEndpoint + '/all')
+      .pipe(catchError(BackendApiService.handleError));
+  }
+
+  public getCouponStats() {
+    return this.http.get(this.couponsEndpoint + '/stats')
       .pipe(catchError(BackendApiService.handleError));
   }
 

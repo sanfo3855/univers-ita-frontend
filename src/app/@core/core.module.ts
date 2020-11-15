@@ -18,8 +18,8 @@ import { SpinnerLoadingComponent } from './components/spinner-loading/spinner-lo
 
 @NgModule({
   providers: [],
-  exports: [HeaderComponent, FooterComponent, ToolbarComponent, QuestionComponent, LoginFormComponent, CreateUserFormComponent,
-    NgbdModalFocus],
+    exports: [HeaderComponent, FooterComponent, ToolbarComponent, QuestionComponent, LoginFormComponent, CreateUserFormComponent,
+        NgbdModalFocus, SpinnerLoadingComponent],
   imports: [CommonModule, RouterModule, ReactiveFormsModule, NgbModule],
   declarations: [FooterComponent, HeaderComponent, ToolbarComponent, QuestionComponent, LoginFormComponent,
     CreateUserFormComponent, NgbdModalFocus, NgbdModalConfirm, NgbdModalConfirmAutofocus, InlineQuestionsComponent, SpinnerLoadingComponent],

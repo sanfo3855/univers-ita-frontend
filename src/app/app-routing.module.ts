@@ -21,6 +21,7 @@ import {LoggedGuard} from './@core/services/logged-guard/logged.guard';
 import {StatsComponent} from './pages/stats/stats.component';
 import {CommonModule} from '@angular/common';
 import {IntroductionComponent} from "./pages/introduction/introduction.component";
+import {CouponsComponent} from "./pages/coupons/coupons.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'landing page', pathMatch: 'full'},
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: 'scrittura', component: WritingComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'fine', component: EndComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'monitoraggio', component: StatsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
+  {path: 'buoni', component: CouponsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 

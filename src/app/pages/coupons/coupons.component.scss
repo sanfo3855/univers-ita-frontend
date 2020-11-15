@@ -1,0 +1,68 @@
+textarea {
+  width: 100%;
+  padding-bottom: 15px;
+  white-space: pre-line;
+  columns: fill-available;
+}
+
+form {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.col-md-12 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-height: 22px;
+  margin-bottom: .625em;
+}
+
+.col-md-4 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-height: 22px;
+  margin-bottom: .625em;
+}
+
+
+.title {
+  padding-bottom: 1em;
+  color: #00436A;
+}
+
+.inserisci-buoni {
+  font-size: 1.5em;
+  color: dimgrey;
+}
+
+.stats-buoni {
+  padding-top: 30px;
+  font-size: 1.5em;
+  color: dimgrey;
+}
+
+.col {
+  padding-top: 30px;
+  font-size: 1.3em;
+}
+
+.center {
+  text-align: center;
+}
+
+.input-group {
+  padding-right: 20px;
+}
+
+.label {
+  padding-right: 5px;
+}
+
+.label-textarea {
+  padding-bottom: 10px;
+}
+
+.stats {
+  font-size: 3em;
+  padding-top: 25px;
+}

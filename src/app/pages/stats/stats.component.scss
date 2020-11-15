@@ -22,3 +22,28 @@ h1 {
   margin-right: 5px;
   line-height: 0.9em;
 }
+
+.underline {
+  font-style: italic;
+}
+
+.fa{
+  margin-left: 4px;
+}
+
+@-webkit-keyframes pulse {
+  0% { -webkit-transform: scale(1); }
+  50% { -webkit-transform: scale(1.2); }
+  100% { -webkit-transform: scale(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+button {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}

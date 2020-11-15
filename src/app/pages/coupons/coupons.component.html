@@ -1,0 +1,97 @@
+<div class="body-overflow">
+  <app-header></app-header>
+  <app-toolbar [appPath]="['Admin','Buoni']"></app-toolbar>
+  <div class="container">
+    <div class="row">
+      <h3 class="title">Gestione Buoni</h3>
+      <div id="inserimento-buoni" class="row">
+        <div class="col-md-12">
+          <div (click)="showCouponForm()" class="inserisci-buoni">Inserisci buoni<i [class]="!showHideCouponForm?'fa fa-angle-left':'fa fa-angle-down'"></i></div>
+          <div *ngIf="showHideCouponForm">
+            <form [formGroup]="uploadCouponsForm" class="form" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <div class="input-group">
+                  <label>
+                    <span class="label label-textarea">Lista buoni (separata da spazi o virgole):</span>
+                    <textarea class="form-control" formControlName="list" rows="5"  cols="3000"></textarea>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-inline">
+                  <div class="input-group">
+                    <label>
+                      <span class="label">Sito buoni:</span>
+                      <input class="form-control" placeholder="www.example.com" formControlName="site">
+                    </label>
+                  </div>
+                  <div class="input-group">
+                    <label>
+                      <span class="label">Data di scadenza:</span>
+                      <input class="form-control" placeholder="dd-mm-yyyy" lang="it"
+                             name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" formControlName="expirationDate">
+                    </label>
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" (click)="d.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Inserisci Buoni</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="statistiche-buoni" class="row">
+        <div class="col-md-12">
+          <div class="row ">
+            <div class="col">
+              <div class="center">
+                <b>Buoni rimasti</b><br>
+                <div class="stats">{{this.statCoupons.remaining}}</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="center">
+                <b>Prossimo buono tra</b><br>
+                <div class="stats">{{this.statCoupons.next}}</div><br>
+                <b>inserimenti</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="table-buoni" class="row">
+        <div class="col-md-12">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Codice</th>
+            <th scope="col">Sito</th>
+            <th scope="col">Scadenza</th>
+            <th scope="col">Distribuito</th>
+            <th scope="col">Ateneo e Indirizzo</th>
+            <th scope="col"><button (click)="getCoupons()" class="btn btn-light"><i class="fa fa-refresh"></i></button></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let coupon of this.coupons; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td width="20%">{{coupon.code}}</td>
+            <td width="20%">{{coupon.site}}</td>
+            <td width="20%">{{coupon.expirationDate}}</td>
+            <td width="20%">{{coupon.given}}</td>
+            <td width="20%">{{coupon.student}}</td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-spinner-loading *ngIf="loading"></app-spinner-loading>
+</div>
+<router-outlet></router-outlet>

@@ -8,20 +8,33 @@
         <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Username (Ateneo e Indirizzo)</th>
-          <th scope="col">Misurazioni Raccolte</th>
+          <th scope="col">
+            <div (click)="orderByAtenei()" [className]="symbolOrderedByAtenei!==null?'underline':''">
+              Username (Ateneo e Indirizzo)
+              <i *ngIf="symbolOrderedByAtenei!==null" [className]="symbolOrderedByAtenei?'fa fa-arrow-down':'fa fa-arrow-up'"></i>
+              <i *ngIf="symbolOrderedByAtenei===null" class="fa fa-arrow-down" style="color: white"></i>
+            </div>
+          </th>
+          <th scope="col">
+            <div (click)="orderByMisurazioni()" [className]="symbolOrderedByMisurazioni!==null?'underline':''">Misurazioni Raccolte
+              <i *ngIf="symbolOrderedByMisurazioni!==null" [className]="symbolOrderedByMisurazioni?'fa fa-arrow-down':'fa fa-arrow-up'"></i>
+              <i *ngIf="symbolOrderedByMisurazioni===null" class="fa fa-arrow-down" style="color: white"></i>
+            </div>
+          </th>
+          <th scope="col"><button (click)="getDataStats()" class="btn btn-light"><i class="fa fa-refresh"></i></button></th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let measure of this.measurements; let i=index">
           <th scope="row">{{i+1}}</th>
-          <td width="25%">{{measure.username}}</td>
-          <td width="75%">{{measure.count}}</td>
+          <td width="35%">{{measure.username}}</td>
+          <td width="65%">{{measure.count}}</td>
+          <td></td>
         </tr>
         </tbody>
       </table>
     </div>
   </div>
-<!--  <app-footer></app-footer>-->
+  <app-spinner-loading *ngIf="loading"></app-spinner-loading>
 </div>
 <router-outlet></router-outlet>

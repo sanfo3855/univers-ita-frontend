@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {JWTTokenService} from '../../services/JWT-token/jwt-token.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {LocalStorageService} from '../../services/local-storage/local-storage.service';
 import {TimerService} from '../../services/timer/timer.service';
 import {BackendApiService} from '../../services/backend-api/backend-api.service';
@@ -16,15 +16,17 @@ export class ToolbarComponent implements OnInit {
   @Input() backButton: string[];
   @Input() nextButton: string[];
   @Input() submitButton: string[];
+  page: string;
 
   constructor(public jwtTokenService: JWTTokenService,
               public localStorage: LocalStorageService,
               private router: Router,
               private timer: TimerService,
-              private backendService: BackendApiService) {
+              private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.page = this.activatedRoute.snapshot.url[0].path;
 
   }
 

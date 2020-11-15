@@ -9,14 +9,28 @@ import {BackendApiService} from '../../@core/services/backend-api/backend-api.se
 export class AdminComponent implements OnInit {
 
   users: any;
+  loading = false;
 
   constructor(private backendApiService: BackendApiService) {
   }
 
   ngOnInit(): void {
+    setTimeout(() => { // here
+      this.loading = true;
+    }, 1);
     this.backendApiService.getUsers().subscribe(data => {
       if (data.success) {
-        this.users = data.response.sort((a, b) => {
+        this.users = data.response.sort((a,b) => {
+          const x = a.username;
+          const y = b.username;
+          if (x < y) {
+            return -1;
+          }
+          if (x > y) {
+            return 1;
+          }
+          return 0;
+        }).sort((a, b) => {
           const x = a.type;
           const y = b.type;
           if (x < y) {
@@ -42,6 +56,9 @@ export class AdminComponent implements OnInit {
         });
       }
     });
+    setTimeout(() => { // here
+      this.loading = false;
+    }, 499);
   }
 
   changeValidity(username: string, value: boolean) {
