@@ -66,6 +66,9 @@ export class SurveyComponent implements OnInit, OnChanges {
       }
     }
     console.log("Check responded: " + returnValue);
+    if(this.sections[0]===3){
+      return true;
+    }
     return returnValue;
   }
 
