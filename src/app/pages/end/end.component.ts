@@ -31,7 +31,7 @@ export class EndComponent implements OnInit {
     this.backendService.imFeelingLucky().subscribe((response) => {
       console.log("Lucky: " + response['lucky'] + " - Code: " + response['code']);
       this.localStorage.set('imFeelingLucky',JSON.stringify(response))
-      this.responseLucky = response;
+      this.responseLucky = response['response'];
     });
 
   }
