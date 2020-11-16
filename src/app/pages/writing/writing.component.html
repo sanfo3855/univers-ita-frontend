@@ -45,7 +45,7 @@
           </span></div>
         <div class="center">
           <br><br>
-          <button [disabled]="this.timer.time !== 0 || !(this.remainingWord < this.maxWord - this.minWord)" type="button" id="bottom-button" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}">Prosegui</button>
+          <button [disabled]="!(this.remainingWord < this.maxWord - this.minWord)" type="button" id="bottom-button" class="btn btn-success bottom-button" [routerLink]="'/questionario'" [queryParams]="{'sezione':[0,1]}">Prosegui</button>
         </div>
       </div>
     </div>
