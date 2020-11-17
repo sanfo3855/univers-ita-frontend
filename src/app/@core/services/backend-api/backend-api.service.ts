@@ -82,13 +82,13 @@ export class BackendApiService {
       .pipe(catchError(BackendApiService.handleError));
   }
 
-  public imFeelingLucky() {
-    return this.http.get(this.couponsEndpoint + '/imFeelingLucky' )
+  public imFeelingLucky(student) {
+    return this.http.post(this.couponsEndpoint + '/imFeelingLucky', {student:student} )
       .pipe(catchError(BackendApiService.handleError));
   }
 
-  public uploadCoupon(couponsList, expirationDate, site) {
-    return this.http.post(this.couponsEndpoint + '/upload', {coupons:couponsList, expirationDate:expirationDate, site:site})
+  public uploadCoupon(couponsList, expirationDate, site,value) {
+    return this.http.post(this.couponsEndpoint + '/upload', {coupons:couponsList, expirationDate:expirationDate, site:site, value:value})
       .pipe(catchError(BackendApiService.handleError));
   }
 

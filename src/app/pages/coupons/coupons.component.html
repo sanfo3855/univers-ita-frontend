@@ -35,6 +35,12 @@
                       <button class="btn btn-secondary" (click)="d.toggle()" type="button"><i class="fa fa-calendar"></i></button>
                     </div>
                   </div>
+                  <div class="input-group">
+                    <label>
+                      <span class="label">Valore buoni:</span>
+                      <input class="form-control" formControlName="value">
+                    </label>
+                  </div>
                   <button type="submit" class="btn btn-primary">Inserisci Buoni</button>
                 </div>
               </div>
@@ -73,7 +79,7 @@
             <th scope="col">Scadenza</th>
             <th scope="col">Distribuito</th>
             <th scope="col">Ateneo e Indirizzo</th>
-            <th scope="col"><button (click)="getCoupons()" class="btn btn-light"><i class="fa fa-refresh"></i></button></th>
+            <th scope="col"><button (click)="update()" class="btn btn-light"><i class="fa fa-refresh"></i></button></th>
           </tr>
           </thead>
           <tbody>

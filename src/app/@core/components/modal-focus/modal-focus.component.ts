@@ -82,12 +82,12 @@ export class NgbdModalFocus {
 
   open(name: string) {
     this._modalService.open(MODALS[name]).result.then((result) => {
-      console.log(result);
+      //console.log(result);
       if (result === 'Ok click') {
 
       }
     }, (reason) => {
-      console.log(reason);
+      //console.log(reason);
     });
   }
 

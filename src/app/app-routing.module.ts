@@ -22,6 +22,7 @@ import {StatsComponent} from './pages/stats/stats.component';
 import {CommonModule} from '@angular/common';
 import {IntroductionComponent} from "./pages/introduction/introduction.component";
 import {CouponsComponent} from "./pages/coupons/coupons.component";
+import {CouponStudentComponent} from "./pages/coupon-student/coupon-student.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'landing page', pathMatch: 'full'},
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path: 'fine', component: EndComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: 'monitoraggio', component: StatsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
   {path: 'buoni', component: CouponsComponent, canActivate: [AuthorizeAdminGuard, LoggedGuard]},
+  {path: 'buono-studente', component: CouponStudentComponent, canActivate: [AuthorizeStudentGuard, LoggedGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 

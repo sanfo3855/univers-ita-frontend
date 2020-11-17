@@ -1,11 +1,13 @@
 <div class="body-overflow">
   <app-header></app-header>
-  <app-toolbar [appPath]="['Landing page','Fine']" [backButton]="['/survey','Questionario']"
-               [nextButton]=""  [submitButton]="['','Conferma']"></app-toolbar>
+  <app-toolbar [appPath]="['Landing page','Fine']"></app-toolbar>
   <div class="content-wrapper">
     <div class="row">
       <div *ngIf="this.localStorage.get('student')==='demo-student'">
         <button type="button" id="back-button" class="btn btn-primary back-button" [routerLink]="['/questionario']"  [queryParams]="{'sezione':5}"><i class="fa fa-arrow-left"></i> Torna al questionario</button>
+      </div>
+      <div *ngIf="this.responseLucky !== null && this.responseLucky['lucky'] === true" class="next-button">
+        <button id="next-button" class="btn btn-success" [routerLink]="['/buono-studente']">Vai al Buono <i class="fa fa-arrow-right"></i></button>
       </div>
     </div>
     <div class="row">
@@ -20,23 +22,19 @@
           Se hai domande, puoi contattarci all’indirizzo <a href="mailto:prin.universita@gmail.com">prin.universita@gmail.com</a><br><br><br>
 
 
-          Clicca su <i>concludi</i> per partecipare all’estrazione di uno dei buoni da 25 € per l’acquisto di libri.
+          Clicca su <i>concludi</i> per partecipare all’estrazione di un buono per l’acquisto di libri.
         </div>
         <div class="center">
           <br><br>
-          <button type="button" id="bottom-button" class="btn btn-success bottom-button" (click)="this.imFeelingLucky()">Concludi</button>
+          <button [disabled]="this.responseLucky !== null" type="button" id="bottom-button" class="btn btn-success bottom-button" (click)="this.imFeelingLucky()">Concludi</button>
           <br><br>
         </div>
-        <div *ngIf="this.responseLucky['lucky'] === true" class="center">
-          <h2>Hai vinto!  😊</h2>
-          Codice <b>{{this.responseLucky['code']}}</b> utilizzabile entro il {{this.responseLucky['expire']}} al seguente link <a href="https://www.amazon.it/">https://www.amazon.it/</a>
-        </div>
-        <div *ngIf="this.responseLucky['lucky'] === false" class="center">
+        <div *ngIf="this.responseLucky !== null && this.responseLucky['lucky'] === false" class="center">
           <h2>Non hai vinto 😔 </h2>
         </div>
+      </div>
     </div>
   </div>
-  </div>
-<!--  <app-footer></app-footer>-->
+  <app-spinner-loading *ngIf="loading"></app-spinner-loading>
 </div>
 <router-outlet></router-outlet>

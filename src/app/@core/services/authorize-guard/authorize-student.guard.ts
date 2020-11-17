@@ -18,13 +18,13 @@ export class AuthorizeStudentGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (this.jwtService.getToken() && this.jwtService.getType() === 'student') {
       if (this.jwtService.isTokenExpired()) {
-        this.router.navigate(['login']);
+        this.router.navigate(['/login']);
         return false;
       } else {
         return true;
       }
     } else {
-      this.router.navigate(['app-home']);
+      this.router.navigate(['/landing page']);
       return false;
     }
   }

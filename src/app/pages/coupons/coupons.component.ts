@@ -18,7 +18,8 @@ export class CouponsComponent implements OnInit {
   uploadCouponsForm: FormGroup = new FormGroup({
     list: new FormControl(''),
     expirationDate: new FormControl(''),
-    site: new FormControl('')
+    site: new FormControl(''),
+    value: new FormControl('')
   });
 
   showHideCouponForm = false;
@@ -47,12 +48,23 @@ export class CouponsComponent implements OnInit {
     const couponList = this.uploadCouponsForm.value.list.replace(/(\r\n|\n|\r)/gm,",").split(",");
     const site = this.uploadCouponsForm.value.site;
     const expiration = this.uploadCouponsForm.value.expirationDate
-    this.sendCoupons(couponList,expiration,site);
+    const value = this.uploadCouponsForm.value.value
+    this.sendCoupons(couponList,expiration,site,value);
 
   }
 
-  sendCoupons(couponList,expiration,site) {
-    this.backendService.uploadCoupon(couponList,expiration,site).subscribe(data => {})
+  sendCoupons(couponList,expiration,site,value) {
+    this.backendService.uploadCoupon(couponList,expiration,site,value).subscribe(data => {
+      this.getCoupons();
+      this.getStats();
+      this.uploadCouponsForm.reset();
+      this.showHideCouponForm = false;
+    })
+  }
+
+  update() {
+    this.getCoupons();
+    this.getStats();
   }
 
   getCoupons() {

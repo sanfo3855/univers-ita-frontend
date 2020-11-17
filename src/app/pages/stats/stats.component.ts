@@ -10,6 +10,7 @@ import {BackendApiService} from "../../@core/services/backend-api/backend-api.se
 })
 export class StatsComponent implements OnInit {
   measurements: any;
+  totalMeasurement: any;
   originalMeasurement: any;
   symbolOrderedByAtenei = null;
   symbolOrderedByMisurazioni = null;
@@ -29,8 +30,9 @@ export class StatsComponent implements OnInit {
       this.loading = true;
     }, 100);
     this.backendService.getDataStats().subscribe(data =>{
-      this.originalMeasurement = data;
-      this.measurements = data;
+      this.originalMeasurement = data['measurements'];
+      this.measurements = data['measurements'];
+      this.totalMeasurement = data['totalMeasurements'];
     });
     setTimeout(() => { // here
       this.loading = false;
@@ -39,7 +41,6 @@ export class StatsComponent implements OnInit {
 
   orderByAtenei(){
     if(this.symbolOrderedByAtenei === null) {
-      console.log(true);
       this.symbolOrderedByAtenei = true;
       this.measurements.sort((a,b) => {
         const x = a.username;
@@ -53,7 +54,6 @@ export class StatsComponent implements OnInit {
         return 0;
       })
     } else if(this.symbolOrderedByAtenei === true) {
-      console.log(false);
       this.symbolOrderedByAtenei = false;
       this.measurements.sort((a,b) => {
         const x = a.username;
@@ -67,7 +67,6 @@ export class StatsComponent implements OnInit {
         return 0;
       })
     } else if(this.symbolOrderedByAtenei === false) {
-      console.log(null);
       this.symbolOrderedByAtenei = null;
       this.measurements = this.originalMeasurement;
     }
@@ -76,7 +75,6 @@ export class StatsComponent implements OnInit {
 
   orderByMisurazioni(){
     if(this.symbolOrderedByMisurazioni === null) {
-      console.log(true);
       this.symbolOrderedByMisurazioni = true;
       this.measurements.sort((a,b) => {
         const x = a.count;
@@ -90,7 +88,6 @@ export class StatsComponent implements OnInit {
         return 0;
       })
     } else if(this.symbolOrderedByMisurazioni === true) {
-      console.log(false);
       this.symbolOrderedByMisurazioni = false;
       this.measurements.sort((a,b) => {
         const x = a.count;
@@ -104,7 +101,6 @@ export class StatsComponent implements OnInit {
         return 0;
       })
     } else if(this.symbolOrderedByMisurazioni === false) {
-      console.log(null);
       this.symbolOrderedByMisurazioni = null;
       this.measurements = this.originalMeasurement;
     }

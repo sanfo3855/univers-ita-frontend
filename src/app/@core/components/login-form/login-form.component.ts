@@ -45,7 +45,7 @@ export class LoginFormComponent implements OnInit {
             this.router.navigate(['/admin']);
           }
         } else {
-          console.log(data.err);
+          //console.log(data.err);
           this.loginError = data.err;
         }
       });

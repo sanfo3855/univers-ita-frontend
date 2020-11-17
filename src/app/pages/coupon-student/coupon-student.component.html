@@ -1,0 +1,45 @@
+<div class="body-overflow">
+  <app-header></app-header>
+  <app-toolbar [appPath]="['Landing page','Fine']"></app-toolbar>
+  <div class="content-wrapper">
+    <div class="row">
+      <div>
+        <button type="button" id="back-button" class="btn btn-primary back-button" [routerLink]="['/fine']">
+          <i class="fa fa-arrow-left"></i> Indietro
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <div *ngIf="this.responseLucky !== null && this.responseLucky['lucky'] === true" class="center win-lose">
+          <h2>Hai vinto un buono da <b>{{this.responseLucky['value']}}€</b>! 😊</h2><br>
+          <div class="testo">
+            <h5>Codice <b>{{this.responseLucky['code']}}</b> utilizzabile entro il <b>{{this.responseLucky['expire']}}</b> al
+              seguente link <a href="https://{{this.responseLucky['site']}}">{{this.responseLucky['site']}}</a></h5>
+            <br><br><br>
+            Prima di chiudere questa pagina, <b>copia</b> o <b>fotografa</b> il codice e il link.
+            <br><br><br><br><br>
+            <ul class="list-inline">
+              <li class="list-inline-item">Per spendere il buono:</li>
+              <li class="list-inline-item"><b>1)</b> vai sul sito</li>
+              <li class="list-inline-item"><b>2)</b> registra un account</li>
+              <li class="list-inline-item"><b>3)</b> metti i libri che ti interessano nel carrello</li>
+              <li class="list-inline-item"><b>4)</b> procedi al pagamento</li>
+              <li class="list-inline-item"><b>5)</b> inserisci il codice del buono nella finestra in basso a sinistra
+              </li>
+            </ul>
+            Il buono può essere speso solo per un acquisto.<br><br>
+            <div class="disclaimer">
+              I buoni vengono emessi e gestiti dagli editori, non dal team del progetto. I dati che inserirai al
+              momento della registrazione sul sito dell’editore non verranno mai comunicati a chi svolge la
+              ricerca alla quale hai partecipato. L’acquisto dei libri, quindi, non pregiudica l’anonimato della
+              rilevazione.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

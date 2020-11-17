@@ -16,7 +16,7 @@
             anagrafici e quindi i dati raccolti non potranno mai essere associati alla tua identità.</b>
           <br><br><br>
           Se completi la raccolta dati, parteciperai automaticamente all’estrazione di numerosi buoni da 25 €
-          per l’acquisto (entro il TERMINE) di libri.
+          per l’acquisto di libri (entro la scadenza del buono).
         </div>
       </div>
       <div *ngIf="!jwtTokenService.getToken()" class="col-md-3">
@@ -36,7 +36,7 @@
             anagrafici e quindi i dati raccolti non potranno mai essere associati alla tua identità.</b>
           <br><br><br>
           Se completi la raccolta dati, parteciperai automaticamente all’estrazione di numerosi buoni da 25 €
-          per l’acquisto (entro il TERMINE) di libri.
+          per l’acquisto di libri (entro la scadenza del buono).
         </div>
         <div class="center" *ngIf="!this.localStorage.get('sent-to-be') || this.localStorage.get('student')==='demo-student'">
           <br><br>

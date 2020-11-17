@@ -3,7 +3,10 @@
   <app-toolbar [appPath]="['Admin','Monitoraggio']"></app-toolbar>
   <div class="container">
     <div class="row">
-      <h3 class="title">Monitoraggio misurazioni</h3>
+      <h3 class="title">Monitoraggio misurazioni</h3><br><br>
+      <div class="row tot-measure">
+        <div>Totale Misurazioni Raccolte: <b>{{this.totalMeasurement}}</b> </div>
+      </div>
       <table class="table table-hover">
         <thead>
         <tr>

@@ -13,9 +13,10 @@ import { StatsComponent } from './pages/stats/stats.component';
 import { IntroductionComponent } from './pages/introduction/introduction.component';
 import { CouponsComponent } from './pages/coupons/coupons.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { CouponStudentComponent } from './pages/coupon-student/coupon-student.component';
 
 @NgModule({
-  declarations: [AppComponent, AppHomeComponent, EndComponent, StatsComponent, IntroductionComponent, CouponsComponent],
+  declarations: [AppComponent, AppHomeComponent, EndComponent, StatsComponent, IntroductionComponent, CouponsComponent, CouponStudentComponent],
   imports: [CoreModule, BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, NgbModule],
   providers: [RedirectGuard, TimerService],
   bootstrap: [AppComponent]
