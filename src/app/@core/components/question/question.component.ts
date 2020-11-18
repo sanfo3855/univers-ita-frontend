@@ -151,7 +151,6 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
         if (!this.responses) {
           this.responses = [];
         }
-        new_response = new_response.replace("."," ")
       } else {
         this.responses = this.responses.filter((val, i, arr) => {
           if (val !== new_response) {
