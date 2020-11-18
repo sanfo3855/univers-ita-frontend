@@ -166,11 +166,12 @@ export class InlineQuestionsComponent implements OnChanges {
           }
         });
       }
-    } else if (this.inline_sub_question_item.type === 'radiobutton' || this.inline_sub_question_item.type === 'select') {
+    } else if (this.inline_sub_question_item.type === 'radiobutton' || this.inline_sub_question_item.type === 'textbox' || this.inline_sub_question_item.type === 'select') {
       this.inline_responses = [this.form.value.value];
-    }  else if (this.inline_sub_question_item.type === 'textbox' ){
-      this.inline_responses = [this.form.value.value.replace("."," ")];
     }
+    //else if (this.inline_sub_question_item.type === 'textbox' ){
+    //  this.inline_responses = [this.form.value.value.replace("."," ")];
+    //}
     // console.log('Question inline: ' + this.inline_sub_question_item.question.question + ' - Responses inline: ' + this.inline_responses);
 
     // SAVE TO LOCAL STORAGE
