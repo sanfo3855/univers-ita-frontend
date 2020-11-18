@@ -151,7 +151,7 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
         if (!this.responses) {
           this.responses = [];
         }
-        this.responses.push(new_response);
+        new_response = new_response.replace("."," ")
       } else {
         this.responses = this.responses.filter((val, i, arr) => {
           if (val !== new_response) {
@@ -159,8 +159,10 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
           }
         });
       }
-    } else if (this.question_item.type === 'radiobutton' || this.question_item.type === 'textbox' || this.question_item.type === 'select') {
+    } else if (this.question_item.type === 'radiobutton' || this.question_item.type === 'select') {
       this.responses = [this.form.value.value];
+    } else if (this.question_item.type === 'textbox'){
+      this.responses = [this.form.value.value.replace("."," ")];
     }
 
     // console.log('Question ' + this.question_item.question.question + ' - Responses ' + this.responses);
