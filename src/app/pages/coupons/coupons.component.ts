@@ -31,7 +31,7 @@ export class CouponsComponent implements OnInit {
     next:null
   };
 
-  constructor(private titleService: Title, private backendService: BackendApiService) {
+  constructor(private titleService: Title, private backendService: BackendApiService, private localStorage: LocalStorageService) {
     this.titleService.setTitle("Monitoraggio - UniverS-ITA");
   }
 

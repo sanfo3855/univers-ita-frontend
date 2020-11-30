@@ -160,12 +160,12 @@ export class QuestionComponent implements /*OnInit,*/ OnChanges {
           }
         });
       }
-    } else if (this.question_item.type === 'radiobutton' || this.question_item.type === 'textbox' || this.question_item.type === 'select') {
+    } else if (this.question_item.type === 'radiobutton' || this.question_item.type === 'select') {
       this.responses = [this.form.value.value];
     }
-    //else if (this.question_item.type === 'textbox'){
-    //  this.responses = [this.form.value.value.replace("."," ")];
-    //}
+    else if (this.question_item.type === 'textbox'){
+      this.responses = [this.form.value.value.split('.').join(' ').trim()];
+    }
 
     // console.log('Question ' + this.question_item.question.question + ' - Responses ' + this.responses);
 

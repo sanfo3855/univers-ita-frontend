@@ -11,7 +11,7 @@
       <div id="admin-data" class="tool-logged">
         <button type="button" id="admin-page-button" [className]="page==='admin'?'btn btn-custom-blue':'btn btn-success'" routerLink="/admin">Pagina Amministratore</button>
         <button type="button" id="stats-page-button" [className]="page==='monitoraggio'?'btn btn-custom-blue':'btn btn-success'" routerLink="/monitoraggio">Monitoraggio</button>
-        <button *ngIf="this.localStorage.get('student')==='matteo_sanfelici'" type="button" id="buoni-page-button" [className]="page==='buoni'?'btn btn-custom-blue':'btn btn-success'" routerLink="/buoni">Gestione Buoni</button>
+        <button *ngIf="this.localStorage.get('student')==='matteo_sanfelici' || this.localStorage.get('student')==='nicola_grandi'" type="button" id="buoni-page-button" [className]="page==='buoni'?'btn btn-custom-blue':'btn btn-success'" routerLink="/buoni">Gestione Buoni</button>
       </div>
     </div>
     <div id="login" class="tool-login">
