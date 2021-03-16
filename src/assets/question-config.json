@@ -861,7 +861,7 @@
         {
           "question": {"question": "Se hai FRATELLI/SORELLE, in quali lingue/dialetti parlate e parlavate quando eravate piccoli?","num": "18"},
           "type": "radiobutton",
-          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5}],
+          "answers": [{"answer":"In italiano","num":1},{"answer":"In un dialetto o in una lingua minoritaria d’Italia","num":2},{"answer":"In un’altra lingua","num":3},{"answer":"Sia in italiano che in un dialetto o una lingua minoritaria d’Italia","num":4},{"answer":"Sia in italiano che in un’altra lingua","num":5},{"answer": "Non ho fratelli o sorelle","num": 6}],
           "inline_sub_questions": [
             {
               "question": {"question":"In quale dialetto o lingua minoritaria d’Italia?","num":"18e1"},
